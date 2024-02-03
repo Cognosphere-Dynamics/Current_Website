@@ -466,6 +466,14 @@ h6 {
   position: relative;
 }
 
+#hero_2 {
+  width: 100%;
+  height: 75vh;
+  /* background: url("../img/hero-bg.jpg") top left;
+  background-size: cover; */
+  position: relative;
+}
+
 #hero:before {
   content: "";
   background: rgba(255, 255, 255, 0.6);
@@ -474,6 +482,18 @@ h6 {
   top: 0;
   left: 0;
   right: 0;
+}
+
+#hero_2::before {
+  content: "";
+  position: absolute;
+  right: -100%;
+  top: 20%;
+  width: 250%;
+  height: 200%;
+  z-index: -1;
+  background-color: #e8ecf5;
+  transform: skewY(135deg);
 }
 
 #hero .container {
