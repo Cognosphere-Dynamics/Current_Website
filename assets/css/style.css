@@ -568,10 +568,16 @@ h6 {
   #hero {
     background-attachment: fixed;
   }
+  #hero_2 {
+    background-attachment: fixed;
+  }
 }
 
 @media (max-width: 768px) {
   #hero {
+    height: 100vh;
+  }
+  #hero_2 {
     height: 100vh;
   }
 
@@ -580,7 +586,18 @@ h6 {
     line-height: 36px;
   }
 
+  #hero_2 h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
   #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  #hero_2 h2 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
@@ -594,6 +611,10 @@ h6 {
 
 @media (max-height: 500px) {
   #hero {
+    height: 120vh;
+  }
+
+  #hero_2 {
     height: 120vh;
   }
 }
