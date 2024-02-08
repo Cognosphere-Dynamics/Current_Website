@@ -82,17 +82,49 @@
   /**
    * Header fixed top on scroll
    */
-  let selectHeader = select('#header')
+  let selectHeader = select('#headerr');
   if (selectHeader) {
     let headerOffset = selectHeader.offsetTop
     let nextElement = selectHeader.nextElementSibling
     const headerFixed = () => {
-      if ((headerOffset - window.scrollY) <= 0) {
+      if ((headerOffset - window.scrollY) <= 10) {
         selectHeader.classList.add('fixed-top')
         nextElement.classList.add('scrolled-offset')
       } else {
         selectHeader.classList.remove('fixed-top')
         nextElement.classList.remove('scrolled-offset')
+      }
+    }
+    window.addEventListener('load', headerFixed)
+    onscroll(document, headerFixed)
+  }
+
+  let selectNavbar = select('#navBar');
+  if (selectNavbar) {
+    let headerOffset = selectNavbar.offsetTop
+    const headerFixed = () => {
+      if ((headerOffset - window.scrollY) <= 0) {
+        selectNavbar.classList.add('fixed-topp')
+      } else if((headerOffset - window.scrollY) >= 10) {
+         selectNavbar.classList.remove('fixed-topp');
+      } else {
+        selectNavbar.classList.remove('fixed-topp')
+      }
+    }
+    window.addEventListener('load', headerFixed)
+    onscroll(document, headerFixed)
+  }
+
+  let selectMargin = select('#margin');
+  if (selectMargin) {
+    let headerOffset = selectMargin.offsetTop
+    const headerFixed = () => {
+      if ((headerOffset - window.scrollY) <= 0) {
+        selectMargin.classList.add('margin')
+      } else if((headerOffset - window.scrollY) >= 10) {
+        selectMargin.classList.remove('margin');
+      } else {
+        selectMargin.classList.remove('margin')
       }
     }
     window.addEventListener('load', headerFixed)

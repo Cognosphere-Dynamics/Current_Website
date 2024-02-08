@@ -160,19 +160,23 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header {
+#header, #headerr {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
   height: 86px;
+}
+
+#headerr {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#header.fixed-top {
+#header, #headerr {
   height: 70px;
 }
 
-#header .logo {
+
+#header .logo, #headerr .logo {
   font-size: 30px;
   margin: 0;
   padding: 0;
@@ -182,15 +186,15 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header .logo a {
+#header .logo a, #headerr .logo a {
   color: #222222;
 }
 
-#header .logo a span {
+#header .logo a span, #headerr .logo a span {
   color: #106eea;
 }
 
-#header .logo img {
+#header .logo img, #headerr .logo img {
   max-height: 40px;
 }
 
@@ -460,7 +464,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 75vh;
+  height: 71vh;
   background: url("../img/hero-bg.jpg") top left;
   background-size: cover;
   position: relative;
@@ -468,9 +472,7 @@ h6 {
 
 #hero_2 {
   width: 100%;
-  height: 75vh;
-  /* background: url("../img/hero-bg.jpg") top left;
-  background-size: cover; */
+  height: 71vh;
   position: relative;
 }
 
@@ -484,7 +486,7 @@ h6 {
   right: 0;
 }
 
-#hero_2::before {
+#hero_2:before {
   content: "";
   position: absolute;
   right: -100%;
@@ -509,11 +511,31 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
+#hero_2 h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #222222;
+  font-family: "Poppins", sans-serif;
+}
+
 #hero h1 span {
   color: #106eea;
 }
 
+#hero_2 h1 span {
+  color: #106eea;
+}
+
 #hero h2 {
+  color: #555555;
+  margin: 5px 0 30px 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+#hero_2 h2 {
   color: #555555;
   margin: 5px 0 30px 0;
   font-size: 24px;
@@ -562,6 +584,29 @@ h6 {
 
 #hero .btn-watch-video:hover i {
   color: #3b8af2;
+}
+
+#hero_2 .download-btn {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #106eea;
+}
+
+#hero_2 .download-btn:hover {
+  background: rgb(32, 59, 117);
+  color: white;
+}
+
+#hero .download-btn+.download-btn {
+  margin-left: 20px;
 }
 
 @media (min-width: 1024px) {
@@ -639,33 +684,34 @@ h6 {
   float: right;
 }
 
-.download-btn {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
-  font-size: 15px;
-  display: inline-block;
-  padding: 8px 24px 10px 46px;
-  border-radius: 3px;
-  transition: 0.5s;
-  color: #fff;
-  background: #106eea;
-  position: relative;
+/*--------------------------------------------------------------
+# Timer General
+--------------------------------------------------------------*/
+.timer {
+  background-color: #106eea;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-.download-btn:hover {
-  background: rgb(32, 59, 117);
+.timer h1 {
   color: white;
+  text-align: center;
 }
 
-.download-btn i {
-  font-size: 20px;
-  position: absolute;
-  left: 18px;
-  top: 8.5px;
+.flexed-timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-#hero .download-btn+.download-btn {
-  margin-left: 20px;
+#years, #days, #hours, #minutes, #seconds {
+  color: #106eea;
+  margin-right: 5px;
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 4px;
+
 }
 
 /*--------------------------------------------------------------
@@ -1895,4 +1941,51 @@ section {
     text-align: center;
     padding: 2px 0;
   }
+}
+
+/*--------------------------------------------------------------
+# Inner Page
+--------------------------------------------------------------*/
+.main {
+  overflow: hidden;
+}
+.empty {
+  width: 100%;
+  height: 50vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.side-nav {
+  position: sticky;
+  background-color: #106eea;
+  padding: 30px;
+  width: 30%;
+  /* height: 50vh; */
+}
+
+.side-nav a {
+  color: white;
+}
+
+.main-text {
+  padding-right: 30px;
+  padding-left: 30px;
+  width: 70%;
+}
+
+.margin {
+  margin-left: 30%;
+}
+
+.fixed-topp {
+  position: fixed;
+  top: 50px;
+  right: 0;
+  left: 0;
+  z-index: 700;
+  height: auto;
 }
