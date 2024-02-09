@@ -160,7 +160,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
-#header, #headerr {
+#header, #headerr, #header-1 {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
@@ -171,12 +171,12 @@ h6 {
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
-#header, #headerr {
+#header, #headerr, #header-1 {
   height: 70px;
 }
 
 
-#header .logo, #headerr .logo {
+#header .logo, #headerr .logo, #header-1 .logo {
   font-size: 30px;
   margin: 0;
   padding: 0;
@@ -186,15 +186,15 @@ h6 {
   font-family: "Poppins", sans-serif;
 }
 
-#header .logo a, #headerr .logo a {
+#header .logo a, #headerr .logo a, #header-1 .logo a {
   color: #222222;
 }
 
-#header .logo a span, #headerr .logo a span {
+#header .logo a span, #headerr .logo a span, #header-1 .logo a span{
   color: #106eea;
 }
 
-#header .logo img, #headerr .logo img {
+#header .logo img, #headerr .logo img, #header-1 .logo img {
   max-height: 40px;
 }
 
@@ -1952,6 +1952,7 @@ section {
 .empty {
   width: 100%;
   height: 50vh;
+  margin-bottom: 50px;
 }
 
 .main-content {
@@ -1961,31 +1962,59 @@ section {
 
 .side-nav {
   position: sticky;
-  background-color: #106eea;
+  top: 85px;
   padding: 30px;
-  width: 30%;
-  /* height: 50vh; */
+  width: 17%;
+}
+
+.side-nav ul li{
+  font-size: 20px;
+  list-style: none;
+  padding: 10px 20px;
 }
 
 .side-nav a {
-  color: white;
+  color: #106eea;
 }
 
 .main-text {
   padding-right: 30px;
   padding-left: 30px;
-  width: 70%;
+  width: 83%;
 }
 
 .margin {
-  margin-left: 30%;
+  margin-left: 17%;
+}
+
+.space {
+  margin-bottom: 70px;
+}
+
+.more_space {
+  margin-bottom: 100px;
+}
+
+.pactive {
+  color: white !important;
+  background-color: #106eea;
+  padding: 10px 20px;
+  border: 1px solid #106eea;
+  border-radius: 4px;
 }
 
 .fixed-topp {
   position: fixed;
-  top: 50px;
+  top: 85px;
   right: 0;
   left: 0;
   z-index: 700;
-  height: auto;
+}
+
+.part-heading {
+  margin-bottom: 10px;
+}
+
+.part-paragraph {
+  margin-bottom: 30px;
 }

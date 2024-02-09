@@ -48,9 +48,9 @@
   const navbarlinksActive = () => {
     let position = window.scrollY + 200
     navbarlinks.forEach(navbarlink => {
-      if (!navbarlink.hash) return
-      let section = select(navbarlink.hash)
-      if (!section) return
+      if (!navbarlink.hash) return // if it has a reference it continues excecution of the code below but if it doesnt that means it ends the function there
+      let section = select(navbarlink.hash) // this access the element or tag with the reference of the hash value
+      if (!section) return // this here means that when the refeerence has been got and it is true then it will continue but if the reference has been got and it id false then the if statement will end the function there
       if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
         navbarlink.classList.add('active')
       } else {
@@ -82,12 +82,12 @@
   /**
    * Header fixed top on scroll
    */
-  let selectHeader = select('#headerr');
+  let selectHeader = select('#header');
   if (selectHeader) {
     let headerOffset = selectHeader.offsetTop
     let nextElement = selectHeader.nextElementSibling
     const headerFixed = () => {
-      if ((headerOffset - window.scrollY) <= 10) {
+      if ((headerOffset - window.scrollY) <= 0) {
         selectHeader.classList.add('fixed-top')
         nextElement.classList.add('scrolled-offset')
       } else {
@@ -99,13 +99,30 @@
     onscroll(document, headerFixed)
   }
 
+  let selectHeaderr = select('#headerr');
+  if (selectHeaderr) {
+    let headerOffset = selectHeaderr.offsetTop
+    let nextElement = selectHeaderr.nextElementSibling
+    const headerFixed = () => {
+      if ((headerOffset - window.scrollY) <= 10) {
+        selectHeaderr.classList.add('fixed-top')
+        nextElement.classList.add('scrolled-offset')
+      } else {
+        selectHeaderr.classList.remove('fixed-top')
+        nextElement.classList.remove('scrolled-offset')
+      }
+    }
+    window.addEventListener('load', headerFixed)
+    onscroll(document, headerFixed)
+  }
+
   let selectNavbar = select('#navBar');
   if (selectNavbar) {
     let headerOffset = selectNavbar.offsetTop
     const headerFixed = () => {
-      if ((headerOffset - window.scrollY) <= 0) {
+      if ((headerOffset - window.scrollY) <= 10) {
         selectNavbar.classList.add('fixed-topp')
-      } else if((headerOffset - window.scrollY) >= 10) {
+      } else if((headerOffset - window.scrollY) >= -15) {
          selectNavbar.classList.remove('fixed-topp');
       } else {
         selectNavbar.classList.remove('fixed-topp')
@@ -119,9 +136,9 @@
   if (selectMargin) {
     let headerOffset = selectMargin.offsetTop
     const headerFixed = () => {
-      if ((headerOffset - window.scrollY) <= 0) {
+      if ((headerOffset - window.scrollY) <= 10) {
         selectMargin.classList.add('margin')
-      } else if((headerOffset - window.scrollY) >= 10) {
+      } else if((headerOffset - window.scrollY) >= -15) {
         selectMargin.classList.remove('margin');
       } else {
         selectMargin.classList.remove('margin')
@@ -318,4 +335,23 @@
    */
   new PureCounter();
 
+  //This is to activate the parts that are active in the inner page
+
+  let partLinks = select('#navBar .partTo', true)
+  const partlinksActive = () => {
+    let positionn = window.scrollY + 200
+    partLinks.forEach(partLink => {
+      if(!partLink.hash) return
+      let section = select(partLink.hash)
+      if(!section) return
+      if(positionn >= section.offsetTop && positionn <= (section.offsetTop + section.offsetHeight)) {
+        partLink.classList.add('pactive')
+      } else {
+        partLink.classList.remove('pactive')
+      }
+    })
+  
+  }
+  window.addEventListener('load', partlinksActive)
+  onscroll(document, partlinksActive)  
 })()
