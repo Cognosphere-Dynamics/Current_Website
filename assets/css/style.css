@@ -1961,7 +1961,7 @@ section {
 }
 
 .side-nav {
-  position: sticky;
+  position: relative;
   top: 85px;
   padding: 30px;
   width: 17%;
@@ -1970,6 +1970,10 @@ section {
 .side-nav ul li{
   font-size: 20px;
   list-style: none;
+  padding: 10px 20px;
+}
+
+.side-nav ul li a {
   padding: 10px 20px;
 }
 
@@ -2001,6 +2005,7 @@ section {
   padding: 10px 20px;
   border: 1px solid #106eea;
   border-radius: 4px;
+  transition: 0.1s ease-in;
 }
 
 .fixed-topp {
