@@ -124,6 +124,12 @@ h6 {
   padding: 0;
 }
 
+@media (max-width: 390px) {
+  #topbar {
+    font-size: 10px;
+  }
+}
+
 #topbar .contact-info i {
   font-style: normal;
   color: #fff;
@@ -472,7 +478,7 @@ h6 {
 
 #hero_2 {
   width: 100%;
-  height: 71vh;
+  height: 73vh;
   position: relative;
 }
 
@@ -593,6 +599,7 @@ h6 {
   font-size: 14px;
   letter-spacing: 1px;
   display: inline-block;
+  margin-top: 5px;
   padding: 10px 28px;
   border-radius: 4px;
   transition: 0.5s;
@@ -615,6 +622,25 @@ h6 {
   }
   #hero_2 {
     background-attachment: fixed;
+  }
+}
+
+@media (max-width: 991px) {
+  #hero_2 .download-btn {
+    font-size: 10px;
+  }
+
+  #hero_2 h1 {
+    font-size: 30px;
+  }
+
+  #hero_2 h2 {
+    font-size: 20px;
+  }
+
+  #hero_2 .center-align {
+    position: relative;
+    top: 80px;
   }
 }
 
@@ -654,6 +680,13 @@ h6 {
   }
 }
 
+@media (max-width: 575px) {
+  #hero_2 .center-align {
+    position: relative;
+    top: 5px;
+  }
+}
+
 @media (max-height: 500px) {
   #hero {
     height: 120vh;
@@ -670,6 +703,22 @@ h6 {
 .carousel-container img {
   height: 600px;
   object-fit: cover;
+}
+
+@media (max-width: 575px) {
+  .carousel-container .center {
+    height: 400px;
+    position: relative;
+    top: 20px;
+    width: 100%;
+  }
+
+  .carousel-container .center-2 {
+    height: 400px;
+    position: relative;
+    top: 20px;
+    width: 100%;
+  }
 }
 
 .heading {
@@ -712,6 +761,40 @@ h6 {
   border: 1px solid white;
   border-radius: 4px;
 
+}
+
+@media (max-width: 762px) {
+  .timer h1 {
+    font-size: 20px;
+  }
+
+  #years, #days, #hours, #minutes, #seconds {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 575px) {
+
+  #years, #days, #hours, #minutes, #seconds {
+    padding: 5px 10px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+
+  #years, #days, #hours, #minutes, #seconds {
+    padding: 3px 6px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  #years, #days, #hours, #minutes, #seconds {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1962,9 +2045,9 @@ section {
 
 .side-nav {
   position: relative;
-  top: 85px;
   padding: 30px;
   width: 17%;
+  z-index: 1030;
 }
 
 .side-nav ul li{
@@ -1985,6 +2068,8 @@ section {
   padding-right: 30px;
   padding-left: 30px;
   width: 83%;
+  font-size: 20px;
+  overflow: hidden;
 }
 
 .margin {
@@ -2010,10 +2095,10 @@ section {
 
 .fixed-topp {
   position: fixed;
-  top: 85px;
+  top: 50px;
   right: 0;
   left: 0;
-  z-index: 700;
+  z-index: 1030;
 }
 
 .part-heading {
