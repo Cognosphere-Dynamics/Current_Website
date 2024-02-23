@@ -2029,9 +2029,6 @@ section {
 /*--------------------------------------------------------------
 # Inner Page
 --------------------------------------------------------------*/
-.main {
-  overflow: hidden;
-}
 .empty {
   width: 100%;
   height: 50vh;
@@ -2044,10 +2041,14 @@ section {
 }
 
 .side-nav {
-  position: relative;
-  padding: 30px;
+  height: 100%;
   width: 17%;
-  z-index: 1030;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
 .side-nav ul li{
@@ -2067,13 +2068,13 @@ section {
 .main-text {
   padding-right: 30px;
   padding-left: 30px;
-  width: 83%;
   font-size: 20px;
   overflow: hidden;
+  margin-left: 17%;
 }
 
 .margin {
-  margin-left: 17%;
+  /* margin-left: 17%; */
 }
 
 .space {
@@ -2094,11 +2095,11 @@ section {
 }
 
 .fixed-topp {
-  position: fixed;
-  top: 50px;
-  right: 0;
-  left: 0;
-  z-index: 1030;
+  /* position: sticky; */
+  /* top: 10px; */
+  /* right: 0; */
+  /* left: 0; */
+  /* z-index: 1; */
 }
 
 .part-heading {

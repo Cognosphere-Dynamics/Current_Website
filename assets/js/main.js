@@ -116,21 +116,21 @@
     onscroll(document, headerFixed)
   }
 
-  let selectNavbar = select('#navBar');
-  if (selectNavbar) {
-    let headerOffset = selectNavbar.offsetTop
-    const headerFixed = () => {
-      if ((headerOffset - window.scrollY) <= 10) {
-        selectNavbar.classList.add('fixed-topp')
-      } else if((headerOffset - window.scrollY) >= -15) {
-         selectNavbar.classList.remove('fixed-topp');
-      } else {
-        selectNavbar.classList.remove('fixed-topp')
-      }
-    }
-    window.addEventListener('load', headerFixed)
-    onscroll(document, headerFixed)
-  }
+  // let selectNavbar = select('#navBar');
+  // if (selectNavbar) {
+  //   let headerOffset = selectNavbar.offsetTop
+  //   const headerFixed = () => {
+  //     if ((headerOffset - window.scrollY) <= 10) {
+  //       selectNavbar.classList.add('fixed-topp')
+  //     } else if((headerOffset - window.scrollY) >= -15) {
+  //        selectNavbar.classList.remove('fixed-topp');
+  //     } else {
+  //       selectNavbar.classList.remove('fixed-topp')
+  //     }
+  //   }
+  //   window.addEventListener('load', headerFixed)
+  //   onscroll(document, headerFixed)
+  // }
 
   let selectMargin = select('#margin');
   if (selectMargin) {
