@@ -374,4 +374,22 @@
   }
   window.addEventListener('load', partlinksActive)
   onscroll(document, partlinksActive)  
+
+  let partLinkss = select('#nav-bar .partTo', true)
+  const partlinksActivee = () => {
+    let positionn2 = window.scrollY + 200
+    partLinkss.forEach(partLink => {
+      if(!partLink.hash) return
+      let section = select(partLink.hash)
+      if(!section) return
+      if(positionn2 >= section.offsetTop && positionn2 <= (section.offsetTop + section.offsetHeight)) {
+        partLink.classList.add('pactivee')
+      } else {
+        partLink.classList.remove('pactivee')
+      }
+    })
+  
+  }
+  window.addEventListener('load', partlinksActivee)
+  onscroll(document, partlinksActivee)  
 })()
