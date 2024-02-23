@@ -2042,10 +2042,10 @@ section {
 
 .side-nav {
   height: 100%;
-  width: 17%;
-  position: fixed;
+  width: 50%;
+  position: sticky;
   z-index: 1;
-  top: 0;
+  top: 100px;
   left: 0;
   overflow-x: hidden;
   padding-top: 20px;
@@ -2070,11 +2070,7 @@ section {
   padding-left: 30px;
   font-size: 20px;
   overflow: hidden;
-  margin-left: 17%;
-}
-
-.margin {
-  /* margin-left: 17%; */
+  margin-left: 5%;
 }
 
 .space {
@@ -2092,14 +2088,6 @@ section {
   border: 1px solid #106eea;
   border-radius: 4px;
   transition: 0.1s ease-in;
-}
-
-.fixed-topp {
-  /* position: sticky; */
-  /* top: 10px; */
-  /* right: 0; */
-  /* left: 0; */
-  /* z-index: 1; */
 }
 
 .part-heading {
