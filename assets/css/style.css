@@ -566,6 +566,24 @@ h6 {
   background: #247cf0;
 }
 
+#navbar .btn-sphere-accounts {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 10px 28px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #106eea;
+}
+
+#navbar .btn-sphere-accounts:hover {
+  background: #247cf0;
+}
+
 #hero .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
