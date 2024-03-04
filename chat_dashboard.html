@@ -248,10 +248,10 @@
             <div class="modal-content p-2">
                 <ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">AI Profile</button>
+                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#add-ai-pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">AI Profile</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Customisation</button>
+                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#add-ai-pills-customisation" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Customisation</button>
                     </li>
                     <!-- <li class="nav-item" role="presentation">
                       <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
@@ -261,7 +261,7 @@
                     </li> -->
                   </ul>
                   <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="tab-pane fade show active" id="add-ai-pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                         <form action="" class="p-3">
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Choose an Avatar</label>
@@ -284,17 +284,23 @@
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
-                        <!-- <div class="customise-text">
+                    <div class="tab-pane fade" id="add-ai-pills-customisation" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                        <div class="customise-text">
                             <h6>Customise</h6>
                             <p>Use the space below to further instruct/restrict the AI on how you want it to behave in any given circumstance.
-                                Pro Tip: Provide precise instructions in order to optimize it's memory and ability to execute</p>
-                        </div> -->
+                                Pro Tip: Provide precise instructions in order to optimize it's memory and ability to execute
+                            </p>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                                <label for="floatingTextarea2">Customise</label>
+                            </div>
+                        </div>
+                        
                     </div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
                     <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
                   </div>
-                <div class="modal-footer">
+                <div class="modal-footer mt-3">
                     <button type="button" class="modal-btn" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary">Save Changes</button>
                 </div>
@@ -308,10 +314,10 @@
             <div class="modal-content p-2">
                 <ul class="nav nav-underline mb-3" id="pills-tab" role="tablist">
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">AI Profile</button>
+                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#edit-ai-info-pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">AI Profile</button>
                     </li>
                     <li class="nav-item" role="presentation">
-                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Customisation</button>
+                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#edit-ai-info-pills-customisation" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Customisation</button>
                     </li>
                     <!-- <li class="nav-item" role="presentation">
                       <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</button>
@@ -321,7 +327,7 @@
                     </li> -->
                   </ul>
                   <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="tab-pane fade show active" id="edit-ai-info-pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
                         <form action="" class="p-3">
                             <div class="mb-3">
                                 <label for="formFile" class="form-label">Choose an Avatar</label>
@@ -329,7 +335,7 @@
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput" class="form-label">AI Name</label>
-                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Glosh" value="Glosh">
+                                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="John" value="John">
                             </div>
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">AI Greeting</label>
@@ -344,17 +350,22 @@
                             </div>
                         </form>
                     </div>
-                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+                    <div class="tab-pane fade" id="edit-ai-info-pills-customisation" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
                         <div class="customise-text">
                             <h6>Customise</h6>
                             <p>Use the space below to further instruct/restrict the AI on how you want it to behave in any given circumstance.
-                                Pro Tip: Provide precise instructions in order to optimize it's memory and ability to execute</p>
+                                Pro Tip: Provide precise instructions in order to optimize it's memory and ability to execute
+                            </p>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 200px; resize: none;"></textarea>
+                                <label for="floatingTextarea2">Customise</label>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
                     <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
                   </div>
-                <div class="modal-footer">
+                <div class="modal-footer mt-3">
                     <button type="button" class="modal-btn" data-bs-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary">Save Changes</button>
                 </div>
