@@ -283,6 +283,80 @@ h6 {
   color: #106eea;
 }
 
+
+/* thos ata */
+.bar {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.bar li {
+  position: relative;
+}
+
+.bar>li {
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.bar a,
+.bar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #222222;
+  white-space: nowrap;
+  transition: 0.3s;
+  position: relative;
+}
+
+.bar a i,
+.bar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.bar>li>a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -6px;
+  left: 0;
+  background-color: #106eea;
+  visibility: hidden;
+  width: 0px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.bar a:hover:before,
+.bar li:hover>a:before,
+.bar .active:before {
+  visibility: visible;
+  width: 100%;
+}
+
+.bar a:hover,
+.bar .active,
+.bar .active:focus,
+.bar li:hover>a {
+  color: #106eea;
+}
+
+/* this end */
+
+
+
+
+
+
 .navbar .dropdown ul {
   display: block;
   position: absolute;
