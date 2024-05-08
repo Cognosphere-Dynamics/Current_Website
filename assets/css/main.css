@@ -810,7 +810,7 @@ section,
 --------------------------------------------------------------*/
 .section-title {
   text-align: center;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
   position: relative;
 }
 
@@ -1992,4 +1992,21 @@ section,
 }
 #control-button-z-index{
   z-index: 1000;
+}
+/* Override default input field styles */
+input[type="email"],
+input[type="password"] {
+    background-color: #fff;
+    border: #388da8 solid 2px ;
+    border-radius: 50%; /* Change to your desired background color */
+}
+.relative-div{
+  position: relative;
+
+}
+.button-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
