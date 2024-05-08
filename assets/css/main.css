@@ -1986,3 +1986,10 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+.control-button-z-index{
+  z-index: 500;
+}
+#control-button-z-index{
+  z-index: 1000;
+}
