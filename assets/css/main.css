@@ -846,7 +846,7 @@ section,
   width: 100%;
   min-height: 70vh;
   position: relative;
-  padding: 180px 0 40px 0;
+  padding: 0 0 40px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -1995,18 +1995,45 @@ section,
 }
 /* Override default input field styles */
 input[type="email"],
-input[type="password"] {
+input[type="password"],
+input[type='text'],
+.input-group-text {
     background-color: #fff;
-    border: #388da8 solid 2px ;
-    border-radius: 50%; /* Change to your desired background color */
+    border: #388da8 solid 2px ; /* Change to your desired background color */
+}
+input[type='checkbox']:checked{
+background-color: #388da8;
+}
+input[type='radio']{
+  background-color: #388da8;
 }
 .relative-div{
   position: relative;
 
+}
+.rounded-40{
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.input-group-text{
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.btn-theme{
+  background-color: #388da8;
+  color: white;
+}
+.btn-theme:hover{
+  background-color: #255d6e;
+  color:white
 }
 .button-bottom{
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+}
+
+.inner-carousel {
+  padding-top: 180px;
 }
