@@ -1,0 +1,26 @@
+##### THIS ALLOWS US TO DEPLOY THE SITE FROM A GIT REPO AUTOMATICALLY ######
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/cognosp1/public_html/
+    - /bin/cp -R .vscode $DEPLOYPATH
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R forms $DEPLOYPATH
+  /bin/cp index.html $DEPLOYPATH
+  /bin/cp sphere_about_us.html $DEPLOYPATH
+  /bin/cp sphere_artificial_super_intelligence.html $DEPLOYPATH
+  /bin/cp sphere_human_robotics.html $DEPLOYPATH
+  /bin/cp sphere_payements.html $DEPLOYPATH
+  /bin/cp sphere_privacy_policy.html $DEPLOYPATH
+  /bin/cp sphere_research.html $DEPLOYPATH
+  /bin/cp sphere_service_ai_robotics_consultancy.html $DEPLOYPATH
+  /bin/cp sphere_service_ai_robotics_research_collaboration.html $DEPLOYPATH
+  /bin/cp sphere_service_computer_vision.html $DEPLOYPATH
+  /bin/cp sphere_service_custom_ai_development.html $DEPLOYPATH
+  /bin/cp sphere_service_data_analysis.html $DEPLOYPATH
+  /bin/cp sphere_service_natural_language_processing.html $DEPLOYPATH
+  /bin/cp sphere_signin.html $DEPLOYPATH
+  /bin/cp sphere_signup.html $DEPLOYPATH
+  /bin/cp sphere_terms_of_use.html $DEPLOYPATH
+  /bin/cp sphere_twogere.html $DEPLOYPATH
+  /bin/cp sphere_verify_mail.html $DEPLOYPATH
