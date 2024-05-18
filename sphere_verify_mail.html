@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Twogere - C.Dynamics</title>
+  <title>Welcome to the Sphere!</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +28,71 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* For WebKit based browsers */
+    ::-webkit-scrollbar {
+      width: 10px;
+      /* width of the scrollbar */
+      border-radius: 20px;
+      /* border radius */
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      /* color of the track */
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      /* color of the thumb */
+      border-radius: 8px;
+      /* border radius */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+      /* color of the thumb on hover */
+    }
+
+    /* For Firefox */
+    /* To style the scrollbar */
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #888 #f1f1f1;
+    }
+
+    /* To style the thumb */
+    *::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 8px;
+      /* border radius */
+    }
+
+    *::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+
+    /* For Microsoft Edge */
+    *::-ms-scrollbar {
+      width: 12px;
+    }
+
+    *::-ms-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    *::-ms-scrollbar-thumb {
+      background: #888;
+      border-radius: 8px;
+      /* border radius */
+    }
+
+    *::-ms-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+
 </head>
 
 <body class="starter-page-page">
@@ -60,11 +127,11 @@
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">Twogere</h1>
+        <h1 class="mb-2 mb-lg-0">Everything you've ever imagined, all around you!</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Let's Talk</li>
+            <li class="current">Sign Up</li>
           </ol>
         </nav>
       </div>
@@ -72,17 +139,48 @@
 
     <!-- Starter Section Section -->
     <section id="starter-section" class="starter-section section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Twogere</h2>
-        <p>Enabling everyone to communicate</p>
-      </div><!-- End Section Title -->
-
       <div class="container" data-aos="fade-up">
-        <p>Development in progress...</p>
+        <form action="" method="post" class="fade-up row">
+          <div class="container-fluid col-6">
+            <img src="assets/img/sign-up_1.gif" class="img-fluid" alt="">
+          </div>
+          <div class="container col-6">
+             <!-- Section Title -->
+            <div class="container section-titler" data-aos="fade-up">
+              <h2>Signin to join experiences</h2>
+            </div><!-- End Section Title -->
+            <div class="row">
+              <div class="col-12 p-2 ">
+                <div class="form-group">
+                  <input type="text" class="form-control rounded-pill"  id="name" placeholder="Enter name">
+                </div>
+              </div>
+              <div class="col-12 p-2 ">
+                <div class="form-group">
+                  <input type="email" class="form-control rounded-pill"  id="email" placeholder="Enter email">
+                </div>
+              </div>
+              <div class="col-12 p-2 ">
+                <div class="form-group">
+                  <input type="email" class="form-control rounded-pill"  id="email" placeholder="Phone number">
+                </div>
+              </div>
+              <div class="col-12 p-2  ">
+               <div class="row">
+                <div class="form-group col-6">
+                    <input type="password" class="form-control rounded-pill"  id="password" placeholder="Enter password">
+                  </div>
+                  <div class="form-group col-6">
+                      <input type="password" class="form-control rounded-pill"  id="name" placeholder="Enter confirm password">
+                    </div>
+               </div>
+              </div>
+              <div class="col-12 p-2 pt-5 m-auto " style="width: 100%;">
+                <button type="submit" class="btn rounded-pill" style="width: 100%; background:#388da8;color: white;">Signin</button>
+              </div>
+          </div>
+        </form>
       </div>
-
     </section><!-- /Starter Section Section -->
 
   </main>
