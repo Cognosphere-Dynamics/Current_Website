@@ -12,7 +12,9 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Nunito", sans-serif;
   --nav-font: "Inter", sans-serif;
 }
@@ -208,7 +210,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -247,11 +249,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -263,7 +265,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -297,7 +299,7 @@ h6 {
   }
 
   .navmenu .megamenu ul li a,
-  .navmenu .megamenu ul li:hover>a {
+  .navmenu .megamenu ul li:hover > a {
     padding: 10px 20px;
     font-size: 15px;
     color: var(--nav-dropdown-color);
@@ -309,7 +311,7 @@ h6 {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .megamenu:hover>ul {
+  .navmenu .megamenu:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -414,8 +416,8 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active,
-  .navmenu .megamenu>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active,
+  .navmenu .megamenu > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -442,7 +444,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -451,7 +453,7 @@ h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
-  --background-color: rgba(var(--accent-color-rgb), .03);
+  --background-color: rgba(var(--accent-color-rgb), 0.03);
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
@@ -567,7 +569,7 @@ h6 {
   border-color: var(--accent-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email] {
+.footer .footer-newsletter .newsletter-form input[type="email"] {
   border: 0;
   padding: 4px 10px;
   width: 100%;
@@ -575,11 +577,11 @@ h6 {
   color: var(--default-color);
 }
 
-.footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
+.footer .footer-newsletter .newsletter-form input[type="email"]:focus-visible {
   outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
+.footer .footer-newsletter .newsletter-form input[type="submit"] {
   border: 0;
   font-size: 16px;
   padding: 0 20px;
@@ -590,7 +592,7 @@ h6 {
   border-radius: 50px;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit]:hover {
+.footer .footer-newsletter .newsletter-form input[type="submit"]:hover {
   background: rgba(var(--accent-color-rgb), 0.8);
 }
 
@@ -753,7 +755,7 @@ h6 {
 # Global Page Titles & Breadcrumbs
 --------------------------------------------------------------*/
 .page-title {
-  --background-color: rgba(var(--default-color-rgb), .04);
+  --background-color: rgba(var(--default-color-rgb), 0.04);
   color: var(--default-color);
   background-color: var(--background-color);
   padding: 25px 0;
@@ -774,11 +776,11 @@ h6 {
   font-size: 14px;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -798,7 +800,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -892,6 +893,9 @@ section,
   font-size: 20px;
   font-weight: 400;
 }
+.btn-get-started {
+  min-width: 200px;
+}
 
 @media (min-width: 768px) {
   .hero .hero-img {
@@ -965,7 +969,7 @@ section,
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services {
-  --background-color: rgba(var(--accent-color-rgb), .06);
+  --background-color: rgba(var(--accent-color-rgb), 0.06);
   padding: 40px 0;
 }
 
@@ -1193,7 +1197,7 @@ section,
 /*--------------------------------------------------------------
 # Features Details Section
 --------------------------------------------------------------*/
-.features-details .features-item+.features-item {
+.features-details .features-item + .features-item {
   margin-top: 60px;
 }
 
@@ -1250,7 +1254,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  --background-color: rgba(var(--accent-color-rgb), .03);
+  --background-color: rgba(var(--accent-color-rgb), 0.03);
 }
 
 .services .service-item {
@@ -1394,6 +1398,22 @@ section,
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+.moreFeaturesCarousel {
+  padding: 0 5rem;
+  padding-top: 0;
+}
+.carousel-indicators {
+  bottom: -4rem;
+}
+.service-carousel-indicators {
+  bottom: -5rem;
+}
+@media (max-width: 768px) {
+  .moreFeaturesCarousel {
+    padding: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1625,7 +1645,7 @@ section,
 # Testimonials Section
 --------------------------------------------------------------*/
 .testimonials {
-  --background-color: rgba(var(--accent-color-rgb), .03);
+  --background-color: rgba(var(--accent-color-rgb), 0.03);
 }
 
 .testimonials .testimonial-item {
@@ -1804,8 +1824,8 @@ section,
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input[type=text],
-.contact .php-email-form input[type=email],
+.contact .php-email-form input[type="text"],
+.contact .php-email-form input[type="email"],
 .contact .php-email-form textarea {
   font-size: 14px;
   padding: 10px 15px;
@@ -1816,19 +1836,19 @@ section,
   border-color: rgba(var(--default-color-rgb), 0.2);
 }
 
-.contact .php-email-form input[type=text]:focus,
-.contact .php-email-form input[type=email]:focus,
+.contact .php-email-form input[type="text"]:focus,
+.contact .php-email-form input[type="email"]:focus,
 .contact .php-email-form textarea:focus {
   border-color: var(--accent-color);
 }
 
-.contact .php-email-form input[type=text]::placeholder,
-.contact .php-email-form input[type=email]::placeholder,
+.contact .php-email-form input[type="text"]::placeholder,
+.contact .php-email-form input[type="email"]::placeholder,
 .contact .php-email-form textarea::placeholder {
   color: rgba(var(--default-color-rgb), 0.3);
 }
 
-.contact .php-email-form button[type=submit] {
+.contact .php-email-form button[type="submit"] {
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
@@ -1837,7 +1857,7 @@ section,
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type=submit]:hover {
+.contact .php-email-form button[type="submit"]:hover {
   background: rgba(var(--accent-color-rgb), 0.8);
 }
 
@@ -1859,7 +1879,7 @@ section,
   box-shadow: 0px 2px 20px rgba(var(--default-color-rgb), 0.12);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
@@ -1987,52 +2007,51 @@ section,
   /* Add your styles here */
 }
 
-.control-button-z-index{
+.control-button-z-index {
   z-index: 500;
 }
-#control-button-z-index{
+#control-button-z-index {
   z-index: 1000;
 }
 /* Override default input field styles */
 input[type="email"],
 input[type="password"],
-input[type='text'],
+input[type="text"],
 .input-group-text {
-    background-color: #fff;
-    border: #388da8 solid 2px ; /* Change to your desired background color */
+  background-color: #fff;
+  border: #388da8 solid 2px; /* Change to your desired background color */
 }
-input[type='checkbox']:checked{
-background-color: #388da8;
-}
-input[type='radio']{
+input[type="checkbox"]:checked {
   background-color: #388da8;
 }
-.relative-div{
-  position: relative;
-
+input[type="radio"] {
+  background-color: #388da8;
 }
-.rounded-40{
+.relative-div {
+  position: relative;
+}
+.rounded-40 {
   border-top-right-radius: 40px;
   border-bottom-right-radius: 40px;
 }
-.input-group-text{
+.input-group-text {
   border-top-left-radius: 40px;
   border-bottom-left-radius: 40px;
 }
-.btn-theme{
+.btn-theme {
   background-color: #388da8;
   color: white;
 }
-.btn-theme:hover{
+.btn-theme:hover {
   background-color: #255d6e;
-  color:white
+  color: white;
 }
-.button-bottom{
+/* .button-bottom {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-}
+} */
 
 .inner-carousel {
   padding-top: 180px;
