@@ -24,6 +24,7 @@ form.addEventListener("submit", (event) => {
       .then((res) => res.json())
       .then(() => {
         messageRegister();
+        window.location.href = `./sphere_signin.html`;
       })
       .catch((error) => console.log(error));
   } else {
