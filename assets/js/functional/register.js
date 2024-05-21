@@ -3,6 +3,7 @@ const messageRegister = () => {
   document.querySelector(".name").value = "";
   document.querySelector(".phone").value = "";
   document.querySelector(".password").value = "";
+  document.querySelector(".confirm-password").value = "";
 };
 
 let url = "https://api.cognospheredynamics.com";
