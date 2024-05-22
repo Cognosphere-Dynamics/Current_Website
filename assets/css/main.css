@@ -114,17 +114,28 @@ h6 {
   }
 }
 
+/* dashboard */
+
+.offcanvas {
+  margin-top: 5rem;
+  margin-left: 7rem;
+  max-width: 13rem;
+}
+.dashboard {
+  margin-left: 21rem;
+}
+
+.offcanvas ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 .btn-getstarted {
   width: 6.5rem;
   height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.btn-getstarted:has(i) {
-  width: 2.7rem;
-  height: 2.7rem;
 }
 
 .header .btn-getstarted,

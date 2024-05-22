@@ -16,7 +16,6 @@ form.addEventListener("submit", (event) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       if (data.error) {
         const message = document.querySelector(".signin-title");
         message.textContent = data.error;

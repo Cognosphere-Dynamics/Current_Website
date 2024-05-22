@@ -124,38 +124,304 @@
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#pricing">Pricing</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            <li class="dashboard d-none">
+            <!-- <li>
               <a href="https://app.cognospheredynamics.com/">Dashboard</a>
-            </li>
+            </li> -->
+            <li><a href="#">Dashboard</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
-
-        <a class="btn-getstarted d-none d-md-block" href="./sphere_signin.html"
-          >Sign In</a
-        >
-        <a class="btn-getstarted fs-3 d-md-none" href="./sphere_signin.html"
-          ><i class="bi bi-box-arrow-in-right"></i
-        ></a>
       </div>
     </header>
     <main class="main mt-5 pt-5">
-      <div class="page-title">
-        <div
-          class="container d-lg-flex justify-content-between align-items-center"
-        >
-          <h1 class="mb-2 mb-lg-0">Dashboard</h1>
-          <nav class="breadcrumbs">
-            <ol>
-              <li><a href="index.html">Home</a></li>
-              <li class="current">Sphere Dashboard</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
+      <div class="container row">
+        <div class="col-2">
+          <a
+            class="text-decoration-none text-info d-md-none"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling"
+          >
+            <i class="bi bi-arrow-right"></i>
+          </a>
 
-      <div class="container">
-        <p>Development in progress...</p>
+          <div
+            class="offcanvas offcanvas-start show"
+            data-bs-scroll="true"
+            data-bs-backdrop="false"
+            tabindex="-1"
+            id="offcanvasScrolling"
+            aria-labelledby="offcanvasScrollingLabel"
+          >
+            <div class="offcanvas-header">
+              <button
+                type="button"
+                class="btn-close d-md-none"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+
+            <div class="offcanvas-body">
+              <p class="d-inline-flex gap-1">
+                <a
+                  class="text-decoration-none fw-bold fs-4 text-secondary dropdown-toggle"
+                  data-bs-toggle="collapse"
+                  href="#products"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="products"
+                >
+                  All Products
+                </a>
+              </p>
+              <div class="collapse" id="products">
+                <div class="card card-body">
+                  <ul>
+                    <li><a href="#" class="dropdown-item">AIDA</a></li>
+                    <li><a href="#" class="dropdown-item">Twogere</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <!-- <hr class="mt-5" /> -->
+            <div class="offcanvas-body">
+              <p class="d-inline-flex gap-1">
+                <a
+                  class="text-decoration-none fw-bold fs-4 text-secondary dropdown-toggle"
+                  data-bs-toggle="collapse"
+                  href="#profile"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="profile"
+                >
+                  Profile
+                </a>
+              </p>
+              <div class="collapse" id="profile">
+                <div class="card card-body">
+                  <ul>
+                    <li><a href="#" class="dropdown-item">Settings</a></li>
+                    <li><a href="#" class="dropdown-item">logout</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 dashboard">
+          <section id="pricing" class="pricing section">
+            <!-- Section Title -->
+            <div class="container section-title">
+              <h2>Pricing</h2>
+              <p>
+                Explore our flexible pricing options tailored to meet your
+                organization's budget and requirements.
+              </p>
+            </div>
+            <!-- End Section Title -->
+
+            <div class="container">
+              <div class="row gy-4">
+                <div class="col-lg-4">
+                  <div class="pricing-item">
+                    <h3>AIDA - Business</h3>
+                    <p class="description">
+                      Transforming customer interactions with unparalleled
+                      efficiency and advanced capabilities.
+                    </p>
+                    <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
+                    <a href="./sphere_payments.html" class="cta-btn"
+                      >4 Days free trial</a
+                    >
+                    <p class="text-center small">No credit card required</p>
+                    <ul>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Unlimited Responses</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Unlimited Chat History</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Unlimited pages of Training</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Unlimied Document Upload</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i> <span>Success Manager</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Unlimited Statistics</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Full Widget Customization</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>WhatsApp Integration</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Instagram Integration</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i> <span>Team Management</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Admin Mobile Application</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Custom Mail Integration</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Pricing Item -->
+
+                <div class="col-lg-4">
+                  <div class="pricing-item featured">
+                    <p class="popular">Popular</p>
+                    <h3>"Twogere" - Standard</h3>
+                    <p class="description">
+                      Your essential tool for seamless sign language translation
+                      and communication accessibility.
+                    </p>
+                    <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
+                    <a href="./sphere_payments.html" class="cta-btn"
+                      >7 Days free trial</a
+                    >
+                    <p class="text-center small">No credit card required</p>
+                    <ul>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Multi-Language Translation</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Real-Time Translation</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Interactive Learning Modules</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Customizable User Interface</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Accessibility Features</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Integration with Social Media Platforms</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Advanced Document Upload</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Unlimited Chat History</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Success Coach Support</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Comprehensive Statistics</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Personalized Learning Plans</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Secure Data Encryption</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Pricing Item -->
+
+                <div class="col-lg-4">
+                  <div class="pricing-item">
+                    <h3>"Twogere" - Enterprise</h3>
+                    <p class="description">
+                      Advanced language translation API and comprehensive web
+                      dashboard solutions.
+                    </p>
+                    <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
+                    <a href="./sphere_payments.html" class="cta-btn"
+                      >7 Days free trial</a
+                    >
+                    <p class="text-center small">No credit card required</p>
+                    <ul>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Language Translation API</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Customizable Translation Models</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>High-Quality Translation</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Real-Time Translation</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Batch Translation</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Multi-Language Support</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i> <span>Web Dashboard</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Secure Data Handling</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Integration with Existing Systems</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i> <span>Usage Analytics</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Customizable User Permissions</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-check"></i>
+                        <span>Scalable Infrastructure</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- End Pricing Item -->
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
