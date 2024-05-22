@@ -114,10 +114,24 @@ h6 {
   }
 }
 
+.btn-getstarted {
+  width: 6.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-getstarted:has(i) {
+  width: 2.7rem;
+  height: 2.7rem;
+}
+
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
+  text-align: center;
   font-size: 14px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
