@@ -1,6 +1,7 @@
 let url = "https://api.cognospheredynamics.com";
 
 const form = document.querySelector(".signin");
+
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const formData = new FormData(form);
@@ -28,17 +29,7 @@ form.addEventListener("submit", (event) => {
       // console.log(data.access_token)
 
       localStorage.setItem("bearer_token", JSON.stringify(data.access_token));
-
-      console.log(JSON.parse(localStorage.getItem("bearer_token")));
-
-      document
-        .querySelector(".signin")
-        .setAttribute("class", "dashboard d.block");
-      document
-        .querySelector(".dashboard")
-        .setAttribute("class", "btn-getstarted d-none");
-
-      window.location.href = `/dashboard.html`;
+      window.location.href = `/index.html`;
     })
     .catch((error) => console.log(error));
 });
