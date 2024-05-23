@@ -187,4 +187,18 @@
   }
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
+
+  let bearer_token = localStorage.getItem("bearer_token");
+  let dashboard = document.getElementById("dashboard");
+  let signin = document.getElementById("signin");
+  let signout = document.getElementById("logout");
+  if (bearer_token) {
+    dashboard.classList.remove("d-none");
+    signin.classList.add("d-none");
+    // localStorage.setItem("bearer_token", "");
+  } else {
+    dashboard.classList.add("d-none");
+    signin.classList.remove("d-none");
+    signout.classList.add("d-none");
+  }
 })();

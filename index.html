@@ -125,14 +125,23 @@
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#pricing">Pricing</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            <li style="display: none">
-              <a href="https://app.cognospheredynamics.com/">Dashboard</a>
+            <li class="d-none" id="dashboard">
+              <a href="./sphere_dashboard.html">Dashboard</a>
+            </li>
+            <li>
+              <a href="#" id="logout" class="d-block d-md-none">logout</a>
             </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="./sphere_signin.html">Sign In</a>
+        <a class="btn-getstarted" id="signin" href="./sphere_signin.html"
+          >Sign In</a
+        >
+
+        <a class="ms-3 fs-3 d-none d-md-block" href="./sphere_signin.html"
+          ><i class="bi bi-box-arrow-in-right"></i
+        ></a>
       </div>
     </header>
 
@@ -1975,6 +1984,8 @@
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
     <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <script src="assets/js/functional/login.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
