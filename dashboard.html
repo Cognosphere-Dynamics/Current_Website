@@ -23,55 +23,6 @@
     <i class="bi bi-chevron-right"></i>
   </h5>
 
-  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-    <ul class="nav nav-pills flex-column">
-      <li>
-        <a class="nav-link px-3 sidebar-link text-dark" data-bs-toggle="collapse" href="#layouts">
-          <span class="me-2"><i class="bi bi-cpu"></i></span>
-          <span>All Products</span>
-          <span class="ms-auto">
-            <span class="right-icon">
-              <i class="bi bi-chevron-down"></i>
-            </span>
-          </span>
-        </a>
-        <div class="collapse" id="layouts">
-          <ul class="navbar-nav ps-3">
-            <li>
-              <a href="#" class="nav-link dropdown-item ms-4"> AIDA </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link dropdown-item ms-4"> Twogere </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-    <ul class="nav nav-pills flex-column mb-5">
-      <li>
-        <a class="nav-link px-3 sidebar-link text-dark" data-bs-toggle="collapse" href="#layouts">
-          <span class="me-2"><i class="bi bi-cpu"></i></span>
-          <span>All Services</span>
-          <span class="ms-auto">
-            <span class="right-icon">
-              <i class="bi bi-chevron-down"></i>
-            </span>
-          </span>
-        </a>
-        <div class="collapse" id="layouts">
-          <ul class="navbar-nav ps-3">
-            <li>
-              <a href="#" class="nav-link dropdown-item ms-4"> AIDA </a>
-            </li>
-            <li>
-              <a href="#" class="nav-link dropdown-item ms-4"> Twogere </a>
-            </li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </div>
   <nav class="navbar navbar-expand-md mb-4 fixed-top bg-white navbar-dashboard">
     <div class="container-fluid">
       <div class="sphere_gif">
@@ -95,17 +46,17 @@
           </li>
         </ul>
         <div class="d-flex align-items-center">
-          <i class="bi bi-envelope fs-3"></i>
+          <img src="./assets/dash_icons/msg_inbox.png">
           <div class="dropdown">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="https://www.w3schools.com/howto/img_avatar.png" alt="avator" width="32" height="32"
                 class="rounded-circle me-2" />
-              <strong class="lead ms-2">User</strong>
+              <strong class="lead ms-2">User Name</strong>
             </button>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item" href="#">change Password</a></li>
-              <li>
+              <li class="link_class"><a class="dropdown-item" href="#">Account</a></li>
+              <li class="link_class"><a class="dropdown-item" href="#">change Password</a></li>
+              <li class="link_class">
                 <a class="dropdown-item" href="#">Logout</a>
               </li>
             </ul>
@@ -115,580 +66,634 @@
     </div>
   </nav>
 
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+    id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <style>
+      .link_class:hover {
+        background-color: #388da8;
+      }
+    </style>
+    <ul class="nav nav-pills flex-column">
+      <li>
+        <a class="nav-link px-3 sidebar-link text-dark" data-bs-toggle="collapse" href="#layouts">
+          <span class="me-2"><i class="bi bi-cpu"></i></span>
+          <span>All Products</span>
+          <span class="ms-auto">
+            <span class="right-icon">
+              <i class="bi bi-chevron-down"></i>
+            </span>
+          </span>
+        </a>
+        <div class="collapse" id="layouts">
+          <ul class="navbar-nav ps-3">
+            <li class="link_class">
+              <a href="#" class="nav-link dropdown-item ms-4"> AIDA </a>
+            </li>
+            <li class="link_class">
+              <a href="#" class="nav-link dropdown-item ms-4"> Twogere </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <ul class="nav nav-pills flex-column mb-5">
+      <li>
+        <a class="nav-link px-3 sidebar-link text-dark" data-bs-toggle="collapse" href="#layouts">
+          <span class="me-2"><i class="bi bi-cpu"></i></span>
+          <span>All Services</span>
+          <span class="ms-auto">
+            <span class="right-icon">
+              <i class="bi bi-chevron-down"></i>
+            </span>
+          </span>
+        </a>
+        <div class="collapse" id="layouts">
+          <ul class="navbar-nav ps-3">
+            <li class="link_class">
+              <a href="#" class="nav-link dropdown-item ms-4"> AIDA </a>
+            </li>
+            <li class="link_class">
+              <a href="#" class="nav-link dropdown-item ms-4"> Twogere </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+`<!-- Products section -->
   <section id="pricing" class="pricing section">
-    <!-- Section Title -->
-    <div class="container-fluid p-2 section-title" data-aos="fade-up">
-      <h2>Pricing</h2>
-    </div>
-    <!-- End Section Title -->
-
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-          <div class="pricing-item">
-            <h3>AIDA - Business</h3>
-            <p class="description">
-              Transforming customer interactions with unparalleled
-              efficiency and advanced capabilities.
-            </p>
-            <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
-            <a href="./sphere_payments.html" class="cta-btn">4 Days free trial</a>
-            <p class="text-center small">No credit card required</p>
-            <ul>
-              <li>
-                <i class="bi bi-check"></i> <span>Unlimited Responses</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Unlimited Chat History</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Unlimited pages of Training</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Unlimied Document Upload</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i> <span>Success Manager</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Unlimited Statistics</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Full Widget Customization</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>WhatsApp Integration</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Instagram Integration</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i> <span>Team Management</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Admin Mobile Application</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Custom Mail Integration</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- End Pricing Item -->
-
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-          <div class="pricing-item featured">
-            <p class="popular">Popular</p>
-            <h3>"Twogere" - Standard</h3>
-            <p class="description">
-              Your essential tool for seamless sign language translation and
-              communication accessibility.
-            </p>
-            <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
-            <a href="./sphere_payments.html" class="cta-btn">7 Days free trial</a>
-            <p class="text-center small">No credit card required</p>
-            <ul>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Multi-Language Translation</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Real-Time Translation</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Interactive Learning Modules</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Customizable User Interface</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Accessibility Features</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Integration with Social Media Platforms</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Advanced Document Upload</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Unlimited Chat History</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Success Coach Support</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Comprehensive Statistics</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Personalized Learning Plans</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Secure Data Encryption</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- End Pricing Item -->
-
-        <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-          <div class="pricing-item">
-            <h3>"Twogere" - Enterprise</h3>
-            <p class="description">
-              Advanced language translation API and comprehensive web
-              dashboard solutions.
-            </p>
-            <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
-            <a href="./sphere_payments.html" class="cta-btn">7 Days free trial</a>
-            <p class="text-center small">No credit card required</p>
-            <ul>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Language Translation API</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Customizable Translation Models</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>High-Quality Translation</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Real-Time Translation</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i> <span>Batch Translation</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Multi-Language Support</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i> <span>Web Dashboard</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Secure Data Handling</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Integration with Existing Systems</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i> <span>Usage Analytics</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Customizable User Permissions</span>
-              </li>
-              <li>
-                <i class="bi bi-check"></i>
-                <span>Scalable Infrastructure</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <!-- End Pricing Item -->
+    <div>
+      <div class="container-fluid p-2 section-title" data-aos="fade-up">
+        <h2>Pricing</h2>
       </div>
-      <div class="col-12 p-2 mt-4 button-bottom">
-        <button type="submit" class="btn rounded-pill" style="width: 100%; background: #388da8; color: white">
-          continue free trail
-        </button>
+  
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>AIDA - Business</h3>
+              <p class="description">
+                Transforming customer interactions with unparalleled
+                efficiency and advanced capabilities.
+              </p>
+              <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
+              <a href="./sphere_payments.html" class="cta-btn">4 Days free trial</a>
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i> <span>Unlimited Responses</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited Chat History</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited pages of Training</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimied Document Upload</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Success Manager</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited Statistics</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Full Widget Customization</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>WhatsApp Integration</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Instagram Integration</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Team Management</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Admin Mobile Application</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Custom Mail Integration</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+  
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+              <p class="popular">Popular</p>
+              <h3>"Twogere" - Standard</h3>
+              <p class="description">
+                Your essential tool for seamless sign language translation and
+                communication accessibility.
+              </p>
+              <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
+              <a href="./sphere_payments.html" class="cta-btn">7 Days free trial</a>
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Multi-Language Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Real-Time Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Interactive Learning Modules</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Customizable User Interface</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Accessibility Features</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Integration with Social Media Platforms</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Advanced Document Upload</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited Chat History</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Success Coach Support</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Comprehensive Statistics</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Personalized Learning Plans</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Secure Data Encryption</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+  
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>"Twogere" - Enterprise</h3>
+              <p class="description">
+                Advanced language translation API and comprehensive web
+                dashboard solutions.
+              </p>
+              <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
+              <a href="./sphere_payments.html" class="cta-btn">7 Days free trial</a>
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Language Translation API</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Customizable Translation Models</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>High-Quality Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Real-Time Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Batch Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Multi-Language Support</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Web Dashboard</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Secure Data Handling</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Integration with Existing Systems</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Usage Analytics</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Customizable User Permissions</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Scalable Infrastructure</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+        </div>
+        <div class="col-12 p-2 mt-4 button-bottom">
+          <button type="submit" class="btn rounded-pill" style="width: 100%; background: #388da8; color: white">
+            continue free trail
+          </button>
+        </div>
       </div>
     </div>
 
-    <!-- Starter Section Section -->
-    <section id="starter-section" class="starter-section section">
-      <div class="container" data-aos="fade-up">
-        <section class="inner-page">
-          <div class="container">
-            <main>
-              <div class="py-2 text-center">
-                <h2>Process Payment</h2>
-                <p class="lead">
-                  Your payment peace of mind is our priority! If any issues
-                  arise, our dedicated team is here to help. Trust us to
-                  ensure smooth transactions every step of the way.
-                </p>
-              </div>
+    <div class="container" data-aos="fade-up">
+      <section class="inner-page">
+        <div class="container">
+          <main>
+            <div class="py-2 text-center">
+              <h2>Process Payment</h2>
+              <p class="lead">
+                Your payment peace of mind is our priority! If any issues
+                arise, our dedicated team is here to help. Trust us to
+                ensure smooth transactions every step of the way.
+              </p>
+            </div>
 
-              <div class="row g-5">
-                <div class="col-md-5 col-lg-4 order-md-last">
-                  <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span class="text-primary">Your cart</span>
-                    <span class="badge bg-primary rounded-pill">3</span>
-                  </h4>
-                  <ul class="list-group mb-3">
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                        <h6 class="my-0">Product name</h6>
-                        <small class="text-muted">Brief description</small>
-                      </div>
-                      <span class="text-muted">$12</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                        <h6 class="my-0">Second product</h6>
-                        <small class="text-muted">Brief description</small>
-                      </div>
-                      <span class="text-muted">$8</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between lh-sm">
-                      <div>
-                        <h6 class="my-0">Third item</h6>
-                        <small class="text-muted">Brief description</small>
-                      </div>
-                      <span class="text-muted">$5</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between bg-light">
-                      <div class="text-success">
-                        <h6 class="my-0">Promo code</h6>
-                        <small>EXAMPLECODE</small>
-                      </div>
-                      <span class="text-success">−$5</span>
-                    </li>
-                    <li class="list-group-item d-flex justify-content-between">
-                      <span>Total (USD)</span>
-                      <strong>$20</strong>
-                    </li>
-                  </ul>
-
-                  <div class="mt-3">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="same-address" />
-                      <label class="form-check-label" for="same-address">Agree to our Terms of Use and Terms and
-                        Conditions.</label>
+            <div class="row g-5">
+              <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-primary">Your cart</span>
+                  <span class="badge bg-primary rounded-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 class="my-0">Product name</h6>
+                      <small class="text-muted">Brief description</small>
                     </div>
-
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="save-info" />
-                      <label class="form-check-label" for="save-info">Get periodic updates on new features and add ons,
-                        change in pricing and new releases.</label>
+                    <span class="text-muted">$12</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 class="my-0">Second product</h6>
+                      <small class="text-muted">Brief description</small>
                     </div>
+                    <span class="text-muted">$8</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between lh-sm">
+                    <div>
+                      <h6 class="my-0">Third item</h6>
+                      <small class="text-muted">Brief description</small>
+                    </div>
+                    <span class="text-muted">$5</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between bg-light">
+                    <div class="text-success">
+                      <h6 class="my-0">Promo code</h6>
+                      <small>EXAMPLECODE</small>
+                    </div>
+                    <span class="text-success">−$5</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Total (USD)</span>
+                    <strong>$20</strong>
+                  </li>
+                </ul>
+
+                <div class="mt-3">
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="same-address" />
+                    <label class="form-check-label" for="same-address">Agree to our Terms of Use and Terms and
+                      Conditions.</label>
+                  </div>
+
+                  <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="save-info" />
+                    <label class="form-check-label" for="save-info">Get periodic updates on new features and add ons,
+                      change in pricing and new releases.</label>
                   </div>
                 </div>
-                <div class="col-md-7 col-lg-8">
-                  <h4 class="mb-3">Account Details</h4>
-                  <form class="needs-validation" novalidate>
-                    <div class="row g-3">
-                      <div class="col-sm-6">
-                        <label for="firstName" class="form-label">First name</label>
-                        <input type="text" class="form-control rounded-pill" id="firstName" placeholder="" value=""
-                          required />
-                        <div class="invalid-feedback">
-                          Valid first name is required.
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Last name</label>
-                        <input type="text" class="form-control rounded-pill" id="lastName" placeholder="" value=""
-                          required />
-                        <div class="invalid-feedback">
-                          Valid last name is required.
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <label for="username" class="form-label">Username</label>
-                        <div class="input-group has-validation">
-                          <span class="input-group-text">@</span>
-                          <input type="text" class="form-control rounded-40" id="username" placeholder="Username"
-                            required />
-                          <div class="invalid-feedback">
-                            Your username is required.
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6">
-                        <label for="email" class="form-label">Email
-                          <span class="text-muted">(Strongly Needed)</span></label>
-                        <input type="email" class="form-control rounded-pill" id="email" placeholder="you@example.com"
-                          required />
-                        <div class="invalid-feedback">
-                          Please enter a valid email address for account
-                          activation.
-                        </div>
-                      </div>
-
-                      <div class="col-sm-6">
-                        <label for="lastName" class="form-label">Verify Email</label>
-                        <input type="text" class="form-control rounded-pill" id="" placeholder="OTP" value=""
-                          required />
-                        <div class="invalid-feedback">
-                          Valid OTP required.
-                        </div>
-                      </div>
-                    </div>
-                    <hr class="my-4" />
-                    <h4 class="mt-3 mb-3">Business Profile</h4>
-                    <div class="row g-3">
-                      <div class="col-12">
-                        <label for="address" class="form-label">Organization name</label>
-                        <input type="text" class="form-control rounded-pill" id="address" placeholder="1234 Main St"
-                          required />
-                        <div class="invalid-feedback">
-                          Please enter your shipping address.
-                        </div>
-                      </div>
-
-                      <div class="col-12">
-                        <label for="address2" class="form-label">Organization website</label>
-                        <input type="text" class="form-control rounded-pill" id="address2"
-                          placeholder="Apartment or suite" />
-                      </div>
-
-                      <div class="col-md-5">
-                        <label for="country" class="form-label">Country</label>
-                        <select class="form-select" id="country" style="
-                                  background-color: #fff;
-                                  border: #388da8 solid 2px;
-                                " required>
-                          <option value="">Choose...</option>
-                          <option>United States</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Please select a valid country.
-                        </div>
-                      </div>
-
-                      <div class="col-md-4">
-                        <label for="state" class="form-label">State</label>
-                        <select class="form-select" id="state" style="
-                                  background-color: #fff;
-                                  border: #388da8 solid 2px;
-                                " required>
-                          <option value="">Choose...</option>
-                          <option>California</option>
-                        </select>
-                        <div class="invalid-feedback">
-                          Please provide a valid state.
-                        </div>
-                      </div>
-
-                      <div class="col-md-3">
-                        <label for="zip" class="form-label">Zip</label>
-                        <input type="text" class="form-control" id="zip" placeholder="" required />
-                        <div class="invalid-feedback">Zip code required.</div>
-                      </div>
-                    </div>
-
-                    <hr class="my-4" />
-                    <h4 class="mt-3 mb-3">Payment Frequency</h4>
-
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-sm-3 mb-2">
-                          <div class="card p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                              <div class="d-flex align-items-center">
-                                <p class="pe-3">1 Month</p>
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input" type="checkbox" id="monthlyCheckbox"
-                                    name="periodCheckbox" onchange="handleCheckboxChange(this)" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-3 mb-2">
-                          <div class="card p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                              <div class="d-flex align-items-center">
-                                <p class="pe-3">3 Months</p>
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input" type="checkbox" id="quarterlyCheckbox"
-                                    name="periodCheckbox" onchange="handleCheckboxChange(this)" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-3 mb-2">
-                          <div class="card p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                              <div class="d-flex align-items-center">
-                                <p class="pe-3">6 Months</p>
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input" type="checkbox" id="semiAnnuallyCheckbox"
-                                    name="periodCheckbox" onchange="handleCheckboxChange(this)" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-sm-3 mb-2">
-                          <div class="card p-3">
-                            <div class="d-flex align-items-center justify-content-between">
-                              <div class="d-flex align-items-center">
-                                <p class="pe-3">1 Year</p>
-                                <div class="form-check form-switch">
-                                  <input class="form-check-input" type="checkbox" id="annuallyCheckbox"
-                                    name="periodCheckbox" onchange="handleCheckboxChange(this)" />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <script>
-                      function handleCheckboxChange(checkbox) {
-                        if (checkbox.checked) {
-                          var checkboxes =
-                            document.getElementsByName("periodCheckbox");
-                          checkboxes.forEach(function (item) {
-                            if (item !== checkbox) {
-                              item.checked = false;
-                            }
-                          });
-                        }
-                      }
-                    </script>
-
-                    <hr class="my-4" />
-
-                    <h4 class="mt-3 mb-3">Addons</h4>
-                    <div class="card p-3 mb-2">
-                      <div class="d-flex align-items-center justify-content-between">
-                        <div>
-                          <p class="fw-bold">Admin Mobile Application</p>
-                          <small class="text-muted">Manage and Monitor AI and other business
-                            activities.</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <p class="pe-3">10000 UGX</p>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="SwitchCheck" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card p-3 mb-2">
-                      <div class="d-flex align-items-center justify-content-between">
-                        <div>
-                          <p class="fw-bold">External Advertising</p>
-                          <small class="text-muted">Run external advertising on your
-                            platforms.</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <p class="pe-3">10000 UGX</p>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="SwitchCheck" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card p-3 mb-2">
-                      <div class="d-flex align-items-center justify-content-between">
-                        <div>
-                          <p class="fw-bold">Add Social Profiles</p>
-                          <small class="text-muted">Link your account to external social medial
-                            profiles for adds and notifications.</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                          <p class="pe-3">10000 UGX</p>
-                          <div class="form-check form-switch">
-                            <input class="form-check-input" type="checkbox" id="SwitchCheck" />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <hr class="my-4" />
-
-                    <h4 class="mt-3 mb-3">Payment</h4>
-
-                    <div class="my-3">
-                      <div class="form-check">
-                        <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
-                          required />
-                        <label class="form-check-label" for="credit">Credit card</label>
-                      </div>
-                      <div class="form-check">
-                        <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required />
-                        <label class="form-check-label" for="debit">Debit card</label>
-                      </div>
-                      <div class="form-check">
-                        <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required />
-                        <label class="form-check-label" for="paypal">PayPal</label>
-                      </div>
-                    </div>
-
-                    <div class="row gy-3">
-                      <div class="col-md-6">
-                        <label for="cc-name" class="form-label">Name on card</label>
-                        <input type="text" class="form-control rounded-pill" id="cc-name" placeholder="" required />
-                        <small class="text-muted">Full name as displayed on card</small>
-                        <div class="invalid-feedback">
-                          Name on card is required
-                        </div>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label for="cc-number" class="form-label">Credit card number</label>
-                        <input type="text" class="form-control rounded-pill" id="cc-number" placeholder="" required />
-                        <div class="invalid-feedback">
-                          Credit card number is required
-                        </div>
-                      </div>
-
-                      <div class="col-md-3">
-                        <label for="cc-expiration" class="form-label">Expiration</label>
-                        <input type="text" class="form-control rounded-pill" id="cc-expiration" placeholder=""
-                          required />
-                        <div class="invalid-feedback">
-                          Expiration date required
-                        </div>
-                      </div>
-
-                      <div class="col-md-3">
-                        <label for="cc-cvv" class="form-label">CVV</label>
-                        <input type="text" class="form-control rounded-pill" id="cc-cvv" placeholder="" required />
-                        <div class="invalid-feedback">
-                          Security code required
-                        </div>
-                      </div>
-                    </div>
-
-                    <hr class="my-4" />
-
-                    <button class="w-100 btn btn-theme btn-lg" type="submit">
-                      Proceed to Payement
-                    </button>
-                  </form>
-                </div>
               </div>
-            </main>
-          </div>
-        </section>
-      </div>
-    </section>
-    <!-- /Starter Section Section -->
+              <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Account Details</h4>
+                <form class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-sm-6">
+                      <label for="firstName" class="form-label">First name</label>
+                      <input type="text" class="form-control rounded-pill" id="firstName" placeholder="" value=""
+                        required />
+                      <div class="invalid-feedback">
+                        Valid first name is required.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Last name</label>
+                      <input type="text" class="form-control rounded-pill" id="lastName" placeholder="" value=""
+                        required />
+                      <div class="invalid-feedback">
+                        Valid last name is required.
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="username" class="form-label">Username</label>
+                      <div class="input-group has-validation">
+                        <span class="input-group-text">@</span>
+                        <input type="text" class="form-control rounded-40" id="username" placeholder="Username"
+                          required />
+                        <div class="invalid-feedback">
+                          Your username is required.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="email" class="form-label">Email
+                        <span class="text-muted">(Strongly Needed)</span></label>
+                      <input type="email" class="form-control rounded-pill" id="email" placeholder="you@example.com"
+                        required />
+                      <div class="invalid-feedback">
+                        Please enter a valid email address for account
+                        activation.
+                      </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                      <label for="lastName" class="form-label">Verify Email</label>
+                      <input type="text" class="form-control rounded-pill" id="" placeholder="OTP" value=""
+                        required />
+                      <div class="invalid-feedback">
+                        Valid OTP required.
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="my-4" />
+                  <h4 class="mt-3 mb-3">Business Profile</h4>
+                  <div class="row g-3">
+                    <div class="col-12">
+                      <label for="address" class="form-label">Organization name</label>
+                      <input type="text" class="form-control rounded-pill" id="address" placeholder="1234 Main St"
+                        required />
+                      <div class="invalid-feedback">
+                        Please enter your shipping address.
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <label for="address2" class="form-label">Organization website</label>
+                      <input type="text" class="form-control rounded-pill" id="address2"
+                        placeholder="Apartment or suite" />
+                    </div>
+
+                    <div class="col-md-5">
+                      <label for="country" class="form-label">Country</label>
+                      <select class="form-select" id="country" style="
+                                background-color: #fff;
+                                border: #388da8 solid 2px;
+                              " required>
+                        <option value="">Choose...</option>
+                        <option>United States</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please select a valid country.
+                      </div>
+                    </div>
+
+                    <div class="col-md-4">
+                      <label for="state" class="form-label">State</label>
+                      <select class="form-select" id="state" style="
+                                background-color: #fff;
+                                border: #388da8 solid 2px;
+                              " required>
+                        <option value="">Choose...</option>
+                        <option>California</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Please provide a valid state.
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <label for="zip" class="form-label">Zip</label>
+                      <input type="text" class="form-control" id="zip" placeholder="" required />
+                      <div class="invalid-feedback">Zip code required.</div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+                  <h4 class="mt-3 mb-3">Payment Frequency</h4>
+
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-3 mb-2">
+                        <div class="card p-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                              <p class="pe-3">1 Month</p>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="monthlyCheckbox"
+                                  name="periodCheckbox" onchange="handleCheckboxChange(this)" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3 mb-2">
+                        <div class="card p-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                              <p class="pe-3">3 Months</p>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="quarterlyCheckbox"
+                                  name="periodCheckbox" onchange="handleCheckboxChange(this)" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3 mb-2">
+                        <div class="card p-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                              <p class="pe-3">6 Months</p>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="semiAnnuallyCheckbox"
+                                  name="periodCheckbox" onchange="handleCheckboxChange(this)" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-3 mb-2">
+                        <div class="card p-3">
+                          <div class="d-flex align-items-center justify-content-between">
+                            <div class="d-flex align-items-center">
+                              <p class="pe-3">1 Year</p>
+                              <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="annuallyCheckbox"
+                                  name="periodCheckbox" onchange="handleCheckboxChange(this)" />
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <script>
+                    function handleCheckboxChange(checkbox) {
+                      if (checkbox.checked) {
+                        var checkboxes =
+                          document.getElementsByName("periodCheckbox");
+                        checkboxes.forEach(function (item) {
+                          if (item !== checkbox) {
+                            item.checked = false;
+                          }
+                        });
+                      }
+                    }
+                  </script>
+
+                  <hr class="my-4" />
+
+                  <h4 class="mt-3 mb-3">Addons</h4>
+                  <div class="card p-3 mb-2">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="fw-bold">Admin Mobile Application</p>
+                        <small class="text-muted">Manage and Monitor AI and other business
+                          activities.</small>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <p class="pe-3">10000 UGX</p>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="SwitchCheck" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card p-3 mb-2">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="fw-bold">External Advertising</p>
+                        <small class="text-muted">Run external advertising on your
+                          platforms.</small>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <p class="pe-3">10000 UGX</p>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="SwitchCheck" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card p-3 mb-2">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div>
+                        <p class="fw-bold">Add Social Profiles</p>
+                        <small class="text-muted">Link your account to external social medial
+                          profiles for adds and notifications.</small>
+                      </div>
+                      <div class="d-flex align-items-center">
+                        <p class="pe-3">10000 UGX</p>
+                        <div class="form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="SwitchCheck" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <h4 class="mt-3 mb-3">Payment</h4>
+
+                  <div class="my-3">
+                    <div class="form-check">
+                      <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
+                        required />
+                      <label class="form-check-label" for="credit">Credit card</label>
+                    </div>
+                    <div class="form-check">
+                      <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required />
+                      <label class="form-check-label" for="debit">Debit card</label>
+                    </div>
+                    <div class="form-check">
+                      <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required />
+                      <label class="form-check-label" for="paypal">PayPal</label>
+                    </div>
+                  </div>
+
+                  <div class="row gy-3">
+                    <div class="col-md-6">
+                      <label for="cc-name" class="form-label">Name on card</label>
+                      <input type="text" class="form-control rounded-pill" id="cc-name" placeholder="" required />
+                      <small class="text-muted">Full name as displayed on card</small>
+                      <div class="invalid-feedback">
+                        Name on card is required
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label for="cc-number" class="form-label">Credit card number</label>
+                      <input type="text" class="form-control rounded-pill" id="cc-number" placeholder="" required />
+                      <div class="invalid-feedback">
+                        Credit card number is required
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <label for="cc-expiration" class="form-label">Expiration</label>
+                      <input type="text" class="form-control rounded-pill" id="cc-expiration" placeholder=""
+                        required />
+                      <div class="invalid-feedback">
+                        Expiration date required
+                      </div>
+                    </div>
+
+                    <div class="col-md-3">
+                      <label for="cc-cvv" class="form-label">CVV</label>
+                      <input type="text" class="form-control rounded-pill" id="cc-cvv" placeholder="" required />
+                      <div class="invalid-feedback">
+                        Security code required
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr class="my-4" />
+
+                  <button class="w-100 btn btn-theme btn-lg" type="submit">
+                    Proceed to Payement
+                  </button>
+                </form>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+    </div>
   </section>
+  <!-- End Products section -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
