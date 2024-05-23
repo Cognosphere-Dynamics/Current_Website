@@ -53,7 +53,7 @@
 
 :root {
   --offcanvas-width: 200px;
-  --topNavbarHeight: 56px;
+  --topNavbarHeight: 70px;
 }
 
 /*--------------------------------------------------------------
@@ -129,6 +129,10 @@ h6 {
 
 .offcanvas {
   width: var(--offcanvas-width) !important;
+  margin-top: var(--topNavbarHeight);
+}
+.navbar-dashboard {
+  border-bottom: 1px solid #dee2e6;
 }
 
 .sphere_gif {
@@ -169,12 +173,6 @@ h6 {
   .reveal-btn,
   .hide-btn {
     visibility: visible;
-  }
-  .reveal {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 1000;
   }
 }
 
