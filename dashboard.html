@@ -39,29 +39,6 @@
       id="offcanvasScrolling"
       aria-labelledby="offcanvasScrollingLabel"
     >
-      <div class="offcanvas-header">
-        <div class="d-flex align-center justify-center flex-column">
-          <div class="sphere_gif">
-            <img
-              src="assets/img/sphere_site_3.gif"
-              alt="sphere_site_3.gif"
-              class="sphere-img"
-            />
-          </div>
-          <h5 class="fw-bold">Cognosphere</h5>
-          <h5 class="fw-bold">Dynamics</h5>
-        </div>
-
-        <h5
-          type="button"
-          class="hide-btn"
-          data-bs-dismiss="offcanvas"
-          aria-label="Close"
-        >
-          <i class="bi bi-chevron-left"></i>
-        </h5>
-      </div>
-      <hr />
       <ul class="nav nav-pills flex-column mb-5">
         <li>
           <a
@@ -88,56 +65,105 @@
             </ul>
           </div>
         </li>
-        <li>
-          <a href="/announcement" class="nav-link px-3 text-dark">
-            <span class="me-2"><i class="bi bi-megaphone"></i></span>
-            <span>Announcement</span>
-          </a>
-        </li>
       </ul>
-      <hr class="mt-5" />
       <ul class="nav nav-pills flex-column mb-5">
         <li>
           <a
             class="nav-link px-3 sidebar-link text-dark"
             data-bs-toggle="collapse"
-            href="#info"
+            href="#layouts"
           >
-            <img
-              src="https://www.w3schools.com/howto/img_avatar.png"
-              alt="avator"
-              width="32"
-              height="32"
-              class="rounded-circle me-2"
-            />
-            <strong class="lead ms-2">User</strong>
+            <span class="me-2"><i class="bi bi-cpu"></i></span>
+            <span>All Services</span>
             <span class="ms-auto">
-              <span class="right-icon text-dark">
-                <i class="bi bi-chevron-down" style="color: #000"></i>
+              <span class="right-icon">
+                <i class="bi bi-chevron-down"></i>
               </span>
             </span>
           </a>
-          <div class="collapse" id="info">
+          <div class="collapse" id="layouts">
             <ul class="navbar-nav ps-3">
               <li>
-                <a href="#" class="nav-link dropdown-item ms-4">Account</a>
+                <a href="#" class="nav-link dropdown-item ms-4"> AIDA </a>
               </li>
               <li>
-                <a href="#" class="nav-link dropdown-item ms-4"
-                  >Change Password</a
-                >
-              </li>
-              <hr />
-              <li>
-                <a href="#" class="nav-link dropdown-item ms-4"> Sign Out </a>
+                <a href="#" class="nav-link dropdown-item ms-4"> Twogere </a>
               </li>
             </ul>
           </div>
         </li>
       </ul>
     </div>
+    <nav
+      class="navbar navbar-expand-md mb-4 fixed-top bg-white navbar-dashboard"
+    >
+      <div class="container-fluid">
+        <div class="sphere_gif">
+          <img
+            src="assets/img/sphere_site_3.gif"
+            alt="sphere_site_3.gif"
+            class="sphere-img"
+          />
+        </div>
+        <a class="navbar-brand ms-2" href="#">Cognosphere Dynamics</a>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="navbarCollapse">
+          <ul
+            class="navbar-nav me-auto mb-2 mb-md-0"
+            style="visibility: hidden"
+          >
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-envelope fs-3"></i>
+            <div class="dropdown">
+              <button
+                class="btn dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="https://www.w3schools.com/howto/img_avatar.png"
+                  alt="avator"
+                  width="32"
+                  height="32"
+                  class="rounded-circle me-2"
+                />
+                <strong class="lead ms-2">User</strong>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Account</a></li>
+                <li><a class="dropdown-item" href="#">change Password</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Logout</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <section id="pricing" class="pricing section">
-      <p class="text-center">Development in progress...</p>
       <!-- Section Title -->
       <div class="container-fluid section-title" data-aos="fade-up">
         <h2>Pricing</h2>
@@ -158,10 +184,7 @@
                 and advanced capabilities.
               </p>
               <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
-              <a href="./sphere_payments.html" class="cta-btn"
-                >4 Days free trial</a
-              >
-              <p class="text-center small">No credit card required</p>
+
               <ul>
                 <li>
                   <i class="bi bi-check"></i> <span>Unlimited Responses</span>
@@ -222,10 +245,7 @@
                 communication accessibility.
               </p>
               <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
-              <a href="./sphere_payments.html" class="cta-btn"
-                >7 Days free trial</a
-              >
-              <p class="text-center small">No credit card required</p>
+
               <ul>
                 <li>
                   <i class="bi bi-check"></i>
@@ -288,10 +308,7 @@
                 dashboard solutions.
               </p>
               <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
-              <a href="./sphere_payments.html" class="cta-btn"
-                >7 Days free trial</a
-              >
-              <p class="text-center small">No credit card required</p>
+
               <ul>
                 <li>
                   <i class="bi bi-check"></i>
@@ -340,6 +357,15 @@
             </div>
           </div>
           <!-- End Pricing Item -->
+        </div>
+        <div class="col-12 p-2 button-bottom" style="width: 100%">
+          <button
+            type="submit"
+            class="btn rounded-pill"
+            style="width: 100%; background: #388da8; color: white"
+          >
+            continue free trail
+          </button>
         </div>
       </div>
     </section>
