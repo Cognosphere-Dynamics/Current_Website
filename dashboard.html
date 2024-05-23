@@ -30,8 +30,9 @@
           <img src="assets/img/sphere_site_3.gif" alt="sphere_site_3.gif" class="sphere-img" />
         </div>
         <a class="navbar-brand ms-2" href="#">Cognosphere Dynamics.</a>
-        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+          aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
@@ -125,7 +126,7 @@
   </div>
 
 
-`<!-- Products section -->
+  `<!-- Products section -->
   <section id="pricing" class="pricing section">
     <div id="default_dash_ui_div">Sample Default Dash UI</div>
 
@@ -197,7 +198,7 @@
             </div>
           </div>
           <!-- End Pricing Item -->
-  
+
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
             <div class="pricing-item featured">
               <p class="popular">Popular</p>
@@ -262,7 +263,7 @@
             </div>
           </div>
           <!-- End Pricing Item -->
-  
+
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
             <div class="pricing-item">
               <h3>"Twogere" - Enterprise</h3>
@@ -332,20 +333,11 @@
       </div>
     </div>
 
-      <!-- AIDA Payment -->
+    <!-- AIDA Payment -->
     <div id="aida_payment_form" class="container" data-aos="fade-up" style="display: none;">
       <section class="inner-page">
         <div class="container">
           <main>
-            <div class="py-2 text-center">
-              <h2>Process Payment</h2>
-              <p class="lead">
-                Your payment peace of mind is our priority! If any issues
-                arise, our dedicated team is here to help. Trust us to
-                ensure smooth transactions every step of the way.
-              </p>
-            </div>
-
             <div class="row g-5">
               <div class="col-md-5 col-lg-4 order-md-last">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
@@ -448,8 +440,7 @@
 
                     <div class="col-sm-6">
                       <label for="lastName" class="form-label">Verify Email</label>
-                      <input type="text" class="form-control rounded-pill" id="" placeholder="OTP" value=""
-                        required />
+                      <input type="text" class="form-control rounded-pill" id="" placeholder="OTP" value="" required />
                       <div class="invalid-feedback">
                         Valid OTP required.
                       </div>
@@ -637,8 +628,7 @@
 
                   <div class="my-3">
                     <div class="form-check">
-                      <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked
-                        required />
+                      <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required />
                       <label class="form-check-label" for="credit">Credit card</label>
                     </div>
                     <div class="form-check">
@@ -671,8 +661,7 @@
 
                     <div class="col-md-3">
                       <label for="cc-expiration" class="form-label">Expiration</label>
-                      <input type="text" class="form-control rounded-pill" id="cc-expiration" placeholder=""
-                        required />
+                      <input type="text" class="form-control rounded-pill" id="cc-expiration" placeholder="" required />
                       <div class="invalid-feedback">
                         Expiration date required
                       </div>
@@ -703,35 +692,30 @@
   <!-- End Products section -->
 
   <script>
-      var default_ui = document.getElementById("default_dash_ui_div");
-var aida_pricing_var = document.getElementById("aida_pricing");
-var aida_payment_form_var = document.getElementById("aida_payment_form");
+    var default_ui = document.getElementById("default_dash_ui_div");
+    var aida_pricing_var = document.getElementById("aida_pricing");
+    var aida_payment_form_var = document.getElementById("aida_payment_form");
 
-function show_aida_pricing() {
-  default_ui.style.display = "none";
-  aida_pricing_var.style.display = "block";
-}
-function show_default_ui() {
-  hide_aida_pricing();
-  default_ui.style.display = "block";
-}
-function hide_default_ui() {
-  default_ui.style.display = "none";
-
-}
-    function hide_aida_pricing() {
-      aida_pricing_var.style.display = "none";
-
+    function show_aida_pricing() {
+      hide_all();
+      aida_pricing_var.style.display = "block";
+    }
+    
+    function show_default_ui() {
+      hide_all();
+      default_ui.style.display = "block";
     }
 
     function show_aida_payment_form() {
-      hide_default_ui();
-      hide_aida_pricing();
+      hide_all();
       aida_payment_form_var.style.display = "block";
     }
 
-    function hide_aida_payment_form() {
-
+    function hide_all() {
+      aida_payment_form_var.style.display = "none";
+      aida_pricing_var.style.display = "none";
+      default_ui.style.display = "none";
+      default_ui.style.display = "none";
     }
   </script>
 
