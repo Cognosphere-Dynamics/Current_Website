@@ -25,14 +25,17 @@
 
   <nav class="navbar navbar-expand-md mb-4 fixed-top bg-white navbar-dashboard">
     <div class="container-fluid">
-      <div class="sphere_gif">
-        <img src="assets/img/sphere_site_3.gif" alt="sphere_site_3.gif" class="sphere-img" />
+      <div style="display: flex;" onclick="show_default_ui()">
+        <div class="sphere_gif">
+          <img src="assets/img/sphere_site_3.gif" alt="sphere_site_3.gif" class="sphere-img" />
+        </div>
+        <a class="navbar-brand ms-2" href="#">Cognosphere Dynamics.</a>
+        <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
       </div>
-      <a class="navbar-brand ms-2" href="#">Cognosphere Dynamics.</a>
-      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
       <div class="navbar-collapse collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0" style="visibility: hidden">
           <li class="nav-item">
@@ -86,7 +89,7 @@
         </a>
         <div class="collapse" id="layouts">
           <ul class="navbar-nav ps-3">
-            <li class="link_class">
+            <li class="link_class" onclick="show_aida_pricing()">
               <a href="#" class="nav-link dropdown-item ms-4"> AIDA </a>
             </li>
             <li class="link_class">
@@ -124,11 +127,14 @@
 
 `<!-- Products section -->
   <section id="pricing" class="pricing section">
-    <div>
+    <div id="default_dash_ui_div">Sample Default Dash UI</div>
+
+    <!-- AIDA Pricing -->
+    <div id="aida_pricing" style="display: none;">
       <div class="container-fluid p-2 section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
+        <h2>AIDA Pricing</h2>
       </div>
-  
+      <!-- Payment 1 -->
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
@@ -139,7 +145,7 @@
                 efficiency and advanced capabilities.
               </p>
               <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
-              <a href="./sphere_payments.html" class="cta-btn">4 Days free trial</a>
+              <a onclick="show_aida_payment_form()" class="cta-btn">4 Days free trial</a>
               <p class="text-center small">No credit card required</p>
               <ul>
                 <li>
@@ -201,7 +207,7 @@
                 communication accessibility.
               </p>
               <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
-              <a href="./sphere_payments.html" class="cta-btn">7 Days free trial</a>
+              <a onclick="show_aida_payment_form()" class="cta-btn">7 Days free trial</a>
               <p class="text-center small">No credit card required</p>
               <ul>
                 <li>
@@ -265,7 +271,7 @@
                 dashboard solutions.
               </p>
               <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
-              <a href="./sphere_payments.html" class="cta-btn">7 Days free trial</a>
+              <a onclick="show_aida_payment_form()" class="cta-btn">7 Days free trial</a>
               <p class="text-center small">No credit card required</p>
               <ul>
                 <li>
@@ -326,7 +332,8 @@
       </div>
     </div>
 
-    <div class="container" data-aos="fade-up">
+      <!-- AIDA Payment -->
+    <div id="aida_payment_form" class="container" data-aos="fade-up" style="display: none;">
       <section class="inner-page">
         <div class="container">
           <main>
@@ -694,6 +701,39 @@
     </div>
   </section>
   <!-- End Products section -->
+
+  <script>
+      var default_ui = document.getElementById("default_dash_ui_div");
+var aida_pricing_var = document.getElementById("aida_pricing");
+var aida_payment_form_var = document.getElementById("aida_payment_form");
+
+function show_aida_pricing() {
+  default_ui.style.display = "none";
+  aida_pricing_var.style.display = "block";
+}
+function show_default_ui() {
+  hide_aida_pricing();
+  default_ui.style.display = "block";
+}
+function hide_default_ui() {
+  default_ui.style.display = "none";
+
+}
+    function hide_aida_pricing() {
+      aida_pricing_var.style.display = "none";
+
+    }
+
+    function show_aida_payment_form() {
+      hide_default_ui();
+      hide_aida_pricing();
+      aida_payment_form_var.style.display = "block";
+    }
+
+    function hide_aida_payment_form() {
+
+    }
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
