@@ -129,7 +129,7 @@
               <a href="./sphere_dashboard.html">Dashboard</a>
             </li>
             <li>
-              <a href="/logout" id="logout" class="d-block d-md-none">logout</a>
+              <a id="logout" class="d-block d-md-none">logout</a>
             </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -945,8 +945,8 @@
           </div>
           <div class="carousel-inner moreFeaturesCarousel container-fluid">
             <div class="carousel-item active" data-bs-interval="5000">
-              <div class="container-fluid inner-carousel">
-                <div class="row justify-content-around gy-4">
+              <div class="inner-carousel container-xl">
+                <div class="row gy-4 d-flex justify-content-between">
                   <div
                     class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
                     data-aos="fade-up"
@@ -1034,8 +1034,8 @@
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-              <div class="container-fluid inner-carousel">
-                <div class="row justify-content-around gy-4">
+              <div class="inner-carousel container-xl">
+                <div class="row gy-4 justify-content-between">
                   <div
                     class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
                     data-aos="fade-up"
@@ -1123,8 +1123,8 @@
               </div>
             </div>
             <div class="carousel-item" data-bs-interval="5000">
-              <div class="container-fluid inner-carousel">
-                <div class="row justify-content-around gy-4">
+              <div class="inner-carousel container-fluid container-xl">
+                <div class="row justify-content-between gy-4">
                   <div
                     class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
                     data-aos="fade-up"
@@ -1247,7 +1247,7 @@
         <!-- End Section Title -->
 
         <div class="container">
-          <div class="row gy-4">
+          <div class="row d-flex justify-content-center gy-4">
             <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
               <div class="pricing-item">
                 <h3>AIDA - Business</h3>
@@ -1455,7 +1455,7 @@
 
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+            <div data-aos="fade-up" data-aos-delay="100">
               <div class="faq-container">
                 <div class="faq-item faq-active">
                   <h3>Why the name "Cognosphere Dynamics"? &#128562;</h3>
@@ -1569,7 +1569,10 @@
       <!-- /Faq Section -->
 
       <!-- Testimonials Section -->
-      <section id="testimonials" class="testimonials section">
+      <section
+        id="testimonials"
+        class="testimonials section d-flex flex-column justify-content-center gy-4"
+      >
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Testimonials</h2>

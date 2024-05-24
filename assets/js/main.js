@@ -217,11 +217,7 @@
     if (isLoggedIn) {
       document.getElementById("dashboard").classList.remove("d-none");
       document.getElementById("signin").classList.add("d-none");
-      const timeout = 30 * 60 * 1000;
-      setTimeout(() => {
-        localStorage.removeItem("bearer_token");
-        updateUI();
-      }, timeout);
+      // const timeout = 30 * 60 * 1000;
     } else {
       document.getElementById("dashboard").classList.add("d-none");
       document.getElementById("signin").classList.remove("d-none");

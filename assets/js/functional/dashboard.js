@@ -53,3 +53,18 @@ function hide_dashboard() {
   twogere_ui.style.display = "none";
   payment_form_ui.style.display = "none";
 }
+
+// const timeout = 1 * 30 * 1000;
+// setTimeout(() => {
+//   localStorage.removeItem("bearer_token");
+// }, timeout);
+
+// async function myAuthCheck() {
+//   let bearer_token = localStorage.getItem("bearer_token");
+//   if (bearer_token) {
+//     console.log(bearer_token);
+//   } else {
+//     console.log("expired");
+//   }
+// }
+setInterval(myAuthCheck, 3000);
