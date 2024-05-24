@@ -22,16 +22,6 @@
 
   <body>
     <!-- Button to trigger offcanvas -->
-    <h5
-      type="button"
-      class="ms-2 mt-2 reveal-btn"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasScrolling"
-      aria-controls="offcanvasScrolling"
-    >
-      <i class="bi bi-chevron-right"></i>
-    </h5>
-
     <nav
       class="navbar navbar-expand-md mb-4 fixed-top bg-white navbar-dashboard"
     >
@@ -45,18 +35,18 @@
             />
           </div>
           <a class="navbar-brand ms-2" href="#">Cognosphere Dynamics.</a>
-          <button
-            class="navbar-toggler collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarCollapse"
-            aria-controls="navbarCollapse"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
         </div>
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
         <div class="navbar-collapse collapse" id="navbarCollapse">
           <ul
@@ -107,6 +97,15 @@
         </div>
       </div>
     </nav>
+    <h5
+      type="button"
+      class="ms-2 mt-2 reveal-btn"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasScrolling"
+      aria-controls="offcanvasScrolling"
+    >
+      <i class="bi bi-chevron-right"></i>
+    </h5>
 
     <div
       class="offcanvas offcanvas-start"
@@ -121,6 +120,17 @@
           background-color: #388da8;
         }
       </style>
+      <div class="offcanvas-header">
+        <span class="text-white d-block d-md-none">text</span>
+        <h5
+          type="button"
+          class="hide-btn d-block d-md-none"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        >
+          <i class="bi bi-chevron-left"></i>
+        </h5>
+      </div>
       <ul class="nav nav-pills flex-column">
         <li>
           <a
@@ -178,9 +188,23 @@
     </div>
 
     `<!-- Products section -->
-    <section id="pricing" class="pricing section">
-      <div id="default_dash_ui_div">Sample Default Dash UI</div>
+    <div class="page-title dashboard-page mt-5 pt-2">
+      <div
+        class="container d-lg-flex justify-content-between align-items-center"
+      >
+        <p class="mb-2 mb-lg-0">Sphere Dashboard</p>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="./index.html">Home</a></li>
+            <li class="current">Sphere Dashboard</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
 
+    <div id="default_dash_ui_div">Sample Dashboard UI</div>
+
+    <section id="aida-pricing" class="pricing section dashboard-page">
       <!-- AIDA Pricing -->
       <div id="aida_pricing" style="display: none">
         <div class="container-fluid p-2 section-title" data-aos="fade-up">
@@ -954,7 +978,7 @@
       </div>
     </section>
 
-    <section id="pricing" class="pricing section">
+    <section id="twogere-pricing" class="pricing section dashboard-page">
       <!-- AIDA Pricing -->
       <div id="twogere_pricing" style="display: none">
         <div class="container-fluid p-2 section-title" data-aos="fade-up">
@@ -1727,8 +1751,118 @@
         </section>
       </div>
     </section>
+
     <!-- End Products section -->
 
+    <footer id="footer" class="footer position-relative dashboard-page">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Cognosphere Dynamics.</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>New Port Bell Road</p>
+              <p>Nakawa, National ICT Innovation Hub</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+256 788 074869</span>
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <span>info@cognospheredynamics.com</span>
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./sphere_about_us.html">About us</a></li>
+              <li><a href="./index#services">Services</a></li>
+              <li><a href="./sphere_terms_of_use.html">Terms of Use</a></li>
+              <li><a href="./sphere_privacy_policy.html">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <a href="./sphere_service_natural_language_processing.html"
+                  >Natural Language Processing</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_computer_vision.html"
+                  >Computer Vision</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_ai_robotics_consultancy.html"
+                  >ML & Robotics Consultancy</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_data_analysis.html"
+                  >Big Data Analysis</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_custom_ai_development.html"
+                  >Custom AI development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./sphere_service_ai_robotics_research_collaboration.html"
+                  >AI research and Collaboration</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              products and services!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Cognosphere Dynaics Limited</strong
+          ><span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
     <script>
       var default_ui = document.getElementById("default_dash_ui_div");
       var aida_pricing_var = document.getElementById("aida_pricing");
@@ -1795,5 +1929,6 @@
         updateView(x);
       });
     </script>
+    <script src="/assets/js/functional/protect.js"></script>
   </body>
 </html>

@@ -24,12 +24,12 @@ form.addEventListener("submit", (event) => {
         setTimeout(() => {
           message.textContent = "";
         }, 4000);
+      } else {
+        localStorage.setItem("bearer_token", JSON.stringify(data.access_token));
+        window.location.href = `/index.html`;
       }
 
       // console.log(data.access_token)
-
-      localStorage.setItem("bearer_token", JSON.stringify(data.access_token));
-      window.location.href = `/index.html`;
     })
     .catch((error) => console.log(error));
 });

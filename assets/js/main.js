@@ -4,7 +4,11 @@
  * Updated: May 01 2024 with Bootstrap v5.3.3
  * Author: BootstrapMade.com
  * License: https://bootstrapmade.com/license/
+ *
+ *
  */
+
+// protect.js
 
 (function () {
   "use strict";
@@ -188,17 +192,42 @@
   window.addEventListener("load", navmenuScrollspy);
   document.addEventListener("scroll", navmenuScrollspy);
 
-  let bearer_token = localStorage.getItem("bearer_token");
-  let dashboard = document.getElementById("dashboard");
-  let signin = document.getElementById("signin");
-  let signout = document.getElementById("logout");
-  if (bearer_token) {
-    dashboard.classList.remove("d-none");
-    signin.classList.add("d-none");
-    // localStorage.setItem("bearer_token", "");
-  } else {
-    dashboard.classList.add("d-none");
-    signin.classList.remove("d-none");
-    signout.classList.add("d-none");
+  document.getElementById("logout").addEventListener("click", function (event) {
+    event.preventDefault();
+    localStorage.removeItem("bearer_token");
+    window.location.href = `/index.html`;
+
+    updateUI();
+  });
+
+  document
+    .getElementById("logout-icon")
+    .addEventListener("click", function (event) {
+      event.preventDefault();
+
+      localStorage.removeItem("bearer_token");
+      window.location.href = `/index.html`;
+
+      updateUI();
+    });
+
+  function updateUI() {
+    const isLoggedIn = localStorage.getItem("bearer_token");
+
+    if (isLoggedIn) {
+      document.getElementById("dashboard").classList.remove("d-none");
+      document.getElementById("signin").classList.add("d-none");
+      const timeout = 30 * 60 * 1000;
+      setTimeout(() => {
+        localStorage.removeItem("bearer_token");
+        updateUI();
+      }, timeout);
+    } else {
+      document.getElementById("dashboard").classList.add("d-none");
+      document.getElementById("signin").classList.remove("d-none");
+      document.getElementById("logout-icon").classList.remove("d-md-block");
+      document.getElementById("logout").classList.add("d-none");
+    }
   }
+  updateUI();
 })();

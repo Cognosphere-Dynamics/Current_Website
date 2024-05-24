@@ -143,13 +143,14 @@ h6 {
   max-width: 100%;
   display: block;
 }
-#pricing {
+.dashboard-page {
   margin-left: calc(var(--offcanvas-width) + 0.25rem);
 }
 .reveal-btn {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
+  top: 3.75rem;
+  left: 0.5rem;
+  z-index: 999;
 }
 .reveal-btn,
 .hide-btn {
@@ -166,8 +167,8 @@ h6 {
   transform: rotate(180deg);
 }
 
-@media (max-width: 720px) {
-  #pricing {
+@media (max-width: 768px) {
+  .dashboard-page {
     margin-left: 0;
   }
   .reveal-btn,
