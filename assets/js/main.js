@@ -225,7 +225,7 @@
     } else {
       document.getElementById("dashboard").classList.add("d-none");
       document.getElementById("signin").classList.remove("d-none");
-      document.getElementById("logout-icon").classList.remove("d-md-block");
+      document.getElementById("logout-icon").classList.remove("d-lg-block");
       document.getElementById("logout").classList.add("d-none");
     }
   }
