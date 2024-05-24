@@ -3,6 +3,7 @@ const messageRegister = () => {
   document.querySelector(".name").value = "";
   document.querySelector(".phone").value = "";
   document.querySelector(".password").value = "";
+  document.querySelector(".confirm-password").value = "";
 };
 
 let url = "https://api.cognospheredynamics.com";
@@ -22,7 +23,8 @@ form.addEventListener("submit", (event) => {
       body: JSON.stringify(data),
     })
       .then((res) => res.json())
-      .then(() => {
+      .then((data) => {
+        console.log(data);
         messageRegister();
         window.location.href = `./sphere_signin.html`;
       })
