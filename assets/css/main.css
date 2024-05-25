@@ -131,6 +131,7 @@ h6 {
   width: var(--offcanvas-width) !important;
   margin-top: var(--topNavbarHeight);
 }
+
 .navbar-dashboard {
   border-bottom: 1px solid #dee2e6;
 }
@@ -139,30 +140,38 @@ h6 {
   width: 2rem;
   height: 2rem;
 }
+
 .sphere-img {
   max-width: 100%;
   display: block;
 }
+
 .dashboard-page {
   margin-left: calc(var(--offcanvas-width) + 0.25rem);
+  transition: margin-left 0.3s ease;
 }
+
 .reveal-btn {
   position: fixed;
   top: 3.75rem;
   left: 0.5rem;
   z-index: 999;
-}
-.reveal-btn,
-.hide-btn {
   visibility: hidden;
 }
+
+.hide-btn {
+  visibility: visible;
+}
+
 .sidebar-link {
   display: flex;
   align-items: center;
 }
+
 .sidebar-link .right-icon {
   display: inline-flex;
 }
+
 .sidebar-link[aria-expanded="true"] .right-icon {
   transform: rotate(180deg);
 }
@@ -171,6 +180,7 @@ h6 {
   .dashboard-page {
     margin-left: 0;
   }
+
   .reveal-btn,
   .hide-btn {
     visibility: visible;
