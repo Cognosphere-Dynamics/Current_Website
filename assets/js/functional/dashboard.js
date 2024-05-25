@@ -54,28 +54,34 @@ function hide_dashboard() {
   payment_form_ui.style.display = "none";
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  var offcanvasElement = document.getElementById("offcanvasScrolling");
-  var revealBtn = document.querySelector(".reveal-btn");
-  var dashboardPages = document.querySelectorAll(".dashboard-page");
+var offcanvasElement = document.getElementById("offcanvasScrolling");
+var revealBtn = document.querySelector(".reveal-btn");
+var dashboardPages = document.querySelectorAll(".dashboard-page");
 
-  offcanvasElement.addEventListener("hidden.bs.offcanvas", function () {
-    dashboardPages.forEach(function (dashboardPage) {
-      dashboardPage.style.margin = "0 auto";
-    });
-    revealBtn.style.visibility = "visible";
+offcanvasElement.addEventListener("hidden.bs.offcanvas", function () {
+  dashboardPages.forEach(function (dashboardPage) {
+    dashboardPage.style.margin = "0 auto";
   });
+  revealBtn.style.visibility = "visible";
+});
 
-  offcanvasElement.addEventListener("shown.bs.offcanvas", function () {
-    dashboardPages.forEach(function (dashboardPage) {
-      dashboardPage.style.marginLeft = "calc(var(--offcanvas-width) + 0.25rem)";
-    });
-    revealBtn.style.visibility = "hidden";
+offcanvasElement.addEventListener("shown.bs.offcanvas", function () {
+  dashboardPages.forEach(function (dashboardPage) {
+    dashboardPage.style.marginLeft = "calc(var(--offcanvas-width) + 0.25rem)";
   });
+  revealBtn.style.visibility = "hidden";
+});
 
-  revealBtn.addEventListener("click", function () {
-    var offcanvas = new bootstrap.Offcanvas(offcanvasElement);
-    offcanvas.show();
+revealBtn.addEventListener("click", function () {
+  var offcanvas = new bootstrap.Offcanvas(offcanvasElement);
+  offcanvas.show();
+});
+
+var hideBtn = document.querySelector(".hide-btn");
+hideBtn.addEventListener("click", function () {
+  offcanvasElement.classList.toggle("collapsed");
+  dashboardPages.forEach(function (dashboardPage) {
+    dashboardPage.classList.toggle("collapsed");
   });
 });
 
