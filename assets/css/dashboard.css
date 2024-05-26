@@ -1,18 +1,6 @@
-/* offcanvas  */
-
-:root {
-  --offcanvas-width: 200px;
-  --topNavbarHeight: 70px;
-  --offcanvas-min-width: 50px;
-}
-
-.offcanvas {
-  width: var(--offcanvas-width) !important;
-  margin-top: var(--topNavbarHeight);
-}
-
-.navbar-dashboard {
-  border-bottom: 1px solid #dee2e6;
+* {
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
 }
 
 .sphere_gif {
@@ -25,10 +13,30 @@
   display: block;
 }
 
+:root {
+  --offcanvas-width: 200px;
+  --topNavbarHeight: 70px;
+  --offcanvas-min-width: 50px;
+}
+
+.offcanvas {
+  width: var(--offcanvas-width) !important;
+  margin-top: var(--topNavbarHeight);
+  transition: width 0.3s ease; /* Smooth transition for width change */
+}
+
+.offcanvas.collapsed {
+  width: var(--offcanvas-min-width) !important; /* Width when collapsed */
+}
+
 .dashboard-page {
-  margin: 0 auto;
+  overflow-y: hidden;
   margin-left: calc(var(--offcanvas-width) + 0.25rem);
-  transition: margin-left 0.3s ease;
+  transition: margin-left 0.3s ease-in;
+}
+
+.dashboard-page.collapsed {
+  margin-left: calc(var(--offcanvas-min-width) + 0.25rem);
 }
 
 .reveal-btn {
