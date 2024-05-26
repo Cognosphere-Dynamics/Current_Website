@@ -97,14 +97,14 @@ function hide_dashboard_items() {
 
 hide_dashboard_items();
 preview.style.display = "block";
-dashboard_link.querySelector("a").classList.add("text-primary"); // Highlight the first link by default
+dashboard_link.querySelector("a").style.color = "#388da8"; // Highlight the first link by default
 
 dashboard_link.addEventListener("click", (event) => {
   event.preventDefault(); // Prevent the default behavior of the anchor tag
   hide_dashboard_items();
   preview.style.display = "block";
   removeActiveClassFromLinks();
-  dashboard_link.querySelector("a").classList.add("text-primary");
+  dashboard_link.querySelector("a").style.color = "#388da8";
 });
 
 conversation_link.addEventListener("click", (event) => {
@@ -112,7 +112,7 @@ conversation_link.addEventListener("click", (event) => {
   hide_dashboard_items();
   conversations.style.display = "block";
   removeActiveClassFromLinks();
-  conversation_link.querySelector("a").classList.add("text-primary");
+  conversation_link.querySelector("a").style.color = "#388da8";
 });
 
 finetune_AI_link.addEventListener("click", (event) => {
@@ -120,7 +120,7 @@ finetune_AI_link.addEventListener("click", (event) => {
   hide_dashboard_items();
   finetune_AI.style.display = "block";
   removeActiveClassFromLinks();
-  finetune_AI_link.querySelector("a").classList.add("text-primary");
+  finetune_AI_link.querySelector("a").style.color = "#388da8";
 });
 
 ai_settings_link.addEventListener("click", (event) => {
@@ -128,7 +128,7 @@ ai_settings_link.addEventListener("click", (event) => {
   hide_dashboard_items();
   ai_settings.style.display = "block";
   removeActiveClassFromLinks();
-  ai_settings_link.querySelector("a").classList.add("text-primary");
+  ai_settings_link.querySelector("a").style.color = "#388da8";
 });
 
 adds_marketing_link.addEventListener("click", (event) => {
@@ -136,7 +136,7 @@ adds_marketing_link.addEventListener("click", (event) => {
   hide_dashboard_items();
   adds_marketing.style.display = "block";
   removeActiveClassFromLinks();
-  adds_marketing_link.querySelector("a").classList.add("text-primary");
+  adds_marketing_link.querySelector("a").style.color = "#388da8";
 });
 
 account_settings_link.addEventListener("click", (event) => {
@@ -144,13 +144,13 @@ account_settings_link.addEventListener("click", (event) => {
   hide_dashboard_items();
   account_settings.style.display = "block";
   removeActiveClassFromLinks();
-  account_settings_link.querySelector("a").classList.add("text-primary");
+  account_settings_link.querySelector("a").style.color = "#388da8";
 });
 
 function removeActiveClassFromLinks() {
   const navLinks = document.querySelectorAll(".nav-link");
   navLinks.forEach((link) => {
-    link.classList.remove("text-primary");
+    link.style.color = "black";
   });
 }
 
