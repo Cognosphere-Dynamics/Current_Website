@@ -1,6 +1,28 @@
-* {
-  box-sizing: border-box;
-  /* overflow-x: hidden; */
+:root {
+  --offcanvas-width: 250px;
+  --offcanvas-collapsed-width: 70px;
+  --topNavbarHeight: 56px;
+}
+
+.offcanvas {
+  width: var(--offcanvas-width) !important;
+  margin-top: var(--topNavbarHeight);
+  transition: width 0.3s ease;
+}
+
+/* Added collapsed state styles */
+.offcanvas.collapsed {
+  width: var(--offcanvas-collapsed-width) !important;
+}
+
+.offcanvas.collapsed .offcanvas-header .text-white,
+.offcanvas.collapsed .nav-link span:not(.me-2),
+.offcanvas.collapsed .collapse {
+  display: none;
+}
+
+.navbar-dashboard {
+  border-bottom: 1px solid #dee2e6;
 }
 
 .sphere_gif {
@@ -13,30 +35,14 @@
   display: block;
 }
 
-:root {
-  --offcanvas-width: 200px;
-  --topNavbarHeight: 70px;
-  --offcanvas-min-width: 50px;
-}
-
-.offcanvas {
-  width: var(--offcanvas-width) !important;
-  margin-top: var(--topNavbarHeight);
-  transition: width 0.3s ease; /* Smooth transition for width change */
-}
-
-.offcanvas.collapsed {
-  width: var(--offcanvas-min-width) !important; /* Width when collapsed */
-}
-
 .dashboard-page {
-  overflow-y: hidden;
   margin-left: calc(var(--offcanvas-width) + 0.25rem);
-  transition: margin-left 0.3s ease-in;
+  transition: margin-left 0.3s ease;
 }
 
+/* Added collapsed state styles for dashboard pages */
 .dashboard-page.collapsed {
-  margin-left: calc(var(--offcanvas-min-width) + 0.25rem);
+  margin-left: calc(var(--offcanvas-collapsed-width) + 0.25rem);
 }
 
 .reveal-btn {
@@ -64,6 +70,10 @@
   transform: rotate(180deg);
 }
 
+.link_class:hover {
+  background-color: #388da8;
+}
+
 @media (max-width: 768px) {
   .dashboard-page {
     margin-left: 0;
@@ -73,13 +83,39 @@
   .hide-btn {
     visibility: visible;
   }
-}
 
-.default_dashboard {
-  width: 100%;
-  margin: 0 auto;
-}
+  .page-title {
+    margin-top: 1rem;
+    padding-top: 1rem;
+  }
 
-.amount {
-  font-size: 3rem;
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .breadcrumbs {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .breadcrumbs ol {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+  }
+
+  .breadcrumbs li {
+    list-style: none;
+    margin: 0 0.5rem;
+  }
+
+  .breadcrumbs li::after {
+    content: "/";
+    margin-left: 0.5rem;
+  }
+
+  .breadcrumbs li:last-child::after {
+    content: "";
+  }
 }
