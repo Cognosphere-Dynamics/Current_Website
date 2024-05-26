@@ -1,23 +1,24 @@
 <div class="bg-white border rounded shadow-sm mb-4 container">
   <div class="border-bottom px-3">
     <div class="d-flex justify-content-between">
-      <div class="d-lg-none text-primary py-4 fw-bold">Price Charts</div>
+      <div class="d-lg-none py-4 fw-bold">Price Charts</div>
       <div class="d-none d-lg-flex">
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-primary mr-3"
+          class="btn btn-link text-decoration-none me-3"
+          style="color: #388da8"
         >
           Model Personalizations
         </button>
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-muted mr-3"
+          class="btn btn-link text-decoration-none text-muted me-3"
         >
           Chat-Client Widget Customazations
         </button>
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-muted mr-3"
+          class="btn btn-link text-decoration-none text-muted me-3"
         >
           My Account & Plans
         </button>
@@ -25,31 +26,32 @@
       <div class="text-sm">
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-muted mr-2"
+          class="btn btn-link text-decoration-none text-muted me-2"
         >
           1M
         </button>
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-muted mr-2"
+          class="btn btn-link text-decoration-none text-muted me-2"
         >
           1D
         </button>
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-muted mr-2"
+          class="btn btn-link text-decoration-none text-muted me-2"
         >
           1W
         </button>
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-primary mr-2"
+          class="btn btn-link text-decoration-none me-2"
+          style="color: #388da8"
         >
           1M
         </button>
         <button
           type="button"
-          class="btn btn-link text-decoration-none text-muted mr-2"
+          class="btn btn-link text-decoration-none text-muted me-2"
         >
           1Y
         </button>
@@ -526,51 +528,58 @@
       </div>
     </div>
 
-    <div class="w-full pt-2 col-6">
-      <div id="central_div" style="width: 500px; height: 600px" class="ms-auto">
-        <div
-          id="central_div_2"
-          class="w-full h-full relative justify-center m-auto"
-        >
-          <div id="central_div_3" class="relative justify-center m-auto">
-            <div
-              class="header_bg flex items-center justify-between absolute top-0 text-center"
+    <div class="pt-2 col-lg-6">
+      <div id="central_div">
+        <div id="central_div_2" class="position-relative justify-center m-auto">
+          <div
+            id="central_div_3"
+            class="position-relative justify-center m-auto"
+          >
+            <p
+              id="header_txt"
+              class="text-center p-2 fs-4 border rounded position-absolute top-0 end-0 start-0"
+              style="
+                background-color: rgb(209 213 219 /1);
+                color: rgb(107 114 128 /1);
+              "
             >
-              <div class="flex-1">
-                <p id="header_txt" class="fs-4 mt-2">
-                  Welcome to Cognosphere Dynamics Limited!
-                </p>
-              </div>
-            </div>
+              Welcome to Scpel AI Software Foundation
+            </p>
 
             <div
               id="central_div_5"
-              class="bg-gray-200 justify-center overflow-y-auto m-auto pb-40 pt-20"
+              class="bg-gray-200 justify-content-center overflow-y-auto m-auto pb-40 pt-20"
             >
               <!-- User Sent message -->
-              <div class="d-flex flex-col gap-1">
-                <div class="d-flex flex-column p-4">
-                  <p class="text-lg font-normal text-justify">
-                    That's awesome. I think our users will really appreciate the
-                    improvements. The enhanced user interface and streamlined
-                    features are designed to provide a more intuitive and
-                    seamless experience. As we continue to prioritize user
-                    feedback, these updates aim to address common pain points
-                    and elevate overall satisfaction. We are excited about the
-                    positive impact these changes will have on our users'
-                    interactions with our platform, fostering a more enjoyable
-                    and efficient environment for everyone. Your commitment to
-                    delivering a top-notch user experience is truly commendable,
-                    and we look forward to the positive response from our valued
-                    user community.
-                  </p>
-                </div>
+              <div
+                class="d-flex flex-column p-4"
+                style="
+                  background-color: rgb(209 213 219 /0.3);
+                  color: rgb(107 114 128 /1);
+                "
+              >
+                <p>
+                  That's awesome. I think our users will really appreciate the
+                  improvements. The enhanced user interface and streamlined
+                  features are designed to provide a more intuitive and seamless
+                  experience. As we continue to prioritize user feedback, these
+                  updates aim to address common pain points and elevate overall
+                  satisfaction. We are excited about the positive impact these
+                  changes will have on our users' interactions with our
+                  platform, fostering a more enjoyable and efficient environment
+                  for everyone. Your commitment to delivering a top-notch user
+                  experience is truly commendable, and we look forward to the
+                  positive response from our valued user community.
+                </p>
               </div>
 
               <!-- Chatbot response -->
               <div class="d-flex flex-column gap-1 m-auto w-100">
-                <div class="d-flex flex-column p-4 bg-info">
-                  <p class="text-lg font-normal text-secondary text-justify">
+                <div
+                  class="d-flex flex-column p-4"
+                  style="background-color: rgb(63 131 248 / 0.3)"
+                >
+                  <p style="color: rgb(17 24 39 /1)">
                     That's awesome. I think our users will really appreciate the
                     improvements. The enhanced user interface and streamlined
                     features are designed to provide a more intuitive and
@@ -587,53 +596,54 @@
                 </div>
               </div>
             </div>
-
             <div
-              class="items-center absolute bottom-0 bg-white bg-opacity-90 w-full z-10 text-center pt-2"
+              class="d-flex align-items-center position-absolute bottom-0 bg-white w-100 text-center pt-2"
             >
-              <form>
-                <div class="flex items-center rounded-lg w-full">
+              <form class="w-100">
+                <div class="d-flex align-items-center rounded w-100">
                   <img
                     id="avatarButton"
                     type="button"
-                    data-dropdown-toggle="userDropdown"
-                    data-dropdown-placement="bottom-start"
-                    class="w-10 h-10 rounded-full ring-2 ring-gray-300 cursor-pointer m-2"
-                    src="./uict_logo.png"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    class="rounded-circle border border-secondary cursor-pointer m-2"
+                    src="https://randomuser.me/api/portraits/women/33.jpg"
                     alt="User dropdown"
+                    style="width: 40px; height: 40px"
                   />
+
                   <input
                     id="chat"
-                    rows="1"
-                    class="block p-2 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    class="form-control me-2"
                     placeholder="Message Earthena-CPT..."
+                    aria-label="Message Earthena-CPT..."
                   />
-                  <button
-                    type="submit"
-                    class="inline-flex justify-center pl-2 text-blue-600 rounded-full cursor-pointer hover:bg-blue-100 dark:text-blue-500 dark:hover:bg-gray-600"
-                  >
+                  <button type="submit" class="btn btn-link text-primary p-0">
                     <svg
-                      class="w-5 h-5 rotate-90 rtl:-rotate-90"
-                      aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 18 20"
+                      width="16"
+                      height="16"
+                      fill="#388da8"
+                      class="bi bi-send-fill"
+                      viewBox="0 0 16 16"
+                      style="
+                        width: 20px;
+                        height: 20px;
+                        transform: rotate(45deg);
+                      "
                     >
                       <path
-                        d="m17.914 18.594-8-18a1 1 0 0 0-1.828 0l-8 18a1 1 0 0 0 1.157 1.376L8 18.281V9a1 1 0 0 1 2 0v9.281l6.758 1.689a1 1 0 0 0 1.156-1.376Z"
+                        d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"
                       />
                     </svg>
-                    <span class="sr-only text-xl">Send message</span>
                   </button>
                 </div>
-                <p
-                  id="helper-text-explanation"
-                  class="mt-1 text-sm text-gray-500"
-                >
+                <p id="helper-text-explanation" class="mt-1 small text-muted">
                   Powered By:
                   <a
-                    href="earthena.cognospheredynamics.com"
-                    class="font-medium text-blue-600 hover:underline dark:text-blue-500"
+                    href="https://earthena.cognospheredynamics.com"
+                    class="fw-medium text-decoration-none"
+                    style="color: #388da8"
                     >Earthena-CPT</a
                   >.
                 </p>
