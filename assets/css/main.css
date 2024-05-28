@@ -1435,6 +1435,7 @@ section,
 /*--------------------------------------------------------------
 # Pricing Section
 --------------------------------------------------------------*/
+
 .pricing .pricing-item {
   background-color: rgba(var(--accent-color-rgb), 0.04);
   padding: 40px 40px;
