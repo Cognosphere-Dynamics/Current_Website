@@ -206,14 +206,8 @@
                     >Conversations/Interractions</a
                   >
                 </div>
-                <div class="col-md" id="finetune_AI_link">
-                  <a href="#" class="nav-link py-4">Finetune AI</a>
-                </div>
                 <div class="col-md" id="ai_settings_link">
                   <a href="#" class="nav-link py-4">AI Settings</a>
-                </div>
-                <div class="col-md" id="adds_marketing_link">
-                  <a href="#" class="nav-link py-4">Adds & Marketing</a>
                 </div>
                 <div class="col-md" id="account_settings_link">
                   <a href="#" class="nav-link py-4">Account Settings</a>
@@ -224,9 +218,9 @@
 
           <div id="preview"></div>
           <div id="conversations"></div>
-          <div id="finetune_AI"></div>
+
           <div id="ai_settings"></div>
-          <div id="adds_marketing"></div>
+
           <div id="account_settings"></div>
 
           <!-- account Settings -->
@@ -246,25 +240,32 @@
         ><span>All Rights Reserved</span>
       </p>
     </div>
+
+    <script>
+      loadHTML("./dashboardFiles/index_dashboard.html", "preview");
+      loadHTML("./dashboardFiles/conversations.html", "conversations");
+
+      loadHTML("./dashboardFiles/ai_settings.html", "ai_settings");
+
+      loadHTML("./dashboardFiles/account_settings.html", "account_settings");
+      loadHTML("/dashboardFiles/aida.html", "aida");
+      loadHTML("/dashboardFiles/twogere.html", "twogere");
+      loadHTML("./dashboardFiles/payment_form.html", "payment_form");
+    </script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      loadHTML("./dashboardFiles/index_dashboard.html", "preview");
-      loadHTML("./dashboardFiles/conversations.html", "conversations");
-      loadHTML("./dashboardFiles/finetune.html", "finetune_AI");
-      loadHTML("./dashboardFiles/ai_settings.html", "ai_settings");
-      loadHTML("./dashboardFiles/adds_marketing.html", "adds_marketing");
-      loadHTML("./dashboardFiles/account_settings.html", "account_settings");
-      loadHTML("/dashboardFiles/aida.html", "aida");
-      loadHTML("/dashboardFiles/twogere.html", "twogere");
-      loadHTML("./dashboardFiles/payment_form.html", "payment_form");
-    </script>
     <script src="/assets/js/functional/dashboard.js"></script>
     <script src="/assets/js/functional/protect.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+      document.querySelector(".finetune_ai").addEventListener("click", () => {
+        console.log("clicked");
+      });
+    </script>
   </body>
 </html>
