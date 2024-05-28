@@ -75,10 +75,8 @@ hideBtns.forEach((hideBtn) => {
 // dashboard_items
 const preview = document.getElementById("preview");
 const conversations = document.getElementById("conversations");
-const finetune_AI = document.getElementById("finetune_AI");
 const account_settings = document.getElementById("account_settings");
 const ai_settings = document.getElementById("ai_settings");
-const adds_marketing = document.getElementById("adds_marketing");
 const dashboard_link = document.getElementById("dashboard_link");
 const conversation_link = document.getElementById("conversation_link");
 const finetune_AI_link = document.getElementById("finetune_AI_link");
@@ -89,9 +87,9 @@ const ai_settings_link = document.getElementById("ai_settings_link");
 function hide_dashboard_items() {
   preview.style.display = "none";
   conversations.style.display = "none";
-  finetune_AI.style.display = "none";
+
   account_settings.style.display = "none";
-  adds_marketing.style.display = "none";
+
   ai_settings.style.display = "none";
 }
 
@@ -115,28 +113,12 @@ conversation_link.addEventListener("click", (event) => {
   conversation_link.querySelector("a").style.color = "#388da8";
 });
 
-finetune_AI_link.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent the default behavior of the anchor tag
-  hide_dashboard_items();
-  finetune_AI.style.display = "block";
-  removeActiveClassFromLinks();
-  finetune_AI_link.querySelector("a").style.color = "#388da8";
-});
-
 ai_settings_link.addEventListener("click", (event) => {
   event.preventDefault(); // Prevent the default behavior of the anchor tag
   hide_dashboard_items();
   ai_settings.style.display = "block";
   removeActiveClassFromLinks();
   ai_settings_link.querySelector("a").style.color = "#388da8";
-});
-
-adds_marketing_link.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent the default behavior of the anchor tag
-  hide_dashboard_items();
-  adds_marketing.style.display = "block";
-  removeActiveClassFromLinks();
-  adds_marketing_link.querySelector("a").style.color = "#388da8";
 });
 
 account_settings_link.addEventListener("click", (event) => {
@@ -153,6 +135,71 @@ function removeActiveClassFromLinks() {
     link.style.color = "black";
   });
 }
+
+// const active_ai = document.getElementById("active_ai_models");
+// const statistics = document.getElementById("usage_and_statistics");
+// const statistics_btn = document.getElementById("statistics_btn");
+// const active_ai_btn = document.getElementById("active_ai_btn");
+
+// active_ai_btn.addEventListener("click", () => {
+//   console.log("clicked");
+//   removeClass();
+//   statistics.classList.add("d-none");
+// });
+
+// statistics_btn.addEventListener("click", () => {
+//   console.log("clicked");
+
+//   removeClass();
+//   active_ai.classList.add("d-none");
+// });
+
+// const removeClass = () => {
+//   statistics.classList.remove("d-none");
+//   active_ai.classList.remove("d-none");
+// };
+
+// // chat
+// const options = {
+//   series: [
+//     {
+//       name: "Users",
+//       data: [100, 150, 200, 250, 300, 350, 400, 450, 500, 550, 600, 650], // Sample data for users
+//     },
+//   ],
+//   chart: {
+//     height: 350,
+//     type: "line",
+//     zoom: {
+//       enabled: false,
+//     },
+//   },
+//   dataLabels: {
+//     enabled: false,
+//   },
+//   stroke: {
+//     curve: "smooth",
+//   },
+//   xaxis: {
+//     categories: [
+//       "Jan",
+//       "Feb",
+//       "Mar",
+//       "Apr",
+//       "May",
+//       "Jun",
+//       "Jul",
+//       "Aug",
+//       "Sep",
+//       "Oct",
+//       "Nov",
+//       "Dec",
+//     ],
+//   },
+// };
+
+// var chart = new ApexCharts(document.querySelector("#lineGraph"), options);
+// chart.render();
 
 // const timeout = 1 * 30 * 1000;
 // setTimeout(() => {
