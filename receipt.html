@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipt</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f8f8f8;
+      }
+
+      .receipt-container {
+        background-color: white;
+        padding: 20px;
+        border: 1px solid #ddd;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .receipt-details {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .detail-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px 0;
+      }
+
+      .detail-row .label {
+        font-weight: bold;
+        flex-basis: 40%;
+        text-align: left;
+      }
+
+      .detail-row .value {
+        flex-basis: 60%;
+        text-align: right;
+      }
+
+      .thank-you {
+        text-align: center;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="receipt-container">
+      <h1>Receipt</h1>
+      <div class="receipt-details">
+        <div class="detail-row">
+          <span class="label">Date:</span>
+          <span class="value" id="date">May 28, 2024</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Name:</span>
+          <span class="value" id="name">John Doe</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Transaction ID:</span>
+          <span class="value" id="transaction-id">123456789</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Amount:</span>
+          <span class="value" id="amount">$27.50</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Amount Charged:</span>
+          <span class="value" id="amount-charged">$27.50</span>
+        </div>
+        <div class="detail-row">
+          <span class="label">Means of Payment:</span>
+          <span class="value" id="payment-method">Credit Card</span>
+        </div>
+      </div>
+      <p class="thank-you">Thank you for your payment!</p>
+    </div>
+  </body>
+</html>
