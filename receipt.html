@@ -92,23 +92,19 @@
     </div>
     <script>
       // The URL to parse
-const url = 'https://cognospheredynamics.com/receipt.html?status=successful&tx_ref=flw_171698515566571d4381e8f&transaction_id=5803676';
+// const url = 'https://cognospheredynamics.com/receipt.html?status=successful&tx_ref=flw_171698515566571d4381e8f&transaction_id=5803676';
 
 // Create a URL object
+      
 const urlObj = new URL(url);
 
-// Use URLSearchParams to get the query parameters
-const params = new URLSearchParams(urlObj.search);
 
-// Extract specific parameters
-const status = params.get('status');
-const txRef = params.get('tx_ref');
-const transactionId = params.get('transaction_id');
+      const urlParams = new URLSearchParams(windows.location.search)
+      const status = urlParams.get('status');
+      const txRef = const txRef = urlParams.get('tx_ref');
+      const transactionId = urlParams.get('transaction_id');
 
-// Log the extracted values
-console.log('Status:', status);
-console.log('Transaction Reference:', txRef);
-console.log('Transaction ID:', transactionId);
+
 
     </script>
   </body>
