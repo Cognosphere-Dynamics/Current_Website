@@ -96,14 +96,24 @@
 
 // Create a URL object
       
-      const urlObj = new URL(url);
-      const urlParams = new URLSearchParams(windows.location.search)
-      const status = urlParams.get('status');
-      const txRef = const txRef = urlParams.get('tx_ref');
-      const transactionId = urlParams.get('transaction_id');
+      // const urlObj = new URL(url);
+      // const urlParams = new URLSearchParams(windows.location.search)
+      // const status = urlParams.get('status');
+      // const txRef = const txRef = urlParams.get('tx_ref');
+      // const transactionId = urlParams.get('transaction_id');
 
+let url = "https://api.cognospheredynamics.com";
 
-
+  fetch(`${url}/api/auth/rave/callback`)
+    .then((res) => res.json())
+    .then((data) => {
+      if (data.error) {
+        console.log(data.error)
+      } else {
+        console.log(data)
+      }
+    })
+    .catch((error) => console.log(error));
     </script>
   </body>
 </html>
