@@ -1,271 +1,423 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard - C.Dynamics</title>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Dashboard - Cognosphere Dynamics</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
     <link href="assets/img/sphere_site_3.gif" rel="icon" />
     <link href="assets/img/sphere_site_3.gif" rel="apple-touch-icon" />
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Vendor CSS Files -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
     />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
-    <link rel="stylesheet" href="assets/css/dashboard.css" />
-    <script>
-      function loadHTML(url, elementId) {
-        fetch(url)
-          .then((response) => response.text())
-          .then((data) => {
-            document.getElementById(elementId).innerHTML = data;
-          });
-      }
-    </script>
+    <link href="assets/css/team.css" rel="stylesheet" />
   </head>
 
-  <body>
-    <!-- Button to trigger offcanvas -->
-    <nav
-      class="navbar navbar-expand-md mb-4 fixed-top bg-white navbar-dashboard border-bottom"
-    >
-      <div class="container-fluid">
-        <div style="display: flex" onclick="show_default_ui()">
-          <div class="sphere_gif">
-            <img
-              src="assets/img/sphere_site_3.gif"
-              alt="sphere_site_3.gif"
-              class="sphere-img"
-            />
-          </div>
-          <a class="navbar-brand ms-2" href="#">Cognosphere Dynamics.</a>
-        </div>
-        <button
-          class="navbar-toggler collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarCollapse"
-          aria-controls="navbarCollapse"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  <body class="starter-page-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <img
+            src="assets/img/sphere_site_3.gif"
+            alt="sphere_site_3.gif"
+            class="d-none d-md-block"
+          />
+          <h1 class="sitename">Cognosphere Dynamics..</h1>
+        </a>
 
-        <div class="navbar-collapse collapse" id="navbarCollapse">
-          <ul
-            class="navbar-nav me-auto mb-2 mb-md-0"
-            style="visibility: hidden"
-          >
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html#hero" class="">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#features">Products</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li class="d-none" id="dashboard">
+              <a href="./sphere_dashboard.html">Dashboard</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+            <li>
+              <a href="/logout" id="logout" class="d-block d-md-none">logout</a>
             </li>
           </ul>
-          <div class="d-flex align-items-center">
-            <img src="./assets/dash_icons/msg_inbox.png" />
-            <div class="dropdown">
-              <button
-                class="btn dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" id="signin" href="./sphere_signin.html"
+          >Sign In</a
+        >
+
+        <a
+          class="ms-3 fs-3 d-none d-md-block"
+          id="logout-icon"
+          href="./sphere_signin.html"
+          ><i class="bi bi-box-arrow-in-right"></i
+        ></a>
+      </div>
+    </header>
+
+    <main class="main mt-5 pt-5">
+      <!-- Page Title -->
+
+      <section id="default_dashboard" class="pricing section container">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up"></div>
+        <!-- End Section Title -->
+        <div class="row d-flex justify-content-center gy-4 aida_prices">
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+            <div class="pricing-item">
+              <h3>AIDA - Business</h3>
+              <p class="description">
+                Transforming customer interactions with unparalleled efficiency
+                and advanced capabilities.
+              </p>
+              <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
+              <a onclick="show_payment_form()" class="cta-btn"
+                >4 Days free trial</a
               >
-                <img
-                  src="https://www.w3schools.com/howto/img_avatar.png"
-                  alt="avator"
-                  width="32"
-                  height="32"
-                  class="rounded-circle me-2"
-                />
-                <strong class="lead ms-2">User Name</strong>
-              </button>
-              <ul class="dropdown-menu">
-                <li class="link_class">
-                  <a class="dropdown-item" href="#">Account</a>
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited Responses</span>
                 </li>
-                <li class="link_class">
-                  <a class="dropdown-item" href="#">change Password</a>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited Chat History</span>
                 </li>
-                <li class="link_class">
-                  <a class="dropdown-item" id="logout" href="#">Logout</a>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited pages of Training</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimied Document Upload</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Success Manager</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited Statistics</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Full Widget Customization</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>WhatsApp Integration</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Instagram Integration</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Team Management</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Admin Mobile Application</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Custom Mail Integration</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+            <div class="pricing-item featured">
+              <p class="popular">Popular</p>
+              <h3>"Twogere" - Standard</h3>
+              <p class="description">
+                Your essential tool for seamless sign language translation and
+                communication accessibility.
+              </p>
+              <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
+              <a onclick="show_payment_form()" class="cta-btn"
+                >7 Days free trial</a
+              >
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Multi-Language Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Real-Time Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Interactive Learning Modules</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Customizable User Interface</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Accessibility Features</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Integration with Social Media Platforms</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Advanced Document Upload</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Unlimited Chat History</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Success Coach Support</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Comprehensive Statistics</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Personalized Learning Plans</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Secure Data Encryption</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- End Pricing Item -->
+
+          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+            <div class="pricing-item">
+              <h3>"Twogere" - Enterprise</h3>
+              <p class="description">
+                Advanced language translation API and comprehensive web
+                dashboard solutions.
+              </p>
+              <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
+              <a onclick="show_payment_form()" class="cta-btn"
+                >7 Days free trial</a
+              >
+              <p class="text-center small">No credit card required</p>
+              <ul>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Language Translation API</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Customizable Translation Models</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>High-Quality Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Real-Time Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Batch Translation</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Multi-Language Support</span>
+                </li>
+                <li><i class="bi bi-check"></i> <span>Web Dashboard</span></li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Secure Data Handling</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Integration with Existing Systems</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i> <span>Usage Analytics</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Customizable User Permissions</span>
+                </li>
+                <li>
+                  <i class="bi bi-check"></i>
+                  <span>Scalable Infrastructure</span>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
-    <div
-      class="offcanvas offcanvas-start"
-      data-bs-scroll="true"
-      data-bs-backdrop="false"
-      tabindex="-1"
-      id="offcanvasScrolling"
-      aria-labelledby="offcanvasScrollingLabel"
-    >
-      <div class="offcanvas-header">
-        <h5 type="button" class="hide-btn">
-          <i class="bi bi-list"></i>
-        </h5>
-      </div>
-      <ul class="nav nav-pills flex-column">
-        <li
-          class="nav-link px-3 sidebar-link text-dark"
-          id="default_dashboard"
-          style="cursor: pointer"
-        >
-          <span class="me-2 hide-btn"><i class="bi bi-ui-checks-grid"></i></span
-          ><spann class="hide-text">Dashboard </spann>
-        </li>
-        <li>
-          <a
-            class="nav-link px-3 sidebar-link text-dark"
-            data-bs-toggle="collapse"
-            href="#products"
-          >
-            <span class="me-2 hide-btn"><i class="bi bi-cpu"></i></span>
-            <span class="hide-text">All Products</span>
-            <span class="ms-auto">
-              <span class="right-icon">
-                <i class="bi bi-chevron-down hide-text"></i>
-              </span>
-            </span>
-          </a>
-          <div class="collapse" id="products">
-            <ul class="navbar-nav ps-3">
-              <li class="link_class" id="aida_dashboard">
-                <a href="#" class="nav-link dropdown-item ms-4 hide-text">
-                  AIDA
-                </a>
-              </li>
-              <li class="link_class" id="twogere_dashboard">
-                <a href="#" class="nav-link dropdown-item ms-4 hide-text">
-                  Twogere
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <ul class="nav nav-pills flex-column mb-5">
-        <li>
-          <a
-            class="nav-link px-3 sidebar-link text-dark"
-            data-bs-toggle="collapse"
-            href="#services"
-          >
-            <span class="me-2 hide-btn"><i class="bi bi-cpu"></i></span>
-            <span class="hide-text">All Services</span>
-            <span class="ms-auto">
-              <span class="right-icon">
-                <i class="bi bi-chevron-down hide-text"></i>
-              </span>
-            </span>
-          </a>
-          <div class="collapse" id="services">
-            <ul class="navbar-nav ps-3">
-              <li class="link_class">
-                <a href="#" class="nav-link dropdown-item ms-4 hide-text">
-                  AIDA
-                </a>
-              </li>
-              <li class="link_class">
-                <a href="#" class="nav-link dropdown-item ms-4 hide-text">
-                  Twogere
-                </a>
-              </li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </div>
+      </section>
 
-    <div class="dashboard-page mt-5 pt-5">
-      <div class="dashboard-inner">
-        <div class="default_dashboard">
-          <div>
-            <div class="container mb-2">
-              <div class="row">
-                <div class="col-md" id="dashboard_link">
-                  <a href="#" class="nav-link py-4">Dashboard</a>
-                </div>
-                <div class="col-md" id="conversation_link">
-                  <a href="#" class="nav-link py-4"
-                    >Conversations/Interractions</a
-                  >
-                </div>
-                <div class="col-md" id="ai_settings_link">
-                  <a href="#" class="nav-link py-4">AI Settings</a>
-                </div>
-                <div class="col-md" id="account_settings_link">
-                  <a href="#" class="nav-link py-4">Account Settings</a>
-                </div>
-              </div>
+      <!-- /Starter Section Section -->
+    </main>
+
+    <footer id="footer" class="footer position-relative">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Cognosphere Dynamics.</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>New Port Bell Road</p>
+              <p>Nakawa, National ICT Innovation Hub</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+256 788 074869</span>
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <span>info@cognospheredynamics.com</span>
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
             </div>
           </div>
 
-          <div id="preview"></div>
-          <div id="conversations"></div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./sphere_about_us.html">About us</a></li>
+              <li><a href="./index#services">Services</a></li>
+              <li><a href="./sphere_terms_of_use.html">Terms of Use</a></li>
+              <li><a href="./sphere_privacy_policy.html">Privacy policy</a></li>
+            </ul>
+          </div>
 
-          <div id="ai_settings"></div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li>
+                <a href="./sphere_service_natural_language_processing.html"
+                  >Natural Language Processing</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_computer_vision.html"
+                  >Computer Vision</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_ai_robotics_consultancy.html"
+                  >ML & Robotics Consultancy</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_data_analysis.html"
+                  >Big Data Analysis</a
+                >
+              </li>
+              <li>
+                <a href="./sphere_service_custom_ai_development.html"
+                  >Custom AI development</a
+                >
+              </li>
+              <li>
+                <a
+                  href="./sphere_service_ai_robotics_research_collaboration.html"
+                  >AI research and Collaboration</a
+                >
+              </li>
+            </ul>
+          </div>
 
-          <div id="account_settings"></div>
-
-          <!-- account Settings -->
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              products and services!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
+              </div>
+            </form>
+          </div>
         </div>
-
-        <!-- dashboard -->
-        <div class="aida_dashboard container" id="aida"></div>
-        <div class="twogere_dashboard container" id="twogere"></div>
       </div>
-    </div>
-    <div id="payment_form" class="container dashboard-page"></div>
 
-    <div class="container copyright text-center mt-4 dashboard-page">
-      <p>
-        © <span>Copyright</span>
-        <strong class="px-1 sitename">Cognosphere Dynaics Limited</strong
-        ><span>All Rights Reserved</span>
-      </p>
-    </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Cognosphere Dynaics Limited</strong
+          ><span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
 
-    <script>
-      loadHTML("./dashboardFiles/index_dashboard.html", "preview");
-      loadHTML("./dashboardFiles/conversations.html", "conversations");
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
 
-      loadHTML("./dashboardFiles/ai_settings.html", "ai_settings");
+    <!-- Preloader -->
 
-      loadHTML("./dashboardFiles/account_settings.html", "account_settings");
-      loadHTML("/dashboardFiles/aida.html", "aida");
-      loadHTML("/dashboardFiles/twogere.html", "twogere");
-      loadHTML("./dashboardFiles/payment_form.html", "payment_form");
-    </script>
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Main JS File -->
 
-    <script src="/assets/js/functional/dashboard.js"></script>
-    <script src="/assets/js/functional/protect.js"></script>
     <script src="assets/js/main.js"></script>
-    <script>
-      document.querySelector(".finetune_ai").addEventListener("click", () => {
-        console.log("clicked");
-      });
-    </script>
   </body>
 </html>

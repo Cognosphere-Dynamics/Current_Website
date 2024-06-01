@@ -100,6 +100,14 @@
       *::-ms-scrollbar-thumb:hover {
         background: #555;
       }
+
+      /* .disabled-div {
+        pointer-events: none;
+        opacity: 0.5;
+      } */
+      .editEmail {
+        cursor: pointer;
+      }
     </style>
   </head>
 
@@ -165,67 +173,84 @@
               </div>
               <!-- End Section Title -->
               <div class="row">
-                <div class="col-12 p-2">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control rounded-pill name"
-                      name="name"
-                      id="name"
-                      required
-                      placeholder="Enter name"
-                    />
-                  </div>
-                </div>
-                <div class="col-12 p-2">
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control rounded-pill email"
-                      name="email"
-                      required
-                      id="email"
-                      placeholder="Enter email"
-                    />
-                  </div>
-                </div>
-                <div class="col-12 p-2">
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control rounded-pill phone"
-                      name="phone"
-                      id="phone"
-                      required
-                      placeholder="Phone number"
-                    />
-                  </div>
-                </div>
-                <div class="col-12 p-2">
-                  <div class="row">
-                    <div class="form-group col-6">
+                <div class="form-box">
+                  <div class="col-12 p-2">
+                    <div class="form-group">
                       <input
-                        type="password"
-                        name="password"
-                        class="form-control rounded-pill password"
-                        id="password"
+                        type="text"
+                        class="form-control rounded-pill name"
+                        name="name"
+                        id="name"
                         required
-                        placeholder="Enter password"
-                      />
-                    </div>
-                    <div class="form-group col-6">
-                      <input
-                        type="password"
-                        required
-                        name="confirmPassword"
-                        class="form-control rounded-pill confirm-password"
-                        id="confirm-password"
-                        placeholder="Enter confirm password"
+                        placeholder="Enter fullname"
                       />
                     </div>
                   </div>
+                  <div class="col-12 p-2">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control rounded-pill email"
+                        name="email"
+                        required
+                        id="email"
+                        placeholder="Enter email"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 p-2">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control rounded-pill phone"
+                        name="phone"
+                        id="phone"
+                        required
+                        placeholder="Phone number"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 p-2">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control rounded-pill username"
+                        name="username"
+                        id="username"
+                        required
+                        placeholder="username"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-12 p-2">
+                    <div class="row">
+                      <div class="form-group col-6">
+                        <input
+                          type="password"
+                          name="password"
+                          class="form-control rounded-pill password"
+                          id="password"
+                          required
+                          placeholder="Enter password"
+                        />
+                      </div>
+                      <div class="form-group col-6">
+                        <input
+                          type="password"
+                          required
+                          name="confirmPassword"
+                          class="form-control rounded-pill confirm-password"
+                          id="confirm-password"
+                          placeholder="Enter confirm password"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-12 p-2 pt-5 m-auto" style="width: 100%">
+                <div
+                  class="col-12 p-2 pt-5 m-auto d-none submit-div"
+                  style="width: 100%"
+                >
                   <button
                     type="submit"
                     class="btn rounded-pill"
@@ -233,12 +258,49 @@
                   >
                     Continue >>>
                   </button>
+
                   <!-- <div class="text-center">
                     <div class="spinner-border text-info" role="status">
                       <span class="sr-only"></span>
                     </div>
                   </div> -->
                 </div>
+
+                <div class="form-group col-12 otp-box mt-5 d-none">
+                  <div class="w-25 text-center mx-auto">
+                    <div class="loader">
+                      verifying ...
+                      <span
+                        class="spinner-border spinner-border-sm ms-2"
+                        style="color: #388da8"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                  </div>
+
+                  <div class="otp-input d-none">
+                    <div class="row">
+                      <h6 class="title-otp col-6">
+                        Enter OTP sent to your Email
+                      </h6>
+                    </div>
+
+                    <input
+                      type="number"
+                      required
+                      name="otp"
+                      class="form-control rounded-pill otp"
+                      id="otp"
+                      placeholder="Enter OTP "
+                    />
+                  </div>
+                </div>
+                <p
+                  class="btn proceed_btn1 rounded-pill mt-5"
+                  style="width: 100%; background: #388da8; color: white"
+                >
+                  proceed
+                </p>
               </div>
             </div>
           </form>
