@@ -134,10 +134,10 @@ h6 {
   color: var(--contrast-color);
   background: var(--accent-color);
   text-align: center;
-  font-size: 14px;
-  padding: 8px 25px;
-  margin: 0 0 0 30px;
-  border-radius: 50px;
+  font-size: 1rem !important;
+  padding: 0.25em 1em !important;
+  margin: 0 0 0 2em !important;
+  border-radius: 3rem;
   transition: 0.3s;
 }
 
@@ -154,8 +154,8 @@ h6 {
 
   .header .btn-getstarted {
     order: 2;
-    margin: 0 15px 0 0;
-    padding: 6px 15px;
+    margin: 0 1.25em 0 0;
+    padding: 0.25em 0.5em;
   }
 
   .header .navmenu {
