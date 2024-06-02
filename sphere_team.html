@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Who Are We? - C.Dynamics</title>
+    <title>Sphere Team - C.Dynamics</title>
     <meta content="" name="description" />
     <meta content="" name="keywords" />
 
@@ -125,7 +125,7 @@
                 <div class="identity">
                   <a href="./index.html">
                     <h5>Member Fullname</h5>
-                    <p>position of the member</p>
+                    <span>position of the member</span>
                   </a>
                 </div>
               </div>
@@ -145,8 +145,12 @@
                   </div>
                 </div>
                 <div class="identity">
-                  <h5><a href="/index.html">Member Fullname</a></h5>
-                  <p>position of the member</p>
+                  <div class="identity">
+                    <a href="./index.html">
+                      <h5>Member Fullname</h5>
+                      <span>position of the member</span>
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -165,8 +169,10 @@
                   </div>
                 </div>
                 <div class="identity">
-                  <h5><a href="/index.html">Member Fullname</a></h5>
-                  <p>position of the member</p>
+                  <a href="./index.html">
+                    <h5>Member Fullname</h5>
+                    <span>position of the member</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -185,8 +191,10 @@
                   </div>
                 </div>
                 <div class="identity">
-                  <h5><a href="/index.html">Member Fullname</a></h5>
-                  <p>position of the member</p>
+                  <a href="./index.html">
+                    <h5>Member Fullname</h5>
+                    <span>position of the member</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -205,8 +213,10 @@
                   </div>
                 </div>
                 <div class="identity">
-                  <h5><a href="/index.html">Member Fullname</a></h5>
-                  <p>position of the member</p>
+                  <a href="./index.html">
+                    <h5>Member Fullname</h5>
+                    <span>position of the member</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -225,8 +235,10 @@
                   </div>
                 </div>
                 <div class="identity">
-                  <h5><a href="/index.html">Member Fullname</a></h5>
-                  <a>position of the member</a>
+                  <a href="./index.html">
+                    <h5>Member Fullname</h5>
+                    <span>position of the member</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -357,6 +369,36 @@
 
     <!-- Preloader -->
 
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        const members = [
+          { id: 1, name: "Oliver Smith", position: "AI Specialist" },
+          { id: 2, name: "Liam Johnson", position: "Data Scientist" },
+          { id: 3, name: "Ethan Brown", position: "Lead Developer" },
+          { id: 4, name: "James Williams", position: "Product Manager" },
+          { id: 5, name: "Alexander Jones", position: "UX Designer" },
+          { id: 6, name: "Benjamin Garcia", position: "Lead Developer" },
+        ];
+
+        const identityElements = document.querySelectorAll(".card");
+
+        identityElements.forEach((identityElement, index) => {
+          console.log(index);
+          const member = members[index];
+
+          const nameElement = identityElement.querySelector("h5");
+          const positionElement = identityElement.querySelector("span");
+
+          nameElement.textContent = member.name;
+          positionElement.textContent = member.position;
+
+          // Update the link to point to the member's individual page
+          const linkElement = identityElement.querySelector(".identity a");
+          console.log(linkElement);
+          linkElement.href = `./sphere_team_member.html?id=${member.id}`;
+        });
+      });
+    </script>
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/php-email-form/validate.js"></script>
