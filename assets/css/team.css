@@ -4,17 +4,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.grid {
-  position: relative;
-  clear: both;
-  margin: 0 auto;
-  /* padding: 1em 0 4em; */
-  max-width: 1000px;
-  list-style: none;
-  text-align: center;
-}
 
-/* Common style */
 .grid {
   position: relative;
   float: left;
@@ -22,10 +12,9 @@
   margin: 10px 1%;
   min-width: 320px;
   max-width: 480px;
-  max-height: 360px;
   width: 48%;
   height: auto;
-  /* background: #3085a3; */
+
   text-align: center;
   cursor: pointer;
 }
@@ -59,6 +48,7 @@
 }
 
 /* Anchor will cover the whole item by default */
+
 .grid .name-caption > a {
   z-index: 1000;
   text-indent: 200%;
@@ -85,6 +75,10 @@
 .grid p {
   letter-spacing: 1px;
   font-size: 68.5%;
+}
+.grid span {
+  font-size: 0.75rem;
+  /* padding-bottom: 1rem; */
 }
 
 .card-effect {
@@ -171,6 +165,6 @@
   }
 }
 .identity {
-  z-index: 999;
+  z-index: 99;
 }
 /* demo */
