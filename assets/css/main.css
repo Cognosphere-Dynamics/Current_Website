@@ -86,7 +86,7 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 20px 0;
+  padding: 1em 0;
   transition: all 0.5s;
   z-index: 997;
 }
@@ -109,11 +109,11 @@ h6 {
 
 @media (max-width: 480px) {
   .header .logo img {
-    max-height: 24px;
+    max-height: 1.5rem;
   }
 
   .header .logo h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 }
 
