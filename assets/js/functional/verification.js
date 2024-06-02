@@ -1,134 +1,121 @@
-const formInformation = document.querySelector(".payment_form_aida");
-const accountErrors = document.querySelectorAll(".account-feedback");
-const Error = document.querySelector(".error");
+const proceedBtn = document.getElementById("proceedBtn");
+const submitBtn = document.getElementById("submitButton");
+const aidaForm = document.querySelector(".payment_form_aida");
 
-const emailInput = document.getElementById("email");
-const otpInput = document.getElementById("otp");
-const proceedBtn = document.querySelector(".proceed_btn1");
+const registerForm = document.querySelector(".registerForm");
+let myotp = 12345;
 
-// email verification
-const feedBackBox = document.querySelector(".verification-box");
-const emailFeedBack = document.querySelector(".veryfyemail");
-const otpFeedBack = document.querySelector(".otp-box");
+proceedBtn.addEventListener("click", function () {
+  let form = document.getElementById("signupForm");
+  let data = new FormData(form);
+  const formData = Object.fromEntries(data);
 
-// OTP verification
-const otpFeedBackBox = document.querySelector(".checkotp");
-const accountDetails = document.querySelector(".accounts-details");
-const businessProfile = document.querySelector(".profile-and-payments");
+  let emailField = document.querySelector('input[name="email"]');
 
-function validateEmail(email) {
-  const re =
-    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
-  return re.test(String(email).toLowerCase());
-}
+  // check if email is right
 
-proceedBtn.addEventListener("click", () => {
-  const otpValue = otpInput.value.trim();
-
-  const emailValue = document.querySelector(".email").value;
-  const name = document.querySelector(".name").value;
-  const username = document.querySelector(".username").value;
-  const phone = document.querySelector(".phone").value;
-  const password = document.querySelector(".password").value;
-  const confirmPassword = document.querySelector(".confirm").value;
-
-  const allFieldsFilled =
-    emailValue && name && username && phone && password && confirmPassword;
-  const passwordsMatch = password === confirmPassword;
-  if (!allFieldsFilled) {
-    Error.textContent = "All Fields Are required";
-    return;
+  function validateEmail(email) {
+    const re =
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@(([^<>()[\]\.,;:\s@"]+\.)+[^<>()[\]\.,;:\s@"]{2,})$/i;
+    return re.test(String(email).toLowerCase());
   }
-  if (!passwordsMatch) {
-    Error.textContent = "Password didn't match";
-    return;
-  }
-  if (!validateEmail(emailValue)) {
-    Error.textContent = "Invalid email";
+
+  if (!validateEmail(emailField.value)) {
+    alert("Invalid email");
     return;
   }
 
-  if (otpValue === "") {
-    // Send verification email
-    feedBackBox.classList.remove("d-none");
-    Error.classList.add("d-none");
+  // Hide the submit button and show loader
+  document.getElementById("submitButton").classList.add("d-none");
+  document.getElementById("loaderSection").classList.remove("d-none");
 
-    setTimeout(() => {
-      emailFeedBack.classList.add("d-none");
-      otpFeedBack.classList.remove("d-none");
-    }, 500);
+  // Perform the first step of form submission
 
-    const userRegister = { email: emailValue, name, username, phone, password };
-    fetch(
-      `https://api.cognospheredynamics.com/api/auth/sendMailForVerification`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(userRegister),
-      }
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.success) {
-          emailFeedBack.classList.add("d-none");
-          otpFeedBack.classList.remove("d-none");
-          accountDetails.classList.add(".hidden-div");
-        } else {
-          Error.classList.remove("d-none");
-          otpFeedBack.classList.add("d-none");
-          let errorMessage = data.errors.email[0];
-          Error.textContent = errorMessage;
-          console.log(errorMessage);
-        }
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-        emailFeedBack.textContent = error.TypeError;
-      });
-  } else {
-    // Verify OTP
-
-    otpFeedBackBox.classList.remove("d-none");
-
-    const verifyingObject = { email: emailValue, velification_code: otpValue };
-    fetch(`https://api.cognospheredynamics.com/api/auth/verifyingCode`, {
+  fetch(
+    "https://api.cognospheredynamics.com/api/auth/sendMailForVerification",
+    {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(verifyingObject),
+      body: JSON.stringify(formData),
+    }
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      // Handle response
+      if (data.success) {
+        // Show OTP section
+        document.getElementById("otpSection").classList.remove("d-none");
+        document.getElementById("submitButton").classList.remove("d-none");
+        document.getElementById("proceedBtn").classList.add("d-none");
+      } else {
+        alert(data.errors.email[0]);
+        emailField.value = "";
+      }
+      // Hide loader and show submit button
+      document.getElementById("loaderSection").classList.add("d-none");
     })
-      .then((res) => res.json())
-      .then((data) => {
-        otpFeedBackBox.classList.remove("d-none");
-        if (data.success) {
-          document.querySelector(".otpSuccessMessage").textContent =
-            data.message + "...";
-          setTimeout(() => {
-            document
-              .querySelector(".otpSuccessMessage")
-              .classList.add("d-none");
-          }, 5000);
+    .catch((error) => {
+      console.log(error);
+      // // Hide loader and show submit button
+      document.getElementById("loaderSection").classList.add("d-none");
+      document.getElementById("submitButton").classList.remove("d-none");
+    });
+});
 
-          otpFeedBackBox.classList.add("d-none");
-          accountDetails.classList.add("d-none");
+// Add an event listener to handle OTP submission
+submitBtn.addEventListener("click", function () {
+  // Function to check if all fields are filled
 
-          businessProfile.classList.remove("d-none");
-          proceedBtn.classList.add("d-none");
-        } else {
-          otpFeedBackBox.classList.add("d-none");
-          document.querySelector(".emailError").textContent =
-            data.message + "...";
-          document.querySelector(".emailError").style.color = "red";
-        }
-      })
-      .catch((error) => {
-        console.log("Error:", error);
-        let data = JSON.parse(error);
-        let errorMessage = data.errors.email[0];
-        console.log(errorMessage);
-      });
+  var otp = document.getElementById("otp").value;
+  let form = document.getElementById("signupForm");
+  let data = new FormData(form);
+  const formData = Object.fromEntries(data);
+  formData.velification_code = otp;
+
+  function areAllFieldsFilled(formData) {
+    for (let key in formData) {
+      if (formData[key].trim() === "") {
+        return false;
+      }
+    }
+    return true;
   }
+
+  if (!areAllFieldsFilled(formData)) {
+    alert("all Fields are required");
+    return;
+  }
+
+  // Perform OTP verification
+  fetch("https://api.cognospheredynamics.com/api/auth/verifyingCode", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      // Handle response
+
+      if (data.success === false) {
+        console.log(data.success);
+        registerForm.classList.add("d-none");
+        document.querySelector(".payment_form_aida").classList.remove("d-none");
+      }
+
+      // if (data.success) {
+      //   registerForm.classList.remove("d-none");
+      //   aidaForm.classList.remove("d-none");
+      //   // Redirect or perform further actions
+      // } else {
+      //   alert("Wrong OTP try again");
+      // }
+    })
+    .catch((error) => {
+      alert("Error: ", error);
+    });
 });

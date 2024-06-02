@@ -6,15 +6,24 @@ const form = document.querySelector(".payment_form_aida");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
+
+  const infoForm = document.getElementById("signupForm");
+
+  const infoFormData = new FormData(infoForm);
+  const infoData = Object.fromEntries(infoFormData);
+
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
-  // console.log("client: ", data);
+
+  const mergedData = { ...infoData, ...data };
+  console.log("client: ", mergedData);
+
   fetch(`${url}/api/auth/payAida`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify(mergedData),
   })
     .then((res) => res.json())
     .then((data) => {
