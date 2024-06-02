@@ -162,9 +162,13 @@
       <!-- Starter Section Section -->
       <section id="starter-section" class="starter-section section">
         <div class="container" data-aos="fade-up">
-          <form method="post" class="fade-up row signup">
+          <form method="post" class="fade-up row signup" id="signupForm">
             <div class="container-fluid col-12 col-md-6">
-              <img src="assets/img/sign-up_1.gif" class="img-fluid" alt="" />
+              <img
+                src="assets/img/sign-up_1.gif"
+                class="img-fluid"
+                alt="Signup Image"
+              />
             </div>
             <div class="container col-12 col-md-6">
               <!-- Section Title -->
@@ -178,7 +182,7 @@
                     <div class="form-group">
                       <input
                         type="text"
-                        class="form-control rounded-pill name"
+                        class="form-control rounded-pill"
                         name="name"
                         id="name"
                         required
@@ -190,10 +194,10 @@
                     <div class="form-group">
                       <input
                         type="email"
-                        class="form-control rounded-pill email"
+                        class="form-control rounded-pill"
                         name="email"
-                        required
                         id="email"
+                        required
                         placeholder="Enter email"
                       />
                     </div>
@@ -202,7 +206,7 @@
                     <div class="form-group">
                       <input
                         type="text"
-                        class="form-control rounded-pill phone"
+                        class="form-control rounded-pill"
                         name="phone"
                         id="phone"
                         required
@@ -214,11 +218,11 @@
                     <div class="form-group">
                       <input
                         type="text"
-                        class="form-control rounded-pill username"
+                        class="form-control rounded-pill"
                         name="username"
                         id="username"
                         required
-                        placeholder="username"
+                        placeholder="Username"
                       />
                     </div>
                   </div>
@@ -228,7 +232,7 @@
                         <input
                           type="password"
                           name="password"
-                          class="form-control rounded-pill password"
+                          class="form-control rounded-pill"
                           id="password"
                           required
                           placeholder="Enter password"
@@ -237,36 +241,52 @@
                       <div class="form-group col-6">
                         <input
                           type="password"
-                          required
                           name="confirmPassword"
-                          class="form-control rounded-pill confirm-password"
+                          class="form-control rounded-pill"
                           id="confirm-password"
+                          required
                           placeholder="Enter confirm password"
                         />
                       </div>
                     </div>
                   </div>
+                  <div class="otp-input d-none" id="otpSection">
+                    <div class="row">
+                      <h6 class="title-otp col-6">
+                        Enter OTP sent to your Email
+                      </h6>
+                    </div>
+                    <input
+                      type="number"
+                      name="otp"
+                      class="form-control rounded-pill"
+                      id="otp"
+                      placeholder="Enter OTP"
+                    />
+                  </div>
                 </div>
-                <div
-                  class="col-12 p-2 pt-5 m-auto d-none submit-div"
-                  style="width: 100%"
-                >
-                  <button
-                    type="submit"
+                <div class="col-12 p-2 pt-5 m-auto" style="width: 100%">
+                  <p
+                    type="button"
                     class="btn rounded-pill"
+                    id="proceedBtn"
+                    style="width: 100%; background: #388da8; color: white"
+                  >
+                    Continue >>>
+                  </p>
+                  <button
+                    type="button"
+                    class="btn rounded-pill d-none"
+                    id="submitButton"
                     style="width: 100%; background: #388da8; color: white"
                   >
                     Continue >>>
                   </button>
-
-                  <!-- <div class="text-center">
-                    <div class="spinner-border text-info" role="status">
-                      <span class="sr-only"></span>
-                    </div>
-                  </div> -->
                 </div>
-
-                <div class="form-group col-12 otp-box mt-5 d-none">
+                <div
+                  class="form-group col-12 otp-box mt-5 d-none"
+                  id="loaderSection"
+                >
                   <div class="w-25 text-center mx-auto">
                     <div class="loader">
                       verifying ...
@@ -277,30 +297,7 @@
                       ></span>
                     </div>
                   </div>
-
-                  <div class="otp-input d-none">
-                    <div class="row">
-                      <h6 class="title-otp col-6">
-                        Enter OTP sent to your Email
-                      </h6>
-                    </div>
-
-                    <input
-                      type="number"
-                      required
-                      name="otp"
-                      class="form-control rounded-pill otp"
-                      id="otp"
-                      placeholder="Enter OTP "
-                    />
-                  </div>
                 </div>
-                <p
-                  class="btn proceed_btn1 rounded-pill mt-5"
-                  style="width: 100%; background: #388da8; color: white"
-                >
-                  proceed
-                </p>
               </div>
             </div>
           </form>
