@@ -1076,6 +1076,7 @@ section,
   margin-bottom: 0;
 }
 
+.opensource .read-more,
 .about .content .read-more {
   background: var(--accent-color);
   color: var(--contrast-color);
@@ -1097,6 +1098,7 @@ section,
   width: 12rem;
 }
 
+.opensource .read-more i,
 .about .content .read-more i {
   font-size: 1.25rem;
   margin-left: 0.25em;
@@ -1104,11 +1106,13 @@ section,
   transition: 0.3s;
 }
 
+.opensource .read-more:hover,
 .about .content .read-more:hover {
   background: rgba(var(--accent-color-rgb), 0.8);
   padding-right: 19px;
 }
 
+.opensource .read-more:hover i,
 .about .content .read-more:hover i {
   margin-left: 10px;
 }
@@ -1664,6 +1668,10 @@ section,
 }
 
 /* Open source Item */
+.opensource-item {
+  max-width: 350px;
+  background-color: rgba(var(--accent-color-rgb), 0.04);
+}
 
 .opensourceImg {
   width: 100%;
@@ -1728,15 +1736,17 @@ section,
   margin: 0 auto 15px auto;
 }
 
+.opensource .swiper-wrapper,
 .testimonials .swiper-wrapper {
   height: auto;
 }
-
+.opensource .swiper-pagination,
 .testimonials .swiper-pagination {
   margin-top: 20px;
   position: relative;
 }
 
+.opensource .swiper-pagination .swiper-pagination-bullet,
 .testimonials .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
@@ -1744,6 +1754,7 @@ section,
   opacity: 1;
 }
 
+.opensource .swiper-pagination .swiper-pagination-bullet-active,
 .testimonials .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--accent-color);
 }
