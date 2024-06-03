@@ -17,7 +17,13 @@ proceedBtn.addEventListener("click", function () {
   }
 
   if (!validateEmail(emailField.value)) {
-    alert("Invalid email");
+    document.getElementById("loaderSection").classList.remove("d-none");
+    document.querySelector(".loader").textContent = "Email cannot be empty!";
+    document.querySelector(".loader").style.color = "red";
+    setTimeout(() => {
+      document.getElementById("loaderSection").classList.add("d-none");
+    }, 5000);
+
     return;
   }
 
@@ -47,7 +53,13 @@ proceedBtn.addEventListener("click", function () {
         document.getElementById("submitButton").classList.remove("d-none");
         document.getElementById("proceedBtn").classList.add("d-none");
       } else {
-        alert(data.errors.email[0]);
+        document.getElementById("loaderSection").classList.remove("d-none");
+        document.querySelector(".loader").textContent = data.errors.email[0];
+
+        document.querySelector(".loader").style.color = "red";
+        setTimeout(() => {
+          document.getElementById("loaderSection").classList.add("d-none");
+        }, 5000);
         emailField.value = "";
       }
       // Hide loader and show submit button
@@ -55,6 +67,7 @@ proceedBtn.addEventListener("click", function () {
     })
     .catch((error) => {
       console.log(error);
+      alert(error);
       // // Hide loader and show submit button
       document.getElementById("loaderSection").classList.add("d-none");
       document.getElementById("submitButton").classList.remove("d-none");
