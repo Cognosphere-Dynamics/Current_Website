@@ -29,6 +29,7 @@ const wrapper = $("#wrapper");
 
 showAsideBtn.addEventListener("click", function () {
   $(`#${this.dataset.show}`).classList.toggle("show-sidebar");
+  sidebar.classList.toggle("hide-sidebar");
   wrapper.classList.toggle("fullwidth");
 });
 
@@ -39,6 +40,7 @@ if (window.innerWidth < 767) {
 window.addEventListener("resize", function () {
   if (window.innerWidth > 767) {
     sidebar.classList.remove("show-sidebar");
+    sidebar.classList.toggle("hide-sidebar");
   }
 });
 

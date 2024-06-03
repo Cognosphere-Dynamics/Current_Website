@@ -1,7 +1,7 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const isLoggedIn = localStorage.getItem("bearer_token");
+document.addEventListener("DOMContentLoaded", function () {
+  const isLoggedIn = localStorage.getItem("bearer_token");
 
-//   if (!isLoggedIn) {
-//     window.location.href = "/sphere_signin.html"; // Redirect to login page
-//   }
-// });
+  if (!isLoggedIn) {
+    window.location.href = "/sphere_signin.html"; // Redirect to login page
+  }
+});

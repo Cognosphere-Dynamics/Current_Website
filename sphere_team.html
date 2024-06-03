@@ -385,7 +385,6 @@
         const identityElements = document.querySelectorAll(".card");
 
         identityElements.forEach((identityElement, index) => {
-          console.log(index);
           const member = members[index];
 
           const nameElement = identityElement.querySelector("h5");
@@ -396,7 +395,7 @@
 
           // Update the link to point to the member's individual page
           const linkElement = identityElement.querySelector(".identity a");
-          console.log(linkElement);
+
           linkElement.href = `./sphere_team_member.html?id=${member.id}`;
         });
       });
