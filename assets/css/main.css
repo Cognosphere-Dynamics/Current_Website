@@ -1663,6 +1663,18 @@ section,
   color: var(--accent-color);
 }
 
+/* Open source Item */
+
+.opensourceImg {
+  width: 100%;
+  height: 400px;
+}
+
+.opensourceImg img {
+  max-width: 100%;
+  display: block;
+}
+
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
