@@ -7,29 +7,28 @@ const form = document.querySelector(".payment_form_aida");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const infoForm = document.getElementById("signupForm");
-
-  const infoFormData = new FormData(infoForm);
-  const infoData = Object.fromEntries(infoFormData);
+  const params = new URLSearchParams(window.location.search);
+  const businessType = params.get("businessType");
+  const user = JSON.parse(localStorage.getItem("user"));
 
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
+  data.businessType = businessType;
+  data.email = user["email"];
+  data.phone = user["phone"];
+  data.name = user["name"];
 
-  const mergedData = { ...infoData, ...data };
-  console.log("client: ", mergedData);
-
-  fetch(`${url}/api/auth/payAida`, {
+  fetch(`${url}/api/auth/payAidas`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(mergedData),
+    body: JSON.stringify(data),
   })
     .then((res) => res.json())
     .then((data) => {
       console.log("server: ", data);
       let link = data.paymentLink;
-      console.log(link);
 
       window.location.href = link;
     })

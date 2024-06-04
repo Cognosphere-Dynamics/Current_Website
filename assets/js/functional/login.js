@@ -7,7 +7,7 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  console.log("data: ", data);
+  
   fetch(`${url}/api/auth/loginUser`, {
     method: "POST",
     headers: {
@@ -25,8 +25,16 @@ form.addEventListener("submit", (event) => {
           message.textContent = "";
         }, 4000);
       } else {
-        localStorage.setItem("bearer_token", JSON.stringify(data.access_token));
-        window.location.href = `/index.html`;
+        console.log(data);
+        const user = {
+          access_token: data.access_token,
+          email: data.user["email"],
+          phone: data.user["phone"],
+          name: data.user["name"],
+        };
+
+        localStorage.setItem("user", JSON.stringify(user));
+        window.location.href = `/sphere_dashboard.html`;
       }
 
       // console.log(data.access_token)

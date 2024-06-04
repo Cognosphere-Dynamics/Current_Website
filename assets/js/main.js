@@ -194,7 +194,7 @@
 
   document.getElementById("logout").addEventListener("click", function (event) {
     event.preventDefault();
-    localStorage.removeItem("bearer_token");
+    localStorage.removeItem("user");
     window.location.href = `/index.html`;
 
     updateUI();
@@ -205,14 +205,14 @@
     .addEventListener("click", function (event) {
       event.preventDefault();
 
-      localStorage.removeItem("bearer_token");
+      localStorage.removeItem("user");
       window.location.href = `/index.html`;
 
       updateUI();
     });
 
   function updateUI() {
-    const isLoggedIn = localStorage.getItem("bearer_token");
+    const isLoggedIn = localStorage.getItem("user");
 
     if (isLoggedIn) {
       document.getElementById("dashboard").classList.remove("d-none");
