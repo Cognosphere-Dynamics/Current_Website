@@ -111,6 +111,50 @@
         background-color: #388da8 !important;
         color: #fff !important;
       }
+      .has-dropdown {
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.has-dropdown a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.has-dropdown:hover {
+  background-color: #fff;
+}
+.has-dropdown .list-dropdown {
+  position: absolute;
+  top: 2.5rem;
+  width: fit-content;
+  width: 8rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  overflow: hidden;
+  transition: 0.3s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding-left: .75em;
+
+}
+
+.has-dropdown .list-dropdown li > a {
+  color: #303030;
+  padding: 0;
+}
+
+.has-dropdown .arrow:after {
+  content: "\F282";
+  font-family: unicons-line;
+  font-size: 1rem;
+  line-height: 1.8;
+  float: right;
+  color: var(--dk-gray-900);
+  transition: all 0.3s ease-in-out;
+}
     </style>
   </head>
 
@@ -131,12 +175,22 @@
           <ul>
             <li><a href="index.html#hero" class="">Home</a></li>
             <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#products">Products</a></li>
-            <li><a href="index.html#api">Our API</a></li>
+            <li class="has-dropdown">
+              <a href="index.html#products" class="arrow">Products</a>
+              <ul class="list-dropdown invisible">
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="index.html#api"></a>Our API</li>
+              </ul>
+            </li>
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#pricing">Pricing</a></li>
-            <li><a href="index.html#opensource">Open Source</a></li>
-            <li><a href="index.html#research">Research</a></li>
+            <li class="has-dropdown ">
+              <a href="index.html#opensource" class="arrow ">Open Source</a>
+              <ul class="list-dropdown invisible">
+                <li><a href="index.html#opensource">Open Source</a></li>
+                <li><a href="index.html#research"></a>Research</li>
+              </ul>
+            </li>
             <li><a href="index.html#contact">Contact</a></li>
             <li class="d-none" id="dashboard">
               <a href="./sphere_dashboard.html">Dashboard</a>
@@ -2102,9 +2156,10 @@
                   efficiency and advanced capabilities.
                 </p>
                 <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
-                <a href="./sphere_payments.html" class="cta-btn"
+                <a href="./sphere_payments.html?businessType=aida_business" class="cta-btn"
                   >4 Days free trial</a
                 >
+                <input type="text" name="business_type" value="aida_business" class="invisible">
                 <p class="text-center small">No credit card required</p>
                 <ul>
                   <li>
@@ -2166,9 +2221,10 @@
                   communication accessibility.
                 </p>
                 <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
-                <a href="./sphere_payments.html" class="cta-btn"
+                <a href="./sphere_payments.html?businessType=twogere_standard" class="cta-btn"
                   >7 Days free trial</a
                 >
+                <input type="text" name="business_type" value="twogere_standard" class="invisible">
                 <p class="text-center small">No credit card required</p>
                 <ul>
                   <li>
@@ -2232,9 +2288,10 @@
                   dashboard solutions.
                 </p>
                 <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
-                <a href="./sphere_payments.html" class="cta-btn"
+                <a href="./sphere_payments.html?businessType=twogere_enterprise" class="cta-btn"
                   >7 Days free trial</a
                 >
+                <input type="text" name="business_type" value="twogere_enterprise" class="invisible">
                 <p class="text-center small">No credit card required</p>
                 <ul>
                   <li>

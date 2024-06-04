@@ -454,7 +454,6 @@
                             </div>
                           </div>
                         </div>
-
                         <hr class="my-4" />
                         <h4 class="mt-3 mb-3">Payment Frequency</h4>
 
@@ -811,7 +810,7 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        const isLoggedIn = localStorage.getItem("bearer_token");
+        const isLoggedIn = localStorage.getItem("user");
 
         if (isLoggedIn) {
           document
