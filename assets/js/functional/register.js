@@ -45,32 +45,44 @@ proceedBtn.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+    // console.log(data);
       // Handle response
       if (data.success) {
         // Show OTP section
         document.getElementById("otpSection").classList.remove("d-none");
         document.getElementById("submitButton").classList.remove("d-none");
         document.getElementById("proceedBtn").classList.add("d-none");
+       document.getElementById("loaderSection").classList.add("d-none");
       } else {
-        document.getElementById("loaderSection").classList.remove("d-none");
-        document.querySelector(".loader").textContent = data.errors.email[0];
+        document.querySelector(".loader").innerHTML = data.errors.email[0];
+        console.log(document.querySelector(".loader").innerHTML)
 
         document.querySelector(".loader").style.color = "red";
         setTimeout(() => {
+          document.querySelector(".loader").style.color = "#303030";
+          document.querySelector(".loader").innerHTML = `
+                  <div class="w-25 text-center mx-auto">
+                    <div class="loader">
+                      verifying...
+                      <span
+                        class="spinner-border spinner-border-sm ms-2"
+                        style="color: #388da8"
+                        aria-hidden="true"
+                      ></span>
+                    </div>
+                  </div>`
           document.getElementById("loaderSection").classList.add("d-none");
         }, 5000);
         emailField.value = "";
       }
       // Hide loader and show submit button
-      document.getElementById("loaderSection").classList.add("d-none");
+
     })
     .catch((error) => {
       console.log(error);
-      alert(error);
       // // Hide loader and show submit button
       document.getElementById("loaderSection").classList.add("d-none");
-      document.getElementById("submitButton").classList.remove("d-none");
+      // document.getElementById("submitButton").classList.remove("d-none");
     });
 });
 
@@ -83,9 +95,6 @@ submitBtn.addEventListener("click", function () {
   let data = new FormData(form);
   const formData = Object.fromEntries(data);
   formData.velification_code = otp;
-
-  console.log(formData);
-
   function areAllFieldsFilled(formData) {
     for (let key in formData) {
       if (formData[key].trim() === "") {
@@ -115,7 +124,13 @@ submitBtn.addEventListener("click", function () {
         window.location.href = `./sphere_signin.html`;
         // Redirect or perform further actions
       } else {
-        alert("Wrong OTP try again");
+        document.querySelector(".title-otp").textContent = "Wrong OTP try again"
+        document.querySelector(".title-otp").style.color = "red"
+        setTimeout(() => {
+        document.querySelector(".title-otp").textContent = "Enter OTP sent to your Email"
+        document.querySelector(".title-otp").style.color = "#303030"
+        }, 5000);
+        // alert("Wrong OTP try again");
       }
     })
     .catch((error) => {
