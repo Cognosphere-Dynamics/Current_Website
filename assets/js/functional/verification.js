@@ -107,13 +107,13 @@ submitBtn.addEventListener("click", function () {
         document.querySelector(".payment_form_aida").classList.remove("d-none");
       }
 
-      // if (data.success) {
-      //   registerForm.classList.remove("d-none");
-      //   aidaForm.classList.remove("d-none");
-      //   // Redirect or perform further actions
-      // } else {
-      //   alert("Wrong OTP try again");
-      // }
+      if (data.success) {
+        registerForm.classList.add("d-none");
+        aidaForm.classList.remove("d-none");
+        // Redirect or perform further actions
+      } else {
+        alert("Wrong OTP try again");
+      }
     })
     .catch((error) => {
       alert("Error: ", error);

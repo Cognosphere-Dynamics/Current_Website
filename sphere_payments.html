@@ -73,7 +73,7 @@
               <a href="./sphere_dashboard.html">Dashboard</a>
             </li>
             <li>
-              <a id="logout" class="d-block d-md-none">logout</a>
+              <a id="logout" class="d-block d-md-none link-danger">logout</a>
             </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -87,7 +87,7 @@
           class="ms-3 fs-3 d-none d-md-block"
           id="logout-icon"
           href="./sphere_signin.html"
-          ><i class="bi bi-box-arrow-in-right"></i
+          ><i class="bi bi-box-arrow-in-rightn"></i
         ></a>
       </div>
     </header>
@@ -125,40 +125,42 @@
                 </div>
 
                 <div class="row g-5">
-                  <!-- <div class="col-md-5 col-lg-4 order-md-last">
+                  <div class="col-md-5 col-lg-4 order-md-last">
                     <h4
                       class="d-flex justify-content-between align-items-center mb-3"
                     >
                       <span class="text-primary">Your cart</span>
-                      <span class="badge bg-primary rounded-pill">3</span>
+                      <span class="badge bg-primary rounded-pill">0</span>
                     </h4>
-                    <ul class="list-group mb-3">
+                    <ul class="list-group mb-3 cart-list">
                       <li
                         class="list-group-item d-flex justify-content-between lh-sm"
                       >
                         <div>
-                          <h6 class="my-0">Product name</h6>
+                          <h6 class="my-0">Payment Frequency</h6>
                           <small class="text-muted">Brief description</small>
                         </div>
-                        <span class="text-muted">$12</span>
+                        <span class="text-muted frequency_price">0</span>
                       </li>
                       <li
                         class="list-group-item d-flex justify-content-between lh-sm"
                       >
                         <div>
-                          <h6 class="my-0">Second product</h6>
+                          <h6 class="my-0">Admin Moblie Application</h6>
                           <small class="text-muted">Brief description</small>
                         </div>
-                        <span class="text-muted">$8</span>
+                        <span class="text-muted admin_mobile_application_price"
+                          >0</span
+                        >
                       </li>
                       <li
                         class="list-group-item d-flex justify-content-between lh-sm"
                       >
                         <div>
-                          <h6 class="my-0">Third item</h6>
+                          <h6 class="my-0">Social Profile</h6>
                           <small class="text-muted">Brief description</small>
                         </div>
-                        <span class="text-muted">$5</span>
+                        <span class="text-muted social_profile_price">0</span>
                       </li>
                       <li
                         class="list-group-item d-flex justify-content-between bg-light"
@@ -167,13 +169,13 @@
                           <h6 class="my-0">Promo code</h6>
                           <small>EXAMPLECODE</small>
                         </div>
-                        <span class="text-success">−$5</span>
+                        <span class="text-success">1237857589</span>
                       </li>
                       <li
                         class="list-group-item d-flex justify-content-between"
                       >
                         <span>Total (USD)</span>
-                        <strong>$20</strong>
+                        <strong class="total_payment">0</strong>
                       </li>
                     </ul>
 
@@ -204,7 +206,7 @@
                         >
                       </div>
                     </div>
-                  </div> -->
+                  </div>
                   <div class="col-md-7 col-lg-8">
                     <div class="registerForm">
                       <form
@@ -545,20 +547,6 @@
                           </div>
                         </div>
 
-                        <script>
-                          function handleCheckboxChange(checkbox) {
-                            if (checkbox.checked) {
-                              var checkboxes =
-                                document.querySelectorAll(".periodCheckbox");
-                              checkboxes.forEach(function (item) {
-                                if (item !== checkbox) {
-                                  item.checked = false;
-                                }
-                              });
-                            }
-                          }
-                        </script>
-
                         <hr class="my-4" />
 
                         <h4 class="mt-3 mb-3">Addons</h4>
@@ -583,6 +571,7 @@
                                   name="admin_mobile_application"
                                   value="10000"
                                   id="SwitchCheckAdmin"
+                                  onchange="addAminMobileApplication(this)"
                                 />
                               </div>
                             </div>
@@ -610,11 +599,75 @@
                                   value="10000"
                                   type="checkbox"
                                   id="SwitchCheckSocial"
+                                  onchange="addSocialProfile(this)"
                                 />
                               </div>
                             </div>
                           </div>
                         </div>
+
+                        <script>
+                          let checkboxes =
+                            document.querySelectorAll(".periodCheckbox");
+                          let frequency_price =
+                            document.querySelector(".frequency_price");
+
+                          let social_profile_price = document.querySelector(
+                            ".social_profile_price"
+                          );
+                          let admin_mobile_application_price =
+                            document.querySelector(
+                              ".admin_mobile_application_price"
+                            );
+
+                          function handleCheckboxChange(checkbox) {
+                            let period = 0;
+                            if (checkbox.checked) {
+                              checkboxes.forEach(function (item) {
+                                if (item !== checkbox) {
+                                  item.checked = false;
+                                } else if (item === checkbox) {
+                                  frequency_price.textContent =
+                                    item.value * 10000;
+                                }
+                              });
+                            } else {
+                              frequency_price.textContent = 0;
+                            }
+                            updateTotal();
+                          }
+                          function addSocialProfile(sp) {
+                            if (sp.checked) {
+                              social_profile_price.textContent = sp.value;
+                            } else {
+                              social_profile_price.textContent = 0;
+                            }
+                            updateTotal();
+                          }
+
+                          function addAminMobileApplication(ama) {
+                            if (ama.checked) {
+                              admin_mobile_application_price.textContent =
+                                ama.value;
+                            } else {
+                              admin_mobile_application_price.textContent = 0;
+                            }
+
+                            updateTotal();
+                          }
+
+                          function updateTotal() {
+                            let total =
+                              parseInt(
+                                admin_mobile_application_price.textContent
+                              ) +
+                              parseInt(social_profile_price.textContent) +
+                              parseInt(frequency_price.textContent);
+                            document.querySelector(
+                              ".total_payment"
+                            ).textContent = total;
+                          }
+                        </script>
 
                         <div class="errorMessage fw-bold p-3 rounded"></div>
                         <button
@@ -755,6 +808,19 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const isLoggedIn = localStorage.getItem("bearer_token");
+
+        if (isLoggedIn) {
+          document
+            .querySelector(".payment_form_aida")
+            .classList.remove("d-none");
+          document.querySelector(".registerForm").classList.add("d-none");
+        }
+      });
+    </script>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
