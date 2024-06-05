@@ -96,6 +96,6 @@ personInfo.addEventListener("click", () => {
 document.getElementById("logout").addEventListener("click", function (event) {
   event.preventDefault();
   console.log("clicked");
-  localStorage.removeItem("bearer_token");
+  localStorage.removeItem("user");
   window.location.href = `/index.html`;
 });

@@ -107,6 +107,53 @@ h6 {
   color: var(--heading-color);
 }
 
+.has-dropdown {
+  position: relative;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.has-dropdown a {
+  text-decoration: none;
+  color: #303030;
+}
+
+.has-dropdown .list-dropdown {
+  position: absolute;
+  top: 2.5rem;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  transition: 0.3s ease-out;
+  padding: 0.75em;
+  display: none;
+}
+.has-dropdown:hover .list-dropdown {
+  display: block;
+}
+
+.has-dropdown .list-dropdown li a {
+  color: #303030;
+  padding: 0.25em;
+}
+
+.has-dropdown .arrow:after {
+  content: "\eb3a";
+  font-family: unicons-line;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  float: right;
+  color: var(--dk-gray-900);
+  transition: all 0.3s ease-in-out;
+}
+
+.has-dropdown:hover .arrow:after {
+  transform: rotate(180deg);
+}
+
 @media (max-width: 480px) {
   .header .logo img {
     max-height: 1.5rem;

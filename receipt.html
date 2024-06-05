@@ -62,7 +62,8 @@
   <body>
     <div class="receipt-container">
       <h1>Receipt</h1>
-      <div class="receipt-details">
+      <h3>Thanks For Subscribing to Cognosphere Dynamics</h3>
+      <!-- <div class="receipt-details">
         <div class="detail-row">
           <span class="label">Date:</span>
           <span class="value" id="date">May 28, 2024</span>
@@ -87,29 +88,29 @@
           <span class="label">Means of Payment:</span>
           <span class="value" id="payment-method">Credit Card</span>
         </div>
-      </div>
+      </div> -->
       <p class="thank-you">Thank you for your payment!</p>
     </div>
     <script>
       // The URL to parse
-// const url = 'https://cognospheredynamics.com/receipt.html?status=successful&tx_ref=flw_171698515566571d4381e8f&transaction_id=5803676';
+      // const url = 'https://cognospheredynamics.com/receipt.html?status=successful&tx_ref=flw_171698515566571d4381e8f&transaction_id=5803676';
 
-// Create a URL object
-      
+      // Create a URL object
+
       // const urlObj = new URL(url);
       // const urlParams = new URLSearchParams(windows.location.search)
       // const status = urlParams.get('status');
       // const txRef = const txRef = urlParams.get('tx_ref');
       // const transactionId = urlParams.get('transaction_id');
 
-let url = "https://api.cognospheredynamics.com";
+      let url = "https://api.cognospheredynamics.com";
 
-  fetch(`${url}/api/auth/rave/callback`)
-    .then((res) => console.log("RES: ",  res.json()))
-    .then((data) => {
-        console.log("DATA", data)
-    })
-    .catch((error) => console.log(error));
+      fetch(`${url}/api/auth/rave/callback`)
+        .then((res) => console.log("RES: ", res.json()))
+        .then((data) => {
+          console.log("DATA", data);
+        })
+        .catch((error) => console.log(error));
     </script>
   </body>
 </html>
