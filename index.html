@@ -36,6 +36,11 @@
     />
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/carousel.css" />
@@ -111,50 +116,6 @@
         background-color: #388da8 !important;
         color: #fff !important;
       }
-      .has-dropdown {
-  position: relative;
-  cursor: pointer;
-  border-radius: 1rem;
-}
-
-.has-dropdown a {
-  text-decoration: none;
-  color: #303030;
-}
-
-.has-dropdown:hover {
-  background-color: #fff;
-}
-.has-dropdown .list-dropdown {
-  position: absolute;
-  top: 2.5rem;
-  width: fit-content;
-  width: 8rem;
-  border-radius: 1rem;
-  background-color: #fff;
-  overflow: hidden;
-  transition: 0.3s ease-out;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  padding-left: .75em;
-
-}
-
-.has-dropdown .list-dropdown li > a {
-  color: #303030;
-  padding: 0;
-}
-
-.has-dropdown .arrow:after {
-  content: "\F282";
-  font-family: unicons-line;
-  font-size: 1rem;
-  line-height: 1.8;
-  float: right;
-  color: var(--dk-gray-900);
-  transition: all 0.3s ease-in-out;
-}
     </style>
   </head>
 
@@ -166,8 +127,7 @@
         <a href="index.html" class="logo d-flex align-items-center me-auto">
           <img src="assets/img/sphere_site_3.gif" alt="sphere_site_3.gif" />
           <div class="header-title">
-            <h1 class="sitename">Cognosphere</h1>
-            <h1 class="sitename">Dynamics..</h1>
+            <h1 class="sitename">Cognosphere Dynamics</h1>
           </div>
         </a>
 
@@ -176,19 +136,19 @@
             <li><a href="index.html#hero" class="">Home</a></li>
             <li><a href="index.html#about">About</a></li>
             <li class="has-dropdown">
-              <a href="index.html#products" class="arrow">Products</a>
-              <ul class="list-dropdown invisible">
+              <a href="#" class="arrow">Our Tools</a>
+              <ul class="list-dropdown">
                 <li><a href="index.html#products">Products</a></li>
-                <li><a href="index.html#api"></a>Our API</li>
+                <li><a href="index.html#api">Our API</a></li>
               </ul>
             </li>
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#pricing">Pricing</a></li>
-            <li class="has-dropdown ">
-              <a href="index.html#opensource" class="arrow ">Open Source</a>
-              <ul class="list-dropdown invisible">
+            <li class="has-dropdown">
+              <a href="#" class="arrow">Resources</a>
+              <ul class="list-dropdown">
                 <li><a href="index.html#opensource">Open Source</a></li>
-                <li><a href="index.html#research"></a>Research</li>
+                <li><a href="index.html#research">Research</a></li>
               </ul>
             </li>
             <li><a href="index.html#contact">Contact</a></li>
@@ -989,136 +949,6 @@
           <!-- Features Item -->
         </div>
       </section>
-      <!-- /Features Details Section -->
-      <!-- <section id="api" class="api section container">
-        <div class="container section-title" data-aos="fade-up">
-          <h2 class="text-center">Our API</h2>
-          <p>
-            Explore our flexible pricing options tailored to meet your
-            organization's budget and requirements.
-          </p>
-        </div>
-
-        <div
-          id="carouselApi"
-          class="carousel carousel-dark slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselApi"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselApi"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselApi"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselApi"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselApi"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselApi"
-              data-bs-slide-to="5"
-              aria-label="Slide 6"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-              <img
-                src="/assets/img/team_collab_3.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <img
-                src="/assets/img/tnc_1.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <img src="/assets/img/ai_5.gif" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <img
-                src="/assets/img/team_collab_3.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-              <img
-                src="/assets/img/tnc_1.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item" data-bs-interval="3000">
-              <img src="/assets/img/ai_5.gif" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-
       <!-- Services Section -->
       <section id="services" class="services section">
         <!-- Section Title -->
@@ -1252,566 +1082,6 @@
       <!-- /Services Section -->
 
       <!-- More Features Section -->
-      <section id="swiper-part" class="section container">
-        <div class="swiper" style="width: 100%; height: 800px">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "direction": "vertical",
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "1",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              },
-
-              "breakpoints": {
-                "320": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 40
-                },
-                "1200": {
-                  "slidesPerView": 1,
-                  "spaceBetween": 1
-                }
-              }
-            }
-          </script>
-          <div
-            class="swiper-wrapper diflex align-items-center justify-content-center"
-          >
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="row gy-4 d-flex justify-content-between">
-                <div
-                  class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <h3>Your Intelligent AI Customer Care Agent</h3>
-                  <p>
-                    Experience unparalleled customer support with Earthena-CPT,
-                    our advanced AI assistant. Elevate your customer service
-                    game.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-lg-6 icon-box d-flex">
-                      <i class="bi bi-easel flex-shrink-0"></i>
-                      <div>
-                        <h4>24/7 Availability</h4>
-                        <p>
-                          Instant assistance around the clock, ensuring no
-                          customer query goes unanswered.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                      <i class="bi bi-patch-check flex-shrink-0"></i>
-                      <div>
-                        <h4>Multilingual Support</h4>
-                        <p>
-                          Seamlessly communicate with customers in their
-                          preferred language, breaking down language barriers
-                          effortlessly.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="225"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Real-time Responses</h4>
-                        <p>
-                          Get instant, accurate answers to customer inquiries,
-                          enhancing satisfaction and efficiency.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Personalized Interactions</h4>
-                        <p>
-                          Tailored responses catered to individual customer
-                          needs, fostering meaningful engagements and rapport.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-                  </div>
-                </div>
-
-                <div
-                  class="features-image col-lg-5 order-1 order-lg-2"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <img src="assets/img/hero-services-img.webp" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="row gy-4 d-flex justify-content-between">
-                <div
-                  class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <h3>Your Intelligent AI Customer Care Agent</h3>
-                  <p>
-                    Experience unparalleled customer support with Earthena-CPT,
-                    our advanced AI assistant. Elevate your customer service
-                    game.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-lg-6 icon-box d-flex">
-                      <i class="bi bi-easel flex-shrink-0"></i>
-                      <div>
-                        <h4>24/7 Availability</h4>
-                        <p>
-                          Instant assistance around the clock, ensuring no
-                          customer query goes unanswered.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                      <i class="bi bi-patch-check flex-shrink-0"></i>
-                      <div>
-                        <h4>Multilingual Support</h4>
-                        <p>
-                          Seamlessly communicate with customers in their
-                          preferred language, breaking down language barriers
-                          effortlessly.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="225"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Real-time Responses</h4>
-                        <p>
-                          Get instant, accurate answers to customer inquiries,
-                          enhancing satisfaction and efficiency.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Personalized Interactions</h4>
-                        <p>
-                          Tailored responses catered to individual customer
-                          needs, fostering meaningful engagements and rapport.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-                  </div>
-                </div>
-
-                <div
-                  class="features-image col-lg-5 order-1 order-lg-2"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <img src="assets/img/hero-services-img.webp" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="row gy-4 d-flex justify-content-between">
-                <div
-                  class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <h3>Your Intelligent AI Customer Care Agent</h3>
-                  <p>
-                    Experience unparalleled customer support with Earthena-CPT,
-                    our advanced AI assistant. Elevate your customer service
-                    game.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-lg-6 icon-box d-flex">
-                      <i class="bi bi-easel flex-shrink-0"></i>
-                      <div>
-                        <h4>24/7 Availability</h4>
-                        <p>
-                          Instant assistance around the clock, ensuring no
-                          customer query goes unanswered.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                      <i class="bi bi-patch-check flex-shrink-0"></i>
-                      <div>
-                        <h4>Multilingual Support</h4>
-                        <p>
-                          Seamlessly communicate with customers in their
-                          preferred language, breaking down language barriers
-                          effortlessly.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="225"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Real-time Responses</h4>
-                        <p>
-                          Get instant, accurate answers to customer inquiries,
-                          enhancing satisfaction and efficiency.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Personalized Interactions</h4>
-                        <p>
-                          Tailored responses catered to individual customer
-                          needs, fostering meaningful engagements and rapport.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-                  </div>
-                </div>
-
-                <div
-                  class="features-image col-lg-5 order-1 order-lg-2"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <img src="assets/img/hero-services-img.webp" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="row gy-4 d-flex justify-content-between">
-                <div
-                  class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <h3>Your Intelligent AI Customer Care Agent</h3>
-                  <p>
-                    Experience unparalleled customer support with Earthena-CPT,
-                    our advanced AI assistant. Elevate your customer service
-                    game.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-lg-6 icon-box d-flex">
-                      <i class="bi bi-easel flex-shrink-0"></i>
-                      <div>
-                        <h4>24/7 Availability</h4>
-                        <p>
-                          Instant assistance around the clock, ensuring no
-                          customer query goes unanswered.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                      <i class="bi bi-patch-check flex-shrink-0"></i>
-                      <div>
-                        <h4>Multilingual Support</h4>
-                        <p>
-                          Seamlessly communicate with customers in their
-                          preferred language, breaking down language barriers
-                          effortlessly.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="225"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Real-time Responses</h4>
-                        <p>
-                          Get instant, accurate answers to customer inquiries,
-                          enhancing satisfaction and efficiency.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Personalized Interactions</h4>
-                        <p>
-                          Tailored responses catered to individual customer
-                          needs, fostering meaningful engagements and rapport.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-                  </div>
-                </div>
-
-                <div
-                  class="features-image col-lg-5 order-1 order-lg-2"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <img src="assets/img/hero-services-img.webp" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="row gy-4 d-flex justify-content-between">
-                <div
-                  class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <h3>Your Intelligent AI Customer Care Agent</h3>
-                  <p>
-                    Experience unparalleled customer support with Earthena-CPT,
-                    our advanced AI assistant. Elevate your customer service
-                    game.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-lg-6 icon-box d-flex">
-                      <i class="bi bi-easel flex-shrink-0"></i>
-                      <div>
-                        <h4>24/7 Availability</h4>
-                        <p>
-                          Instant assistance around the clock, ensuring no
-                          customer query goes unanswered.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                      <i class="bi bi-patch-check flex-shrink-0"></i>
-                      <div>
-                        <h4>Multilingual Support</h4>
-                        <p>
-                          Seamlessly communicate with customers in their
-                          preferred language, breaking down language barriers
-                          effortlessly.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="225"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Real-time Responses</h4>
-                        <p>
-                          Get instant, accurate answers to customer inquiries,
-                          enhancing satisfaction and efficiency.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Personalized Interactions</h4>
-                        <p>
-                          Tailored responses catered to individual customer
-                          needs, fostering meaningful engagements and rapport.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-                  </div>
-                </div>
-
-                <div
-                  class="features-image col-lg-5 order-1 order-lg-2"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <img src="assets/img/hero-services-img.webp" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="row gy-4 d-flex justify-content-between">
-                <div
-                  class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <h3>Your Intelligent AI Customer Care Agent</h3>
-                  <p>
-                    Experience unparalleled customer support with Earthena-CPT,
-                    our advanced AI assistant. Elevate your customer service
-                    game.
-                  </p>
-
-                  <div class="row">
-                    <div class="col-lg-6 icon-box d-flex">
-                      <i class="bi bi-easel flex-shrink-0"></i>
-                      <div>
-                        <h4>24/7 Availability</h4>
-                        <p>
-                          Instant assistance around the clock, ensuring no
-                          customer query goes unanswered.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="150"
-                    >
-                      <i class="bi bi-patch-check flex-shrink-0"></i>
-                      <div>
-                        <h4>Multilingual Support</h4>
-                        <p>
-                          Seamlessly communicate with customers in their
-                          preferred language, breaking down language barriers
-                          effortlessly.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="225"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Real-time Responses</h4>
-                        <p>
-                          Get instant, accurate answers to customer inquiries,
-                          enhancing satisfaction and efficiency.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-
-                    <div
-                      class="col-lg-6 icon-box d-flex"
-                      data-aos="fade-up"
-                      data-aos-delay="300"
-                    >
-                      <i class="bi bi-brightness-high flex-shrink-0"></i>
-                      <div>
-                        <h4>Personalized Interactions</h4>
-                        <p>
-                          Tailored responses catered to individual customer
-                          needs, fostering meaningful engagements and rapport.
-                        </p>
-                      </div>
-                    </div>
-                    <!-- End Icon Box -->
-                  </div>
-                </div>
-
-                <div
-                  class="features-image col-lg-5 order-1 order-lg-2"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <img src="assets/img/hero-services-img.webp" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- If we need pagination -->
-          <div class="swiper-pagination"></div>
-        </div>
-      </section>
 
       <section id="more-features" class="more-features section">
         <div
@@ -2156,10 +1426,17 @@
                   efficiency and advanced capabilities.
                 </p>
                 <h4><sup>$</sup>14<sup>.68</sup><span> / month</span></h4>
-                <a href="./sphere_payments.html?businessType=aida_business" class="cta-btn"
+                <a
+                  href="./sphere_payments.html?businessType=aida_business"
+                  class="cta-btn"
                   >4 Days free trial</a
                 >
-                <input type="text" name="business_type" value="aida_business" class="invisible">
+                <input
+                  type="text"
+                  name="business_type"
+                  value="aida_business"
+                  class="invisible"
+                />
                 <p class="text-center small">No credit card required</p>
                 <ul>
                   <li>
@@ -2221,10 +1498,17 @@
                   communication accessibility.
                 </p>
                 <h4><sup>$</sup>1<sup>.60</sup><span> / month</span></h4>
-                <a href="./sphere_payments.html?businessType=twogere_standard" class="cta-btn"
+                <a
+                  href="./sphere_payments.html?businessType=twogere_standard"
+                  class="cta-btn"
                   >7 Days free trial</a
                 >
-                <input type="text" name="business_type" value="twogere_standard" class="invisible">
+                <input
+                  type="text"
+                  name="business_type"
+                  value="twogere_standard"
+                  class="invisible"
+                />
                 <p class="text-center small">No credit card required</p>
                 <ul>
                   <li>
@@ -2288,10 +1572,17 @@
                   dashboard solutions.
                 </p>
                 <h4><sup>$</sup>88<sup>.09</sup><span> / month</span></h4>
-                <a href="./sphere_payments.html?businessType=twogere_enterprise" class="cta-btn"
+                <a
+                  href="./sphere_payments.html?businessType=twogere_enterprise"
+                  class="cta-btn"
                   >7 Days free trial</a
                 >
-                <input type="text" name="business_type" value="twogere_enterprise" class="invisible">
+                <input
+                  type="text"
+                  name="business_type"
+                  value="twogere_enterprise"
+                  class="invisible"
+                />
                 <p class="text-center small">No credit card required</p>
                 <ul>
                   <li>
@@ -2591,143 +1882,567 @@
         </div>
       </section>
 
-      <section id="research" class="research section container d-none">
+      <section id="research" class="research section container">
         <div class="container section-title" data-aos="fade-up">
-          <h2 class="text-center">Research</h2>
+          <h2>Research</h2>
+          <p>Development in progress ...</p>
           <p>
-            Explore our flexible pricing options tailored to meet your
-            organization's budget and requirements.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quod
+            error quam magnam
           </p>
         </div>
-
-        <div
-          id="carouselResearch"
-          class="carousel carousel-dark slide"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselResearch"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselResearch"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselResearch"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselResearch"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselResearch"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselResearch"
-              data-bs-slide-to="5"
-              aria-label="Slide 6"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div
-              class="carousel-item carousel-item-opensource active w-75"
-              data-bs-interval="10000"
-            >
-              <img
-                src="/assets/img/team_collab_3.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
+        <div data-aos="fade-up" data-aos-delay="100">
+          <div
+            class="swiper"
+            style="width: 100%; height: 600px; overflow: hidden"
+          >
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "direction": "vertical",
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": 1,
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 40
+                  },
+                  "1200": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 1
+                  }
+                }
+              }
+            </script>
+            <div class="swiper-wrapper container" style="height: 100%">
+              <!-- Slides -->
+              <div class="swiper-slide" style="height: 100%">
+                <div class="row gy-4 d-flex justify-content-between container">
+                  <div
+                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <h3>Your Intelligent AI Customer Care Agent</h3>
+                    <p>
+                      Experience unparalleled customer support with
+                      Earthena-CPT, our advanced AI assistant. Elevate your
+                      customer service game.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-6 icon-box d-flex">
+                        <i class="bi bi-easel flex-shrink-0"></i>
+                        <div>
+                          <h4>24/7 Availability</h4>
+                          <p>
+                            Instant assistance around the clock, ensuring no
+                            customer query goes unanswered.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
+                        <i class="bi bi-patch-check flex-shrink-0"></i>
+                        <div>
+                          <h4>Multilingual Support</h4>
+                          <p>
+                            Seamlessly communicate with customers in their
+                            preferred language, breaking down language barriers
+                            effortlessly.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="225"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Real-time Responses</h4>
+                          <p>
+                            Get instant, accurate answers to customer inquiries,
+                            enhancing satisfaction and efficiency.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Personalized Interactions</h4>
+                          <p>
+                            Tailored responses catered to individual customer
+                            needs, fostering meaningful engagements and rapport.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                    </div>
+                  </div>
+                  <div
+                    class="features-image col-lg-5 order-1 order-lg-2"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <img
+                      src="assets/img/hero-services-img.webp"
+                      alt=""
+                      width="450"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: 100%">
+                <div class="row gy-4 d-flex justify-content-between container">
+                  <div
+                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <h3>Your Intelligent AI Customer Care Agent</h3>
+                    <p>
+                      Experience unparalleled customer support with
+                      Earthena-CPT, our advanced AI assistant. Elevate your
+                      customer service game.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-6 icon-box d-flex">
+                        <i class="bi bi-easel flex-shrink-0"></i>
+                        <div>
+                          <h4>24/7 Availability</h4>
+                          <p>
+                            Instant assistance around the clock, ensuring no
+                            customer query goes unanswered.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
+                        <i class="bi bi-patch-check flex-shrink-0"></i>
+                        <div>
+                          <h4>Multilingual Support</h4>
+                          <p>
+                            Seamlessly communicate with customers in their
+                            preferred language, breaking down language barriers
+                            effortlessly.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="225"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Real-time Responses</h4>
+                          <p>
+                            Get instant, accurate answers to customer inquiries,
+                            enhancing satisfaction and efficiency.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Personalized Interactions</h4>
+                          <p>
+                            Tailored responses catered to individual customer
+                            needs, fostering meaningful engagements and rapport.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                    </div>
+                  </div>
+                  <div
+                    class="features-image col-lg-5 order-1 order-lg-2"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <img
+                      src="assets/img/hero-services-img.webp"
+                      alt=""
+                      width="450"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: 100%">
+                <div class="row gy-4 d-flex justify-content-between container">
+                  <div
+                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <h3>Your Intelligent AI Customer Care Agent</h3>
+                    <p>
+                      Experience unparalleled customer support with
+                      Earthena-CPT, our advanced AI assistant. Elevate your
+                      customer service game.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-6 icon-box d-flex">
+                        <i class="bi bi-easel flex-shrink-0"></i>
+                        <div>
+                          <h4>24/7 Availability</h4>
+                          <p>
+                            Instant assistance around the clock, ensuring no
+                            customer query goes unanswered.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
+                        <i class="bi bi-patch-check flex-shrink-0"></i>
+                        <div>
+                          <h4>Multilingual Support</h4>
+                          <p>
+                            Seamlessly communicate with customers in their
+                            preferred language, breaking down language barriers
+                            effortlessly.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="225"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Real-time Responses</h4>
+                          <p>
+                            Get instant, accurate answers to customer inquiries,
+                            enhancing satisfaction and efficiency.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Personalized Interactions</h4>
+                          <p>
+                            Tailored responses catered to individual customer
+                            needs, fostering meaningful engagements and rapport.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                    </div>
+                  </div>
+                  <div
+                    class="features-image col-lg-5 order-1 order-lg-2"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <img
+                      src="assets/img/hero-services-img.webp"
+                      alt=""
+                      width="450"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: 100%">
+                <div class="row gy-4 d-flex justify-content-between container">
+                  <div
+                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <h3>Your Intelligent AI Customer Care Agent</h3>
+                    <p>
+                      Experience unparalleled customer support with
+                      Earthena-CPT, our advanced AI assistant. Elevate your
+                      customer service game.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-6 icon-box d-flex">
+                        <i class="bi bi-easel flex-shrink-0"></i>
+                        <div>
+                          <h4>24/7 Availability</h4>
+                          <p>
+                            Instant assistance around the clock, ensuring no
+                            customer query goes unanswered.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
+                        <i class="bi bi-patch-check flex-shrink-0"></i>
+                        <div>
+                          <h4>Multilingual Support</h4>
+                          <p>
+                            Seamlessly communicate with customers in their
+                            preferred language, breaking down language barriers
+                            effortlessly.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="225"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Real-time Responses</h4>
+                          <p>
+                            Get instant, accurate answers to customer inquiries,
+                            enhancing satisfaction and efficiency.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Personalized Interactions</h4>
+                          <p>
+                            Tailored responses catered to individual customer
+                            needs, fostering meaningful engagements and rapport.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                    </div>
+                  </div>
+                  <div
+                    class="features-image col-lg-5 order-1 order-lg-2"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <img
+                      src="assets/img/hero-services-img.webp"
+                      alt=""
+                      width="450"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: 100%">
+                <div class="row gy-4 d-flex justify-content-between container">
+                  <div
+                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <h3>Your Intelligent AI Customer Care Agent</h3>
+                    <p>
+                      Experience unparalleled customer support with
+                      Earthena-CPT, our advanced AI assistant. Elevate your
+                      customer service game.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-6 icon-box d-flex">
+                        <i class="bi bi-easel flex-shrink-0"></i>
+                        <div>
+                          <h4>24/7 Availability</h4>
+                          <p>
+                            Instant assistance around the clock, ensuring no
+                            customer query goes unanswered.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
+                        <i class="bi bi-patch-check flex-shrink-0"></i>
+                        <div>
+                          <h4>Multilingual Support</h4>
+                          <p>
+                            Seamlessly communicate with customers in their
+                            preferred language, breaking down language barriers
+                            effortlessly.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="225"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Real-time Responses</h4>
+                          <p>
+                            Get instant, accurate answers to customer inquiries,
+                            enhancing satisfaction and efficiency.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Personalized Interactions</h4>
+                          <p>
+                            Tailored responses catered to individual customer
+                            needs, fostering meaningful engagements and rapport.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                    </div>
+                  </div>
+                  <div
+                    class="features-image col-lg-5 order-1 order-lg-2"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <img
+                      src="assets/img/hero-services-img.webp"
+                      alt=""
+                      width="450"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide" style="height: 100%">
+                <div class="row gy-4 d-flex justify-content-between container">
+                  <div
+                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    data-aos="fade-up"
+                    data-aos-delay="100"
+                  >
+                    <h3>Your Intelligent AI Customer Care Agent</h3>
+                    <p>
+                      Experience unparalleled customer support with
+                      Earthena-CPT, our advanced AI assistant. Elevate your
+                      customer service game.
+                    </p>
+                    <div class="row">
+                      <div class="col-lg-6 icon-box d-flex">
+                        <i class="bi bi-easel flex-shrink-0"></i>
+                        <div>
+                          <h4>24/7 Availability</h4>
+                          <p>
+                            Instant assistance around the clock, ensuring no
+                            customer query goes unanswered.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="150"
+                      >
+                        <i class="bi bi-patch-check flex-shrink-0"></i>
+                        <div>
+                          <h4>Multilingual Support</h4>
+                          <p>
+                            Seamlessly communicate with customers in their
+                            preferred language, breaking down language barriers
+                            effortlessly.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="225"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Real-time Responses</h4>
+                          <p>
+                            Get instant, accurate answers to customer inquiries,
+                            enhancing satisfaction and efficiency.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                      <div
+                        class="col-lg-6 icon-box d-flex"
+                        data-aos="fade-up"
+                        data-aos-delay="300"
+                      >
+                        <i class="bi bi-brightness-high flex-shrink-0"></i>
+                        <div>
+                          <h4>Personalized Interactions</h4>
+                          <p>
+                            Tailored responses catered to individual customer
+                            needs, fostering meaningful engagements and rapport.
+                          </p>
+                        </div>
+                      </div>
+                      <!-- End Icon Box -->
+                    </div>
+                  </div>
+                  <div
+                    class="features-image col-lg-5 order-1 order-lg-2"
+                    data-aos="fade-up"
+                    data-aos-delay="300"
+                  >
+                    <img
+                      src="assets/img/hero-services-img.webp"
+                      alt=""
+                      width="450"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <img
-                src="/assets/img/tnc_1.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div
-              class="carousel-item carousel-item-opensource"
-              data-bs-interval="10000"
-            >
-              <img src="/assets/img/ai_5.gif" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div
-              class="carousel-item carousel-item-opensource"
-              data-bs-interval="10000"
-            >
-              <img
-                src="/assets/img/team_collab_3.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>First slide label</h5>
-                <p>
-                  Some representative placeholder content for the first slide.
-                </p>
-              </div>
-            </div>
-            <div
-              class="carousel-item carousel-item-opensource"
-              data-bs-interval="2000"
-            >
-              <img
-                src="/assets/img/tnc_1.gif"
-                class="d-block w-100"
-                alt="..."
-              />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Second slide label</h5>
-                <p>
-                  Some representative placeholder content for the second slide.
-                </p>
-              </div>
-            </div>
-            <div class="carousel-item carousel-item-opensource">
-              <img src="/assets/img/ai_5.gif" class="d-block w-100" alt="..." />
-              <div class="carousel-caption d-none d-md-block">
-                <h5>Third slide label</h5>
-                <p>
-                  Some representative placeholder content for the third slide.
-                </p>
-              </div>
-            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
