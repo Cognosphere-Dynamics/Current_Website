@@ -226,4 +226,26 @@
     }
   }
   updateUI();
+
+  const tabs = document.querySelectorAll(".api-nav-link");
+  const tabContent = document.querySelector(".api-tab-pane");
+  const tabContentImg = tabContent.querySelector("img");
+
+  const ImgLinks = [
+    "assets/img/chatter_3.gif",
+    "assets/img/chatter_2.gif",
+    "assets/img/sign_l_1.gif",
+  ];
+  let currentIndex = 0;
+
+  const switchTabs = () => {
+    tabs[currentIndex].classList.remove("active", "show");
+    tabContentImg.setAttribute("src", ImgLinks[currentIndex]);
+
+    currentIndex = (currentIndex + 1) % tabs.length;
+
+    tabs[currentIndex].classList.add("active", "show");
+  };
+
+  setInterval(switchTabs, 5000);
 })();

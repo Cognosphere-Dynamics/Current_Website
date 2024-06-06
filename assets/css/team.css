@@ -14,7 +14,7 @@
   max-width: 480px;
   width: 48%;
   height: auto;
-
+  background: rgba(255, 255, 255, 0.85);
   text-align: center;
   cursor: pointer;
 }
@@ -28,7 +28,8 @@
 
 .grid .name-caption {
   padding: 2em;
-  color: #fff;
+  background: rgba(61, 67, 72, 0.03);
+
   font-size: 1.25em;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
@@ -82,7 +83,8 @@
 }
 
 .card-effect {
-  background: #fff;
+  background: rgba(61, 67, 72, 0.03);
+  /* background-color: black; */
   text-align: left;
 }
 
@@ -124,7 +126,8 @@
   left: 2em;
   z-index: -1;
   height: 3.5em;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
+
   content: "";
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
@@ -156,7 +159,7 @@
     -webkit-transform: translate3d(0, -5em, 0) scale3d(1, 1, 1);
     transform: translate3d(0, -5em, 0) scale3d(1, 1, 1);
     height: 2em;
-    background: #fff;
+    background: rgba(61, 67, 72, 0.03);
   }
   .card-effect p {
     opacity: 1;
