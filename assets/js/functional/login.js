@@ -7,7 +7,10 @@ form.addEventListener("submit", (event) => {
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
-  
+  let loginBtn = document.querySelector(".login-btn");
+
+  loginBtn.textContent = "please wait ...";
+
   fetch(`${url}/api/auth/loginUser`, {
     method: "POST",
     headers: {
@@ -18,14 +21,13 @@ form.addEventListener("submit", (event) => {
     .then((res) => res.json())
     .then((data) => {
       if (data.error) {
-        const message = document.querySelector(".signin-title");
-        message.textContent = data.error;
-        message.style.color = "salmon";
+        const message = document.querySelector(".error");
+        message.textContent = "wrong email or username";
+        loginBtn.textContent = "Login";
         setTimeout(() => {
           message.textContent = "";
-        }, 4000);
+        }, 5000);
       } else {
-        console.log(data);
         const user = {
           access_token: data.access_token,
           email: data.user["email"],
