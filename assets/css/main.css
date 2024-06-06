@@ -180,7 +180,7 @@ h6 {
   color: var(--contrast-color);
   background: var(--accent-color);
   text-align: center;
-  font-size: 1rem !important;
+  font-size: 1rem;
   padding: 0.25em 1em !important;
   margin: 0 0 0 2em !important;
   border-radius: 3rem;
@@ -193,6 +193,11 @@ h6 {
   background: rgba(var(--accent-color-rgb), 0.85);
 }
 
+@media (max-width: 575px) {
+  .header .btn-getstarted {
+    font-size: 0.9rem;
+  }
+}
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
@@ -2143,4 +2148,53 @@ input[type="radio"] {
 
 .inner-carousel {
   padding-top: 180px;
+}
+
+/* ============= */
+/* table style */
+/* ==================== */
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  transition: all 0.3s ease-out;
+}
+
+td,
+th {
+  padding: 1em;
+  vertical-align: top;
+}
+.col1 {
+  width: 60%;
+}
+table a,
+table ul {
+  list-style-type: none;
+  padding: 0.75em;
+  margin: 0;
+}
+table .bi {
+  display: none;
+}
+table .small-screen-title {
+  display: none;
+}
+@media (max-width: 575px) {
+  table .bi {
+    display: block;
+  }
+  .col1 {
+    width: 100%;
+  }
+  .col2 {
+    width: 100%;
+  }
+  table .hide {
+    display: none;
+  }
+  table .small-screen-title {
+    display: block;
+  }
 }

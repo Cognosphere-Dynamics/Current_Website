@@ -749,6 +749,125 @@
       <!-- /Clients Section -->
 
       <!-- Features Section -->
+
+      <section id="api" class="features section">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2 class="">Our API</h2>
+          <p>Development in Progress..</p>
+          <p>
+            Meet Earthena CPT, our newest AI large language model trained on
+            large corpuses of data.
+          </p>
+        </div>
+        <!-- End Section Title -->
+        <div class="container">
+          <table>
+            <tr>
+              <td class="col1 gpt4">
+                <h4>GPT-4o</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Reiciendis expedita tenetur magni officiis omnis iste minus
+                  eveniet optio quo cum.
+                </p>
+                <i
+                  class="bi bi-plus fs-3 gpt4-plus"
+                  style="float: right; cursor: pointer"
+                ></i>
+              </td>
+              <td class="col2 gpt4result hide">
+                <h4 class="small-screen-title">GPT-4o</h4>
+                <i
+                  class="bi bi-x fs-3 gpt4-minus"
+                  style="float: right; cursor: pointer"
+                ></i>
+                <b>Input</b>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor, sit amet .</li>
+                </ul>
+
+                <b>Output</b>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor, sit amet</li>
+                </ul>
+                <a href="#" style="color: #388da8"> learn more </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="col1 gpt3">
+                <h4>GPT-3.5 Turbo</h4>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Repudiandae tempore quasi maxime unde aliquam ipsum labore
+                  animi magnam ducimus dignissimos ullam, illo nisi id.
+                  Exercitationem illo fugit reiciendis at aliquam?
+                </p>
+                <i
+                  class="bi bi-plus fs-3 gpt3-plus"
+                  style="float: right; cursor: pointer"
+                ></i>
+              </td>
+              <td class="col2 hide gpt3-result">
+                <h4 class="small-screen-title">GPT-3.5 Turbo</h4>
+                <i
+                  class="bi bi-x fs-3 gpt3-minus"
+                  style="float: right; cursor: pointer"
+                ></i>
+                <b>Input</b>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor, sit amet</li>
+                </ul>
+
+                <b>Output</b>
+                <ul>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor sit amet.</li>
+                  <li>Lorem ipsum dolor, sit amet.</li>
+                </ul>
+                <a href="#" style="color: #388da8"> learn more </a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
+      <script>
+        let gpt4add = document.querySelector(".gpt4-plus");
+        let gpt4sub = document.querySelector(".gpt4-minus");
+        let gpt4 = document.querySelector(".gpt4");
+        let gpt4result = document.querySelector(".gpt4result");
+
+        gpt4add.addEventListener("click", (e) => {
+          gpt4.classList.toggle("hide");
+          gpt4result.classList.toggle("hide");
+          console.log("clicked");
+        });
+        gpt4sub.addEventListener("click", (e) => {
+          gpt4.classList.toggle("hide");
+          gpt4result.classList.toggle("hide");
+        });
+
+        let gpt3add = document.querySelector(".gpt3-plus");
+        let gpt3sub = document.querySelector(".gpt3-minus");
+        let gpt3 = document.querySelector(".gpt3");
+        let gpt3result = document.querySelector(".gpt3-result");
+
+        gpt3add.addEventListener("click", (e) => {
+          gpt3.classList.toggle("hide");
+          gpt3result.classList.toggle("hide");
+        });
+        gpt3sub.addEventListener("click", (e) => {
+          gpt3.classList.toggle("hide");
+          gpt3result.classList.toggle("hide");
+        });
+      </script>
+
       <section id="products" class="features section">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
@@ -812,7 +931,7 @@
                         Sign Language - Naturan Language Translation
                       </h4>
                       <p>
-                        Bridge communication gaps with Twogele. Seamless sign
+                        Bridge communication gaps with Twogere. Seamless sign
                         language to natural language translation solution.
                       </p>
                     </div>
@@ -825,109 +944,6 @@
             <div class="col-lg-6">
               <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
                 <div class="tab-pane fade active show" id="features-tab-1">
-                  <img
-                    src="assets/img/chatter_3.gif"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </div>
-                <!-- End Tab Content Item -->
-
-                <div class="tab-pane fade" id="features-tab-2">
-                  <img
-                    src="assets/img/chatter_2.gif"
-                    alt=""
-                    class="img-fluid"
-                  />
-                </div>
-                <!-- End Tab Content Item -->
-
-                <div class="tab-pane fade" id="features-tab-3">
-                  <img src="assets/img/sign_l_1.gif" alt="" class="img-fluid" />
-                </div>
-                <!-- End Tab Content Item -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="api" class="features section">
-        <!-- Section Title -->
-        <div class="container section-title" data-aos="fade-up">
-          <h2 class="">Our API</h2>
-          <p>
-            Meet Earthena CPT, our newest AI large language model trained on
-            large corpuses of data.
-          </p>
-        </div>
-        <!-- End Section Title -->
-
-        <div class="container">
-          <div class="row justify-content-between">
-            <div class="col-lg-5 d-flex align-items-center">
-              <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active show api-nav-link"
-                    data-bs-toggle="tab"
-                    data-bs-target="#api-tab-1"
-                  >
-                    <i class="bi bi-binoculars"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">
-                        General Earthena Inquiries and Research
-                      </h4>
-                      <p>
-                        Dive into knowledge with Earthena-CPT! Get real-time
-                        answers with our advanced AI model.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link api-nav-link"
-                    data-bs-toggle="tab"
-                    data-bs-target="#api-tab-2"
-                  >
-                    <i class="bi bi-box-seam"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">
-                        Intelligent AI Customer Care Agent
-                      </h4>
-                      <p>
-                        Elevate customer support with Earthena-CPT. Instant,
-                        accurate assistance available 24/7.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link api-nav-link"
-                    data-bs-toggle="tab"
-                    data-bs-target="#api-tab-3"
-                  >
-                    <i class="bi bi-brightness-high"></i>
-                    <div>
-                      <h4 class="d-none d-lg-block">
-                        Sign Language - Naturan Language Translation
-                      </h4>
-                      <p>
-                        Bridge communication gaps with Twogele. Seamless sign
-                        language to natural language translation solution.
-                      </p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-              <!-- End Tab Nav -->
-            </div>
-
-            <div class="col-lg-6">
-              <div class="api-tab-content" data-aos="fade-up" data-aos-delay="200">
-                <div class="api-tab-pane fade active show" id="api-tab-1">
                   <img
                     src="assets/img/chatter_3.gif"
                     alt=""
@@ -2015,7 +2031,7 @@
               <div class="swiper-slide" style="height: 100%">
                 <div class="row gy-4 d-flex justify-content-between container">
                   <div
-                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    class="col-lg-6 d-flex flex-column justify-content-center order-1 order-lg-2"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -2086,7 +2102,7 @@
                     </div>
                   </div>
                   <div
-                    class="features-image col-lg-5 order-1 order-lg-2"
+                    class="features-image col-lg-5 order-2 order-lg-1"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >
@@ -2101,7 +2117,7 @@
               <div class="swiper-slide" style="height: 100%">
                 <div class="row gy-4 d-flex justify-content-between container">
                   <div
-                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    class="col-lg-6 d-flex flex-column justify-content-center order-1 order-lg-2"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -2172,7 +2188,7 @@
                     </div>
                   </div>
                   <div
-                    class="features-image col-lg-5 order-1 order-lg-2"
+                    class="features-image col-lg-5 order-2 order-lg-1"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >
@@ -2187,7 +2203,7 @@
               <div class="swiper-slide" style="height: 100%">
                 <div class="row gy-4 d-flex justify-content-between container">
                   <div
-                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    class="col-lg-6 d-flex flex-column justify-content-center order-1 order-lg-2"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -2258,7 +2274,7 @@
                     </div>
                   </div>
                   <div
-                    class="features-image col-lg-5 order-1 order-lg-2"
+                    class="features-image col-lg-5 order-12 order-lg-1"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >
@@ -2273,7 +2289,7 @@
               <div class="swiper-slide" style="height: 100%">
                 <div class="row gy-4 d-flex justify-content-between container">
                   <div
-                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    class="col-lg-6 d-flex flex-column justify-content-center order-1 order-lg-2"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -2344,7 +2360,7 @@
                     </div>
                   </div>
                   <div
-                    class="features-image col-lg-5 order-1 order-lg-2"
+                    class="features-image col-lg-5 order-2 order-lg-1"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >
@@ -2359,7 +2375,7 @@
               <div class="swiper-slide" style="height: 100%">
                 <div class="row gy-4 d-flex justify-content-between container">
                   <div
-                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    class="col-lg-6 d-flex flex-column justify-content-center order-1 order-lg-2"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -2430,7 +2446,7 @@
                     </div>
                   </div>
                   <div
-                    class="features-image col-lg-5 order-1 order-lg-2"
+                    class="features-image col-lg-5 order-2 order-lg-1"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >
@@ -2445,7 +2461,7 @@
               <div class="swiper-slide" style="height: 100%">
                 <div class="row gy-4 d-flex justify-content-between container">
                   <div
-                    class="col-lg-6 d-flex flex-column justify-content-center order-2 order-lg-1"
+                    class="col-lg-6 d-flex flex-column justify-content-center order-1 order-lg-2"
                     data-aos="fade-up"
                     data-aos-delay="100"
                   >
@@ -2516,7 +2532,7 @@
                     </div>
                   </div>
                   <div
-                    class="features-image col-lg-5 order-1 order-lg-2"
+                    class="features-image col-lg-5 order-2 order-lg-1"
                     data-aos="fade-up"
                     data-aos-delay="300"
                   >

@@ -227,14 +227,14 @@
   }
   updateUI();
 
-  const tabs = document.querySelectorAll(".api-nav-link");
-  const tabContent = document.querySelector(".api-tab-pane");
+  const tabs = document.querySelectorAll(".nav-link");
+  const tabContent = document.querySelector(".tab-pane");
   const tabContentImg = tabContent.querySelector("img");
 
   const ImgLinks = [
-    "assets/img/chatter_3.gif",
     "assets/img/chatter_2.gif",
     "assets/img/sign_l_1.gif",
+    "assets/img/chatter_3.gif",
   ];
   let currentIndex = 0;
 
