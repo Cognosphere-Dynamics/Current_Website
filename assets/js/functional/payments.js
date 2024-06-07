@@ -8,12 +8,12 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
 
   const params = new URLSearchParams(window.location.search);
-  const businessType = params.get("businessType");
+  const business_type = params.get("business_type");
   const user = JSON.parse(localStorage.getItem("user"));
 
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
-  data.businessType = businessType;
+  data.business_type = business_type;
   data.email = user["email"];
   data.phone = user["phone"];
   data.name = user["name"];
