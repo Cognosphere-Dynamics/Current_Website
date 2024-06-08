@@ -27,7 +27,6 @@ form.addEventListener("submit", (event) => {
   })
     .then((res) => res.json())
     .then((data) => {
-      console.log("server: ", data);
       let link = data.paymentLink;
 
       window.location.href = link;

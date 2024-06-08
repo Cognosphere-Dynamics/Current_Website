@@ -1,10 +1,41 @@
 const proceedBtn = document.getElementById("proceedBtn");
 const submitBtn = document.getElementById("submitButton");
+const errorInForm = document.querySelector(".errorInForm");
 
 proceedBtn.addEventListener("click", function () {
   let form = document.getElementById("signupForm");
   let data = new FormData(form);
   const formData = Object.fromEntries(data);
+  delete formData.otp;
+
+  function areAllFieldsFilled(formData) {
+    for (let key in formData) {
+      if (formData[key].trim() === "") {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  if (!areAllFieldsFilled(formData)) {
+    errorInForm.classList.remove("d-none");
+    errorInForm.textContent = "All fields are required";
+    setTimeout(() => {
+      errorInForm.classList.add("d-none");
+      errorInForm.textContent = "";
+    }, 5000);
+    return;
+  }
+
+  if (formData["password"] !== formData["confirmPassword"]) {
+    errorInForm.classList.remove("d-none");
+    errorInForm.textContent = "Password didn't Match";
+    setTimeout(() => {
+      errorInForm.classList.add("d-none");
+      errorInForm.textContent = "";
+    }, 5000);
+    return;
+  }
 
   let emailField = document.querySelector('input[name="email"]');
 
@@ -45,17 +76,17 @@ proceedBtn.addEventListener("click", function () {
   )
     .then((response) => response.json())
     .then((data) => {
-    // console.log(data);
+      // console.log(data);
       // Handle response
       if (data.success) {
         // Show OTP section
         document.getElementById("otpSection").classList.remove("d-none");
         document.getElementById("submitButton").classList.remove("d-none");
         document.getElementById("proceedBtn").classList.add("d-none");
-       document.getElementById("loaderSection").classList.add("d-none");
+        document.getElementById("loaderSection").classList.add("d-none");
       } else {
         document.querySelector(".loader").innerHTML = data.errors.email[0];
-        console.log(document.querySelector(".loader").innerHTML)
+        console.log(document.querySelector(".loader").innerHTML);
 
         document.querySelector(".loader").style.color = "red";
         setTimeout(() => {
@@ -70,13 +101,12 @@ proceedBtn.addEventListener("click", function () {
                         aria-hidden="true"
                       ></span>
                     </div>
-                  </div>`
+                  </div>`;
           document.getElementById("loaderSection").classList.add("d-none");
         }, 5000);
         emailField.value = "";
       }
       // Hide loader and show submit button
-
     })
     .catch((error) => {
       console.log(error);
@@ -95,19 +125,6 @@ submitBtn.addEventListener("click", function () {
   let data = new FormData(form);
   const formData = Object.fromEntries(data);
   formData.velification_code = otp;
-  function areAllFieldsFilled(formData) {
-    for (let key in formData) {
-      if (formData[key].trim() === "") {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  if (!areAllFieldsFilled(formData)) {
-    alert("all Fields are required");
-    return;
-  }
 
   // Perform OTP verification
   fetch("https://api.cognospheredynamics.com/api/auth/verifyingCode", {
@@ -124,11 +141,13 @@ submitBtn.addEventListener("click", function () {
         window.location.href = `./sphere_signin.html`;
         // Redirect or perform further actions
       } else {
-        document.querySelector(".title-otp").textContent = "Wrong OTP try again"
-        document.querySelector(".title-otp").style.color = "red"
+        document.querySelector(".title-otp").textContent =
+          "Wrong OTP try again";
+        document.querySelector(".title-otp").style.color = "red";
         setTimeout(() => {
-        document.querySelector(".title-otp").textContent = "Enter OTP sent to your Email"
-        document.querySelector(".title-otp").style.color = "#303030"
+          document.querySelector(".title-otp").textContent =
+            "Enter OTP sent to your Email";
+          document.querySelector(".title-otp").style.color = "#303030";
         }, 5000);
         // alert("Wrong OTP try again");
       }
