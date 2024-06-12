@@ -1,101 +1,95 @@
-// Other important pens.
-// Map: https://codepen.io/themustafaomar/pen/ZEGJeZq
-// Navbar: https://codepen.io/themustafaomar/pen/VKbQyZ
+let aida_dashboard = document.getElementById("aida_dashboard");
+let twogere_dashboard = document.getElementById("twogere_dashboard");
 
-"use strict";
+let aida_ui = document.querySelector(".aida_dashboard");
+let twogere_ui = document.querySelector(".twogere_dashboard");
+let default_ui = document.querySelector(".default_dashboard");
+let payment_form_ui = document.getElementById("payment_form");
 
-function $(selector) {
-  return document.querySelector(selector);
-}
+aida_ui.style.display = "none";
+twogere_ui.style.display = "none";
+payment_form_ui.style.display = "none";
 
-function find(el, selector) {
-  let finded;
-  return (finded = el.querySelector(selector)) ? finded : null;
-}
-
-function siblings(el) {
-  const siblings = [];
-  for (let sibling of el.parentNode.children) {
-    if (sibling !== el) {
-      siblings.push(sibling);
-    }
-  }
-  return siblings;
-}
-
-const showAsideBtn = $(".show-side-btn");
-const sidebar = $(".sidebar");
-const wrapper = $("#wrapper");
-
-showAsideBtn.addEventListener("click", function () {
-  $(`#${this.dataset.show}`).classList.toggle("show-sidebar");
-  sidebar.classList.toggle("hide-sidebar");
-  wrapper.classList.toggle("fullwidth");
+aida_dashboard.addEventListener("click", () => {
+  hide_dashboard();
+  aida_ui.style.display = "block";
 });
 
-if (window.innerWidth < 767) {
-  sidebar.classList.add("show-sidebar");
-}
-
-window.addEventListener("resize", function () {
-  if (window.innerWidth > 767) {
-    sidebar.classList.remove("show-sidebar");
-    sidebar.classList.toggle("hide-sidebar");
-  }
+twogere_dashboard.addEventListener("click", () => {
+  hide_dashboard();
+  twogere_ui.style.display = "block";
 });
 
-// dropdown menu in the side nav
-var slideNavDropdown = $(".sidebar-dropdown");
+function show_payment_form() {
+  hide_dashboard();
+  payment_form_ui.style.display = "block";
+}
+function hide_dashboard() {
+  aida_ui.style.display = "none";
+  twogere_ui.style.display = "none";
+  payment_form_ui.style.display = "none";
+}
 
-$(".sidebar .categories").addEventListener("click", function (event) {
-  event.preventDefault();
+// dashboard_items
+const preview = document.getElementById("preview");
+const conversations = document.getElementById("conversations");
+const account_settings = document.getElementById("account_settings");
+const ai_settings = document.getElementById("ai_settings");
+const dashboard_link = document.getElementById("dashboard_link");
+const conversation_link = document.getElementById("conversation_link");
+const finetune_AI_link = document.getElementById("finetune_AI_link");
+const account_settings_link = document.getElementById("account_settings_link");
+const adds_marketing_link = document.getElementById("adds_marketing_link");
+const ai_settings_link = document.getElementById("ai_settings_link");
 
-  const item = event.target.closest(".has-dropdown");
+function hide_dashboard_items() {
+  preview.style.display = "none";
+  conversations.style.display = "none";
 
-  if (!item) {
-    return;
-  }
+  account_settings.style.display = "none";
 
-  item.classList.toggle("opened");
+  ai_settings.style.display = "none";
+}
 
-  siblings(item).forEach((sibling) => {
-    sibling.classList.remove("opened");
+hide_dashboard_items();
+preview.style.display = "block";
+dashboard_link.querySelector("a").style.color = "#388da8"; // Highlight the first link by default
+
+dashboard_link.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent the default behavior of the anchor tag
+  hide_dashboard_items();
+  preview.style.display = "block";
+  removeActiveClassFromLinks();
+  dashboard_link.querySelector("a").style.color = "#388da8";
+});
+
+conversation_link.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent the default behavior of the anchor tag
+  hide_dashboard_items();
+  conversations.style.display = "block";
+  removeActiveClassFromLinks();
+  conversation_link.querySelector("a").style.color = "#388da8";
+});
+
+ai_settings_link.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent the default behavior of the anchor tag
+  hide_dashboard_items();
+  ai_settings.style.display = "block";
+  removeActiveClassFromLinks();
+  ai_settings_link.querySelector("a").style.color = "#388da8";
+});
+
+account_settings_link.addEventListener("click", (event) => {
+  event.preventDefault(); // Prevent the default behavior of the anchor tag
+  hide_dashboard_items();
+  account_settings.style.display = "block";
+  removeActiveClassFromLinks();
+  account_settings_link.querySelector("a").style.color = "#388da8";
+});
+
+function removeActiveClassFromLinks() {
+  const navLinks = document.querySelectorAll(".nav-link");
+  navLinks.forEach((link) => {
+    link.style.color = "black";
   });
-
-  if (item.classList.contains("opened")) {
-    const toOpen = find(item, ".sidebar-dropdown");
-
-    if (toOpen) {
-      toOpen.classList.add("active");
-    }
-
-    siblings(item).forEach((sibling) => {
-      const toClose = find(sibling, ".sidebar-dropdown");
-
-      if (toClose) {
-        toClose.classList.remove("active");
-      }
-    });
-  } else {
-    find(item, ".sidebar-dropdown").classList.toggle("active");
-  }
-});
-
-$(".sidebar .close-aside").addEventListener("click", function () {
-  $(`#${this.dataset.close}`).classList.add("show-sidebar");
-  wrapper.classList.remove("margin");
-});
-
-const info = $(".info");
-const personInfo = $(".personInfo");
-
-personInfo.addEventListener("click", () => {
-  info.classList.toggle("invisible");
-});
-
-document.getElementById("logout").addEventListener("click", function (event) {
-  event.preventDefault();
-  console.log("clicked");
-  localStorage.removeItem("user");
-  window.location.href = `/index.html`;
-});
+}
