@@ -131,10 +131,18 @@ h6 {
   padding: 0.75em;
   display: none;
 }
+
 .has-dropdown:hover .list-dropdown {
   display: block;
 }
 
+@media (max-width: 767px) {
+  .has-dropdown .list-dropdown {
+    position: relative;
+    top: 0;
+    display: none;
+  }
+}
 .has-dropdown .list-dropdown li a {
   color: #303030;
   padding: 0.25em;
