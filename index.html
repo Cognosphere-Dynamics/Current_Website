@@ -126,7 +126,11 @@
         class="container-fluid container-xl position-relative d-flex align-items-center"
       >
         <a href="index.html" class="logo d-flex align-items-center me-auto">
-          <img src="assets/img/sphere_site_3.gif" alt="sphere_site_3.gif" />
+          <img
+            src="assets/img/sphere_site_3.gif"
+            alt="sphere_site_3.gif"
+            class="d-none d-md-block"
+          />
           <div class="header-title">
             <h1 class="sitename">Cognosphere Dynamics</h1>
           </div>
@@ -134,30 +138,57 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html#hero" class="">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#hero" class="navmenu-link">Home</a></li>
+            <li><a href="index.html#about" class="navmenu-link">About</a></li>
             <li class="has-dropdown">
               <a href="#" class="arrow">Our Tools</a>
               <ul class="list-dropdown">
-                <li><a href="index.html#products">Products</a></li>
-                <li><a href="index.html#api">Our API</a></li>
+                <li>
+                  <a href="index.html#products" class="navmenu-link"
+                    >Products</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#api" class="navmenu-link">Our API</a>
+                </li>
               </ul>
             </li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#pricing">Pricing</a></li>
+            <li>
+              <a href="index.html#services" class="navmenu-link">Services</a>
+            </li>
+            <li>
+              <a href="index.html#pricing" class="navmenu-link">Pricing</a>
+            </li>
             <li class="has-dropdown">
               <a href="#" class="arrow">Resources</a>
               <ul class="list-dropdown">
-                <li><a href="index.html#opensource">Open Source</a></li>
-                <li><a href="index.html#research">Research</a></li>
+                <li>
+                  <a href="index.html#opensource" class="navmenu-link"
+                    >Open Source</a
+                  >
+                </li>
+                <li>
+                  <a href="index.html#research" class="navmenu-link"
+                    >Research</a
+                  >
+                </li>
               </ul>
             </li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li>
+              <a href="index.html#contact" class="navmenu-link">Contact</a>
+            </li>
             <li class="d-none" id="dashboard">
-              <a href="./sphere_dashboard.html">Dashboard</a>
+              <a href="./sphere_dashboard.html" class="navmenu-link"
+                >Dashboard</a
+              >
             </li>
             <li>
-              <a id="logout" class="d-block d-md-none link-danger">logout</a>
+              <a
+                id="logout"
+                class="d-block d-md-none link-danger"
+                class="navmenu-link"
+                >logout</a
+              >
             </li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

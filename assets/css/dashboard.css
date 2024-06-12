@@ -137,11 +137,16 @@ body {
 -------------------------------- */
 .charts .chart-container {
   background-color: rgba(var(--accent-color-rgb), 0.04);
-  height: 500px;
+  height: 300px;
 }
 
 .charts .chart-container h3 {
   color: var(--dk-gray-900);
+}
+@media (max-width: 767px) {
+  .charts .chart-container {
+    height: 100px;
+  }
 }
 
 /* --------------------------------

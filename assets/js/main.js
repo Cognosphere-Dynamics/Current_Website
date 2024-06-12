@@ -48,7 +48,7 @@
   /**
    * Hide mobile nav on same-page/hash links
    */
-  document.querySelectorAll("#navmenu a").forEach((navmenu) => {
+  document.querySelectorAll("#navmenu .navmenu-link").forEach((navmenu) => {
     navmenu.addEventListener("click", () => {
       if (document.querySelector(".mobile-nav-active")) {
         mobileNavToogle();
@@ -69,6 +69,23 @@
       }
     });
   });
+
+  const dropdowns = document.querySelectorAll(".has-dropdown");
+
+  if (window.innerWidth < 769) {
+    dropdowns.forEach((dropdown) => {
+      const trigger = dropdown.querySelector("a");
+      trigger.addEventListener("click", function (e) {
+        // Prevent the default anchor behavior
+        e.preventDefault();
+
+        // Toggle the dropdown menu
+        const dropdownMenu = dropdown.querySelector(".list-dropdown");
+        dropdownMenu.style.display =
+          dropdownMenu.style.display === "block" ? "none" : "block";
+      });
+    });
+  }
 
   /**
    * Preloader
