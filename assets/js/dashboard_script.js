@@ -36,16 +36,6 @@ showAsideBtn.addEventListener("click", function () {
   }
 });
 
-if (window.innerWidth < 767) {
-  sidebar.classList.add("show-sidebar");
-}
-
-window.addEventListener("resize", function () {
-  if (window.innerWidth > 767) {
-    sidebar.classList.remove("show-sidebar");
-  }
-});
-
 // dropdown menu in the side nav
 let slideNavDropdown = $(".sidebar-dropdown");
 
@@ -88,7 +78,7 @@ $(".sidebar .close-aside").addEventListener("click", function () {
   wrapper.classList.remove("margin");
 });
 
-const links = document.querySelectorAll(".categories a");
+const links = document.querySelectorAll(".categories .section-link");
 const sections = document.querySelectorAll(".dashboard-section");
 
 function showSection(targetId) {
@@ -101,6 +91,10 @@ links.forEach((link) => {
   link.addEventListener("click", function (event) {
     event.preventDefault();
     const targetId = this.getAttribute("data-target");
+    if (window.innerWidth < 767) {
+      sidebar.classList.toggle("show-sidebar");
+    }
+
     showSection(targetId);
   });
 });
@@ -108,7 +102,6 @@ links.forEach((link) => {
 showSection("main_preview");
 
 // individual page navs
-console.log("Straigh: ", document.getElementById("nav_btn"));
 
 const pageLinks = document.getElementById("nav_btn");
 console.log(pageLinks);

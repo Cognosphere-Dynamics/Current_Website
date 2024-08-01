@@ -116,6 +116,18 @@ body {
 }
 
 @media (max-width: 767px) {
+  .sidebar {
+    transform: translateX(-360px);
+  }
+
+  .show-sidebar {
+    width: var(--sidebar-width);
+    transform: translateX(0);
+  }
+
+  .sidebar.hide-sidebar {
+    transform: translateX(-360px);
+  }
   .sidebar ul > li {
     padding-top: 12px;
     padding-bottom: 12px;

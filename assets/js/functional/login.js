@@ -36,7 +36,7 @@ form.addEventListener("submit", (event) => {
         };
 
         localStorage.setItem("user", JSON.stringify(user));
-        window.location.href = `/sphere_dashboard.html`;
+        window.location.href = `/index.html`;
       }
 
       // console.log(data.access_token)
